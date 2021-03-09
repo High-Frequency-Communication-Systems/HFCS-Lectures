@@ -1,0 +1,8 @@
+\frametitle{Revisiting Maxwell's Equations}
+  For a uniform plane wave, the source-free Maxwell's equations are:
+  \begin{align*}
+\curl \va{E} &= - \pdv{\va{B}}{t} \implies \vu{z} \cross \pdv{\va{E}}{z} = - \pdv{\va{B}}{t} \\
+\curl \va{H} &= \pdv{\va{D}}{t}  \implies \vu{z} \cross \pdv{\va{H}}{z} =  \pdv{\va{D}}{t} \\
+\div \va{E} &= 0  \implies \pdv{{E_z}}{z} = 0\\
+\div \va{H} &= 0 \implies \pdv{{H_z}}{z} = 0
+\end{align*}

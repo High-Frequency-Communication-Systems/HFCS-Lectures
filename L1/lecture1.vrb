@@ -1,0 +1,13 @@
+\frametitle{Course Assessments}
+  \begin{table}
+      \begin{tabular}{ll}
+      \toprule
+      Assessment & Weightage\\
+      \midrule
+      Homework & 30\% \\
+      Exam & 20\% \\
+      Lab Exercises & 20\% \\
+      Lab Project \& Presentation & 20\% \\
+      \bottomrule
+    \end{tabular}
+  \end{table}

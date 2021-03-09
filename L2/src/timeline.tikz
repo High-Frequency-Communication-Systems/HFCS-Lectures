@@ -1,0 +1,68 @@
+% arara: pdflatex
+% arara: pdflatex: {synctex: yes}
+% arara: pdflatex: {synctex: on}
+
+\documentclass[border=5mm]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+\makeatletter
+\tikzset{
+  join/.code=\tikzset{after node path={%
+      \ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+      edge[every join]#1(\tikzchaincurrent)\fi}
+  },
+  >=stealth',
+  every on chain/.append style={join},
+  every join/.style={->},
+  labeled/.style={
+     execute at begin node=$\scriptstyle,
+     execute at end node=$
+  }
+}
+%
+\begin{document}
+\begin{tikzpicture}
+  \matrix (m) [
+      matrix of math nodes,
+      nodes in empty cells, % adds nodes in cells without content
+      row sep=3em, column sep=4em,
+      nodes={font={\vphantom{S,}}}, % to account for missing commas, no need for \phantoms
+      row 3/.style={text height=0pt,text depth=0pt} % to reduce height of nodes in third row
+    ]
+    % note \text for first column
+    % added third row as suggested by cfr
+    { \text{group 1} &[-2em] N &      & M  &  S,M   &   &  \\
+      \text{group 2} &       N & S,M  &    &        &   &  \\[-2em] % reduce space between second and third row
+      &&&&&& \\
+    };
+  { [start chain]
+    \chainin (m-1-2);
+    \chainin (m-1-4); %[join={node[above,labeled] {\psi}}];
+    \chainin (m-1-5);
+    \chainin (m-1-7);}
+
+   { [start chain]
+    \chainin (m-2-2);
+    \chainin (m-2-3);
+    \chainin (m-2-7);}
+
+    % draw dashed vertical lines
+    \draw [densely dashed,->] (m-2-3)          -- (m-2-3  |- m-1-1);
+    \draw [densely dashed,->] (m-1-4 |- m-2-1) -- (m-1-4);
+
+    % draw arrow for timeline
+    \draw [->] (m-3-1 -| m-2-1.east) -- (m-3-7);
+
+    % draw ticks and add labels
+    \foreach [count=\i from 2] \txt in {
+       Before\\Sept. 2013,
+       Sept. 2013,
+       Jan. 2014,
+       March 2015,
+       After\\March 2015} {
+         \draw ([yshift=2pt]m-3-\i.center) -- ++(0,-4pt)
+            node [below,align=center,font=\footnotesize] {\txt};
+      }
+\end{tikzpicture}
+\end{document}

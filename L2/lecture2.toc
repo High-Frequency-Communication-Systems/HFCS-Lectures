@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Material Properties}{15}{0}{1}
+\beamer@sectionintoc {2}{Nanoscale Electromagnetics}{22}{0}{2}
