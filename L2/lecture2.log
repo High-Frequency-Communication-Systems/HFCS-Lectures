@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.11)  8 MAR 2021 11:46
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.11)  9 MAR 2021 16:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2354,6 +2354,21 @@ File: src/nanoantennas.pdf Graphic file (type pdf)
 ] [24
 
 ]
+(./src/interface.pdf_tex
+File: src/interface.pdf Graphic file (type pdf)
+<use src/interface.pdf, page 1>
+) [25
+
+] [26
+
+] [27
+
+] (./src/spp.pdf_tex
+File: src/spp.pdf Graphic file (type pdf)
+<use src/spp.pdf, page 1>
+) [28
+
+]
 \tf@nav=\write11
 \openout11 = `lecture2.nav'.
 
@@ -2369,12 +2384,12 @@ Package rerunfilecheck Info: File `lecture2.out' has not changed.
 (rerunfilecheck)             Checksum: 10004031ED3A6C733A642970AD4DCA25;317.
  ) 
 Here is how much of TeX's memory you used:
- 59605 strings out of 477218
- 1408727 string characters out of 5830434
- 2014998 words of memory out of 5000000
- 78141 multiletter control sequences out of 15000+600000
+ 59639 strings out of 477218
+ 1409321 string characters out of 5830434
+ 2015250 words of memory out of 5000000
+ 78168 multiletter control sequences out of 15000+600000
  415165 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,64n,132p,746b,2920s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on lecture2.pdf (24 pages).
+Output written on lecture2.pdf (28 pages).

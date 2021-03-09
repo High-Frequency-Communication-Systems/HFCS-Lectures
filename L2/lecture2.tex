@@ -397,9 +397,66 @@ We take the curl of the above two equations and use the vector identity, $\curl 
 \end{frame}
 
 \begin{frame}
-  \frametitle{}
+  \frametitle{Surface Plasmons}
+  \begin{outline}
+    \1 At optical and mid infrared frequencies ( $>$ \SI{10}{\tera \hertz}), some materials such as gold exhibit negative dielectric constant $(\Re(\E_r) < 0)$ 
+    \1 At a metal-dielectric interface such as the one below:
+  \end{outline}
+  \begin{figure}
+    \centering 
+  \def\svgwidth{.75\linewidth}
+    \input{src/interface.pdf_tex}
+  \end{figure}
 \end{frame}
 
+
+\begin{frame}
+  \frametitle{Existence of Surface Plasmons}
+  \begin{outline}
+    \1 The TM mode fields in region 1 are expressed as:
+  \end{outline}
+      \begin{align*}
+    \va{E}_1 ={}& \left(\vu{x} E_{x1}  + \vu{z} E_{z1}  \right) \, \exp \left( - \j (k_x x \,+\, k_{z1} z) \right), \\
+    \va{H}_1 ={}& \vu{y} H_{y1}  \, \exp \left( - \j (k_x x \,+\, k_{z1} z) \right)
+  \end{align*}
+  and likewise for region 2. Using the Ampere's Law ($\curl \va{H} = -\j \O \va{E}$), we get the boundary conditions:
+    \begin{align*}
+    k_{z1} H_{y1} ={}& \O \E_1 E_{x1}\\
+    k_{z2} H_{y2} ={}& -\O \E_2 E_{x2}
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Dispersion Relation}
+  \begin{outline}
+    \1 Ensuring the continuity of tangential fields, $E_{x1} = E_{x2}$ and $H_{y1} = H_{y2}$, we get:
+    \end{outline}
+    \begin{align*}
+  \frac{k_{z1}}{\E_1} + \frac{k_{z2}}{\E_2} &= 0.
+\end{align*}
+\begin{outline}
+  \1 Using the Helmholtz equation, ($\laplacian \va{E} + k_i^2 \va{E} = 0$) , where $i = 1,2$, and assuming the permeabilities of all regions are that of air, we obtain,
+\end{outline}
+\begin{align*}
+  k_x &= k_0 \sqrt{\frac{\E_{r1} \E_{r2}}{\E_{r1} + \E_{r2}}}
+\end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Visualising the Surface Plasmons}
+  \begin{outline}
+    \1 The dispersion relation has a solution when 
+  \end{outline}
+    \begin{equation*}
+    \E_1 > 0, \quad    \E_2' < 0, \quad   \text{and}  \quad \left| \E_2' \right| > \E_1,
+  \end{equation*}
+  \begin{figure}[b!]
+  \centering
+  \def\svgwidth{.75\linewidth}
+  \input{src/spp.pdf_tex}
+  \caption*{Surface plasmon propagation along a dielectric-metal boundary and exponential decay perpendicular to the boundary.}
+\end{figure}
+\end{frame}
 % \begin{frame}
 %   \frametitle{Conductor Models}
 %   \begin{figure}
