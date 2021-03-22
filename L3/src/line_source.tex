@@ -60,7 +60,7 @@
 
         %set the plot display orientation
         %syntax: \tdplotsetdisplay{\theta_d}{\phi_d}
-\tdplotsetmaincoords{60}{130}
+\tdplotsetmaincoords{65}{120}
 
 
         %define polar coordinates for some vector
@@ -69,7 +69,10 @@
 \pgfmathsetmacro{\thetavec}{70}
 \pgfmathsetmacro{\phivec}{60}
 
-\begin{tikzpicture}[scale=2,tdplot_main_coords]
+\begin{tikzpicture}[scale=2,tdplot_main_coords,cube/.style={very thin,black},
+                    grid/.style={very thin,gray!80},
+                    axis/.style={->,blue,ultra thick},
+                    rotated axis/.style={->,purple,ultra thick}]
 
 
 %-----------------------
@@ -92,6 +95,14 @@
         \tdplotsetcoord{P}{\rvec}{\thetavec - 30}{\phivec}
         %draw figure contents
         %--------------------
+
+            %draw a grid in the x-y plane
+        \foreach \x in {-1,-.75,...,1}
+            \foreach \y in {-1,-.75,...,1}
+        {
+            \draw[grid] (\x,-1) -- (\x,1);
+            \draw[grid] (-1,\y) -- (1,\y);
+        }
 
 
 %draw figure contents

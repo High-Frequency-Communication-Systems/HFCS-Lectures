@@ -67,6 +67,9 @@
 \pgfmathsetmacro{\Thetavec}{\thetavec+\dtheta}
 \pgfmathsetmacro{\Phivec}{\phivec+\dphi}
 
+\pgfmathsetmacro{\h}{0}
+\pgfmathsetmacro{\l}{.1}
+
 \begin{tikzpicture}[scale=5,tdplot_main_coords]
 
 
@@ -198,6 +201,8 @@
 \draw[thick,->,color=blue] (r1) -- (r2) node[anchor=east]{$\va{r}$};
 \draw[thick,->,color=blue] (Q2xy) -- (P2xy) node[anchor=north]{$\va{H}$};
 \draw[thick,->,color=blue] (E1) -- (E2) node[anchor=north]{$\va{E}$};
+
+\draw[-stealth,very thick, color=green] (0,0,\h - \l/2) --  node[anchor=north east]{} (0,0,\h + \l/2) node[midway, color = black, anchor= south east]{$I \dd{l}$};
 
 
 

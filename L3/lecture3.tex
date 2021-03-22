@@ -303,6 +303,15 @@ The magnetic vector potential $\va{A}$ is finally expressed through an inhomogen
 \end{outline}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Regions of Radiation}
+      \begin{figure}[t!]
+      \centering
+          \includegraphics[width=.7\textwidth]{src/antenna_rregions.pdf}
+      \caption{The Regions of Antenna Radiation}
+    \end{figure}
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Plotting the Radiation Pattern}
@@ -326,6 +335,10 @@ The magnetic vector potential $\va{A}$ is finally expressed through an inhomogen
     \1 \textcolor{red}{Due on MS Teams on March 30.}
   \end{outline}
 \end{tcolorbox}
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\textwidth]{circular.pdf}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -341,9 +354,9 @@ I_{0} & x'=0, \quad y=0, \quad |z'| \leq \frac{L}{2} \\
 0 & \text { elsewhere }
 \end{array}\right.
   \end{align*}
-  \begin{figure}
+  \begin{figure}[t!]
   \centering
-  \includegraphics[width=.3\textwidth]{line_source.pdf}
+  \includegraphics[width=.4\textwidth]{line_source.pdf}
 \end{figure}
 \end{frame}
 
@@ -358,13 +371,22 @@ I_{0} & x'=0, \quad y=0, \quad |z'| \leq \frac{L}{2} \\
   &= \u \frac{\e^{-\j k r}}{4 \pi r} \int_{-L/2}^{L/2} I_0 \e^{\j k \left(z' \cos \theta\right)} \dd{z'} \\
   &= \u \frac{I_0 \e^{-\j k r}}{4 \pi r} \frac{\sin \left[(kL/2)\cos \theta\right]}{(kL/2)\cos \theta}
 \end{align*}
+\end{frame}
 
-The electric field is given as:
+\begin{frame}
+  \frametitle{Example - contd.}
+   The electric field is given as:
 \begin{align*}
-  \va{E} &= - \j \O \va{A} - (- \j \O \va{A} \cdot \vu{r})\vu{r} \\
-  &= \j \O \sin \theta A_z \vu*{\theta} 
+  \va{E} &= - \j \O \va{A} - \frac{\j}{\O \u \E} \grad(\div \va{A}) \\
+  &= - \j \O \va{A} - (- \j \O \va{A} \cdot \vu{r})\vu{r} \\
+  &= \j \O \sin \theta A_z \vu*{\theta} \\
+  &= \frac{\j \O \u I_{0} L \e^{-\j k r}}{4 \pi r} \sin \theta \frac{\sin \left[(\beta L / 2) \cos \theta\right]}{(\beta L / 2) \cos \theta} \vu*{\theta}
 \end{align*}
-  \end{frame}
+The magnetic field can simply be found as:
+\begin{align*}
+  H_{\phi} &= \frac{E_{\theta}}{\eta}
+\end{align*}
+\end{frame}
 
 \begin{frame}
   \frametitle{The Poynting Vector}
@@ -383,7 +405,7 @@ The electric field is given as:
 
 
 \begin{frame}
-  \frametitle{The intrinsic impedance}  
+  \frametitle{The Intrinsic Impedance}  
   \begin{outline}
     \1 Just like voltage and current ratio gives us impedance
     \1 The ratio of electric and magnetic field components give us the \textit{intrinsic impedance}
@@ -391,7 +413,7 @@ The electric field is given as:
   \begin{align*}
     \frac{E_{\theta}}{H_{\phi}} &= \eta = \sqrt{\frac{\u}{\E}}
   \end{align*}
-  For freespace, the value is $\eta_0 = 376.7 \Omega \approx 120 \pi \Omega$
+  For freespace, the value is $\eta_0 = \SI{376.7}{\ohm} \approx \SI{120 \pi}{\ohm}$
 \end{frame}
 
 
@@ -428,7 +450,7 @@ The electric field is given as:
   \begin{outline}
     \1 For a given antenna the directivity and gain describe in what direction the radiation is, as compared to an isotropic antenna
     \1 For the isotropic antenna, the radiation pattern is uniform (ie) a circle
-    \1 Directivity id defined as the ratio of radiation intensity in a certain direction to the average radiation intensity
+    \1 Directivity is defined as the ratio of radiation intensity in a certain direction to the average radiation intensity
   \end{outline}
   \begin{align*}
     D &= \frac{1}{2} \frac{\max \left[\Re (\va{E} \cross \va{H^{*}}) \cdot \vu{r} \right]}{P /4 \pi r^2}
