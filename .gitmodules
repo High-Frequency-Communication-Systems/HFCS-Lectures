@@ -1,0 +1,3 @@
+[submodule "L3/L3/python"]
+	path = L3/L3/python
+	url = https://github.com/manuamador/Dipole.git
