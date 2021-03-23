@@ -162,7 +162,7 @@
 
   \begin{outline}
     \1 We still need to figure out how to find the potentials,   $\va{A}$ and $\phi$ for a given current density $\va{J}$.
-    \1 For this we move back to the Maxwell's equations and find a relationship
+    \1 For this we move back to Maxwell's equations and find a relationship
   \end{outline}
 
   \begin{align*}
@@ -278,7 +278,9 @@ The magnetic vector potential $\va{A}$ is finally expressed through an inhomogen
 
 
 
-\section*{Antenna Characteristics and Parameters}
+\section{Antenna Characteristics and Parameters}
+
+
 \begin{frame}
   \frametitle{The Radiation Pattern}
 \begin{outline}
@@ -380,7 +382,7 @@ I_{0} & x'=0, \quad y=0, \quad |z'| \leq \frac{L}{2} \\
   \va{E} &= - \j \O \va{A} - \frac{\j}{\O \u \E} \grad(\div \va{A}) \\
   &= - \j \O \va{A} - (- \j \O \va{A} \cdot \vu{r})\vu{r} \\
   &= \j \O \sin \theta A_z \vu*{\theta} \\
-  &= \frac{\j \O \u I_{0} L \e^{-\j k r}}{4 \pi r} \sin \theta \frac{\sin \left[(\beta L / 2) \cos \theta\right]}{(\beta L / 2) \cos \theta} \vu*{\theta}
+  &= \frac{\j \O \u I_{0} L \e^{-\j k r}}{4 \pi r} \sin \theta \frac{\sin \left[(k L / 2) \cos \theta\right]}{(k L / 2) \cos \theta} \vu*{\theta}
 \end{align*}
 The magnetic field can simply be found as:
 \begin{align*}
