@@ -5,12 +5,12 @@
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
 \usepackage{minted}
-
+\usepackage{bookmark}
 \usepgfplotslibrary{dateplot}
 
 \usemintedstyle{trac}
 
-% Specifiy the location of images to be used
+% ($ (A)!r!(B) $) the location of images to be used
 \graphicspath{{src/}}
 
 %% Customisation
@@ -164,12 +164,11 @@
     \1 We still need to figure out how to find the potentials,   $\va{A}$ and $\phi$ for a given current density $\va{J}$.
     \1 For this we move back to Maxwell's equations and find a relationship
   \end{outline}
-
-  \begin{align*}
+\begin{align*}
      \curl \va{H} &= \j \O \E \va{E} + \va{J} \\
      \curl \left( \curl \va{A} \right) &= \j \O \u \E \va{E} + \u \va{J} \\
      \curl \curl \va{A} &= \j \O \u \E \left(-\j \O \va{A} - \grad \phi \right) + \u \va{J}
-  \end{align*}
+\end{align*}
 \end{frame}
 
 \begin{frame}
@@ -509,4 +508,6 @@ The magnetic field can simply be found as:
     e_{rad} &= \frac{P_{rad}}{P_{in}} = \frac{P_{rad}}{P_{rad} + P_{ohm}}
   \end{align*}
 \end{frame}
+
+
 \end{document}
