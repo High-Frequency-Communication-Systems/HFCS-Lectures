@@ -1,0 +1,163 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme{glasgow}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage{bookmark}
+\usepgfplotslibrary{dateplot}
+
+\usemintedstyle{trac}
+
+% ($ (A)!r!(B) $) the location of images to be used
+\graphicspath{{src/}}
+
+%% Customisation
+% \newcommand{\V}[1]{\v} % vectors \v{c}
+% \renewcommand{\v}[1]{\mathbf{#1}} % vectors
+\newcommand{\ti}[1]{\tilde{#1}} % spectral representation
+\newcommand{\tnsr}[1]{\underline{\underline{#1}}}
+
+% Symbols
+\renewcommand{\O}{\omega}  % omega
+\newcommand{\E}{\varepsilon}  % epsilon
+\renewcommand{\u}{\mu}  % mu
+\newcommand{\p}{\rho}  % rho
+\newcommand{\x}{\times}  % times
+\renewcommand{\inf}{\infty}  % infinity
+\newcommand{\infint}{\int\limits_{-\inf}^\inf} % integral by R
+\newcommand{\e}{\mathrm{e}} % Straight-up exponential
+\renewcommand{\j}{{j}\mkern1mu} % Straight-up exponential
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+\title{High Frequency Communication Systems}
+\subtitle{Lecture 4}
+\date{Spring 2021}
+\author{Hasan T Abbas \& Qammer H Abbasi}
+% \institute{}
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Lecture Outline}
+\begin{outline}[itemize]
+  \1 Transmission Lines Theory \& Analysis
+  \1 The Smith Chart 
+  \1 Load Mismatching
+  \1 The Magic of Quarter-wave Transformer
+\end{outline}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Transmission Line Theory}
+\begin{outline}
+  \1 A technique to bridge the gap between basic circuit analysis and electromagnetic fields theory
+   \2 Lots of similaritites and analogies
+    \1 Commonly used to design microwave devices and circuits
+\end{outline}
+\end{frame}
+
+\begin{frame}
+  \frametitle{TL \& EM Field Theory - Duality}
+  \begin{columns}[T] % align columns
+  \begin{column}{.3\textwidth}
+\begin{outline}
+  \1 In wave scattering problems, we place the co-ordinate system at the boundary
+  \1 In transmission lines, we use the two different lines as the boundary
+  \1 For open problems, the load is considered to be at infinity.
+  \end{outline}
+   \end{column}
+ \begin{column}[T]{.7\textwidth}
+    \begin{figure}
+      \centering
+          \includegraphics[width=.9\textwidth]{circuit.pdf}
+      \caption{The analogy between wave problems and transmission lines.}
+    \end{figure}
+      \end{column}%
+\end{columns}
+  \end{frame}
+
+
+\begin{frame}
+  \frametitle{TL \& EM Field Theory Duality}
+  \begin{table}
+    \begin{tabular}{ll}
+    \toprule
+    TL Theory & EM Field Theory \\
+    \midrule
+    $V_{1} = V_{0} \e^{-\j \gamma_{1} z} \left(1+\Gamma_{L} \e^{\j 2 \gamma_{1} z}\right)$ & $E_{x,1}=E_{0} \e^{-\j k_{1} z} \left( 1 + \Gamma \e^{\j 2 k_{1} z} \right)$ \\
+    $I_{1} = \frac{V_{0}}{Z_{0,1}} \e^{-\j \gamma_{1} z} \left(1+\Gamma_{L} \e^{\j 2 \gamma_{1} z}\right)$ & $H_{x,1} = \frac{E_{0}}{\eta_0} \e^{-\j k_{1} z} \left( 1 + \Gamma \e^{\j 2 k_{1} z} \right)$ \\
+   $ \Gamma_{L} = \frac{Z_L - Z_{0,1}}{Z_L + Z_{0,1}} = \frac{Z_{0,2} - Z_{0,1}}{Z_{0,2} + Z_{0,1}}$ & $\Gamma = \frac{\eta_2 - \eta_1}{\eta_2 + \eta_1}$ \\
+   $V_2 = T V_0 \e^{-\j \gamma_{2} z}$ & $E_{x,2} = T E_0 \e^{-\j k_{2} z}$ \\
+   $I_2 = T \frac{V_0}{Z_{0,2}} \e^{-\j \gamma_{2} z}$ & $H_{x,2} = T \frac{E_0}{\eta_2} \e^{-\j k_{2} z}$ \\
+   $T = \frac{2 Z_{0,2}}{{Z_{0,2}} + {Z_{0,1}}}$ & $T = \frac{2 \eta_2}{\eta_2 + \eta_1}$ \\
+   \bottomrule
+  \end{tabular}
+\end{table}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{TL Theory and Circuit Elements}
+\begin{outline}
+  \1 For a transmission line, we use a distributed circuit approach
+  \2 Energy stored in the magnetic field $\rightarrow L$
+  \2 Energy stored in the electric field $\rightarrow C$
+  \2 Conductive losses $\rightarrow R$
+  \2 Dielectric losses $\rightarrow G$
+  \1 All the circuit elements are expressed per unit length
+  \1 We can express the voltage and current at any given point $z$ and time $t$.
+\end{outline}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Transmission Line Equation}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.85\textwidth]{tlines.pdf}
+  \end{figure}
+  \begin{figure}
+    \centering
+    \includegraphics[width=.85\textwidth]{circuit2.pdf}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Solution to the Transmission Line Equation - The Telegraphers Equation}
+\begin{outline}
+  \1 Solving the electric circuit leads to a second order differential equation
+  \1 Analogous to the wave equation
+  \2 Hence the analogies between voltage $V$ and electric field $\va{E}$
+\end{outline}
+\begin{align*}
+  \left\{ \pdv[2]{z} - \left[ (R + \j \O L)( G + \j \O C)  \right] \right\} V (z,t) = 0
+\end{align*}
+The solution is of the type:
+\begin{align*}
+  V(z) &= V_{+} \e^{-\gamma z} + V_{-} \e^{+\gamma z}
+\end{align*}
+where the propagation constant $\gamma = \sqrt{(R + \j \O L)( G + \j \O C)}$. For a lossless case $R = G = 0$. 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Equivalent Circuits - Terminated Load}
+\begin{outline}
+  \1 
+\end{outline}
+
+  
+
+\end{frame}
+
+\end{document}

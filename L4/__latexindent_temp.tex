@@ -1,0 +1,90 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme{glasgow}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage{bookmark}
+\usepgfplotslibrary{dateplot}
+
+\usemintedstyle{trac}
+
+% ($ (A)!r!(B) $) the location of images to be used
+\graphicspath{{src/}}
+
+%% Customisation
+% \newcommand{\V}[1]{\v} % vectors \v{c}
+% \renewcommand{\v}[1]{\mathbf{#1}} % vectors
+\newcommand{\ti}[1]{\tilde{#1}} % spectral representation
+\newcommand{\tnsr}[1]{\underline{\underline{#1}}}
+
+% Symbols
+\renewcommand{\O}{\omega}  % omega
+\newcommand{\E}{\varepsilon}  % epsilon
+\renewcommand{\u}{\mu}  % mu
+\newcommand{\p}{\rho}  % rho
+\newcommand{\x}{\times}  % times
+\renewcommand{\inf}{\infty}  % infinity
+\newcommand{\infint}{\int\limits_{-\inf}^\inf} % integral by R
+\newcommand{\e}{\mathrm{e}} % Straight-up exponential
+\renewcommand{\j}{{j}\mkern1mu} % Straight-up exponential
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+\title{High Frequency Communication Systems}
+\subtitle{Lecture 4}
+\date{Spring 2021}
+\author{Hasan T Abbas \& Qammer H Abbasi}
+% \institute{}
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Lecture Outline}
+\begin{outline}[itemize]
+  \1 Transmission Lines Theory \& Analysis
+  \1 The Smith Chart 
+  \1 Load Mismatching
+  \1 The Magic of Quarter-wave Transformer
+\end{outline}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Transmission Line Theory}
+\begin{outline}
+  \1 A technique to bridge the gap between basic circuit analysis and electromagnetic fields theory
+   \2 Lots of similaritites and analogies
+    \1 Commonly used to design microwave devices and circuits
+\end{outline}
+\end{frame}
+
+\begin{frame}
+  \frametitle{TL \& EM Theory - Duality}
+  \begin{columns}[T] % align columns
+  \begin{column}{.3\textwidth}
+\begin{outline}
+  \1 In wave scattering problems, we place the co-ordinate system at the boundary
+  \1 In transmission lines, we use the two different lines as the boundary
+  \1 For open problems, the load is considered to be at infinity.
+  \end{outline}
+   \end{column}
+ \begin{column}[T]{.7\textwidth}
+    \begin{figure}
+      \centering
+          \includegraphics[width=.9\textwidth]{circuit.pdf}
+      \caption{The analogy between wave problems and transmission lines.}
+    \end{figure}
+      \end{column}%
+\end{columns}
+  \end{frame}
+
+\end{document}
