@@ -57,13 +57,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Transmission Lines}
+
 \begin{frame}[fragile]
 \frametitle{Transmission Line Theory}
 \begin{outline}
   \1 A technique to bridge the gap between basic circuit analysis and electromagnetic fields theory
    \2 Lots of similarities and analogies
     \1 Commonly used to design microwave devices and circuits
-    \1 We use transmission lines when the electrica length of the device is greater than $\lambda / 10$.
+    \1 We use transmission lines when the electrical length of the device is greater than $\lambda / 10$.
 \end{outline}
 \end{frame}
 
@@ -189,7 +191,7 @@ At $z = 0$, $Z(0) = Z_L$, and we get:
 
 \begin{frame}
   \frametitle{TL Impedance}
-At $z = -l$, the input impedance $Z(-l) - Z_{in}$ is given by:
+At $z = -l$, the input impedance $Z(-l) = Z_{in}$ is given by:
 \begin{align*}
   Z(-l) &= Z_0 \frac{\e^{\gamma l} + \e^{-\gamma l}\Gamma_L}{\e^{\gamma l} - \e^{\gamma l}\Gamma_L} \\
   &= Z_0 \frac{\left(Z_L + Z_0\right)\e^{\gamma l} + \left(Z_L - Z_0\right) \e^{-\gamma l}}{\left(Z_L + Z_0\right)\e^{\gamma l} - \left(Z_L - Z_0\right) \e^{-\gamma l}} \\
@@ -302,9 +304,9 @@ Z(-l) &= Z_0 \frac{Z_L + \j Z_0 \tan{\beta l}}{Z_0 + \j Z_L \tan{\beta l}}
 
   Recall, 
   \begin{align*}
-    V(z) &= V_{+} \left( \e^{- \gamma z} + \Gamma_L \e^{ \gamma z} \right)
+    V(z) &= V_{+} \left( \e^{- \gamma z} + \Gamma \e^{ \gamma z} \right)
   \end{align*}
-  The values of the voltage reflection coefficient range from $-1 \le |\Gamma_L| \le 1$.
+  The values of the voltage reflection coefficient range from $-1 \le |\Gamma| \le 1$.
 
   The VSWR is the ratio of the maximum and minimum absolute values of the voltage
   \begin{align*}
@@ -312,10 +314,49 @@ Z(-l) &= Z_0 \frac{Z_L + \j Z_0 \tan{\beta l}}{Z_0 + \j Z_L \tan{\beta l}}
   \end{align*}
   In other words,
   \begin{align*}
-    |V_{max}| &= V_0 \left(1 + |\Gamma_L|\right) \\
-    |V_{min}| &= V_0 \left(1 - |\Gamma_L|\right) \\  
-    VSWR &= \frac{1 + |\Gamma_L|}{1 - \Gamma_L}
+    |V_{max}| &= V_0 \left(1 + |\Gamma|\right) \\
+    |V_{min}| &= V_0 \left(1 - |\Gamma|\right) \\  
+    VSWR &= \frac{1 + |\Gamma|}{1 - \Gamma}
   \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Return Loss}
+
+  \begin{outline}
+    \1 Often we use the decibels (dB) to express the power levels and performance parameters
+    \1 Here we look into the the terms \textit{return loss} and \textit{insertion loss}
+  \end{outline}
+  For mismatched load, the power \textit{returned} to the generator is the \textcolor{red}{return loss}:
+  \begin{align*}
+  \mathrm{RL} &= -20 \log |\Gamma| \mathrm{(dB)}
+  \end{align*} 
+  \begin{outline}
+    % \1 For a load, matched to the line, $\Gamma = 0$ which gives us RL = $\infty$ dB.
+    % \1 In the case of total reflection ($\Gamma = 1$), RL = 0 dB.
+    \1 For passive circuits like an antenna, the return loss is always a non-negative number.
+  \end{outline}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Insertion Loss}
+  \begin{outline}
+    \1 Like reflection, we also have \textit{transmission} coefficient
+    \1 This is useful when we have lots of elements in a transmission line.
+  \end{outline}
+The trasmission coefficient is defined as:
+\begin{align*}
+  T &= 1 + \Gamma = \frac{2 Z_{1}}{{Z_{0}} + {Z_{1}}}
+\end{align*}
+The \textcolor{red}{insertion loss} becomes:
+\begin{align*}
+  \mathrm{IL} &= -20 \log |T| \mathrm{dB}
+\end{align*}
+We use $20$ in both the definitions as we primarily are dealing with power levels.
+
 \end{frame}
 
 \begin{frame}
@@ -392,22 +433,39 @@ The power at the load is hence:
 \end{align*}
 \end{frame}
 
-% \section{The Smith Chart}
-% \begin{frame}
-%   \frametitle{The Smith Chart}
-% \begin{figure}[htbp]
-%   \centering
-%   \includegraphics[width=.7\textwidth]{smith.pdf}
-% \end{figure}
 
-% \begin{frame}
-%   \frametitle{Navigating the Smith Chart}
-% \begin{outline}
-%   \1 Developed by P Smith in 1939
-%   \1 To this day, it is an inte
-% \end{outline}
-  
+\section{The Smith Chart}
+\begin{frame}
+  \frametitle{The Smith Chart}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=.7\textwidth]{smith.pdf}
+\end{figure}
+\end{frame}
 
-% \end{frame}
+
+\begin{frame}
+  \frametitle{Why Smith Chart}
+\begin{outline}
+  \1 Developed by P Smith in 1939
+  \1 To this day, it is an integral part of microwave circuit design
+  \1 Provides a tool to visualise the transmission line phenomena such as impedance matching
+  \1 \textcolor{red}{It is simply a polar plot of the reflection coefficient, $\Gamma$}
+\end{outline}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Navigating the Smith Chart}
+\begin{outline}
+  \1 In polar coordinates, $\Gamma = |\Gamma| \e^{\j \theta}$
+  \1 We plot the magnitude as a radius $(|\Gamma| \le 1)$ from the centre
+  \1 The angle $\theta$ ranges from $\SI{-180}{\degree}$ to $\SI{180}{\degree}$
+\end{outline}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=.5\textwidth]{smith_example.pdf}
+  \caption{$\Gamma$ plotted on the Smith chart }
+\end{figure}
+\end{frame}
 % \end{frame}
 \end{document}
