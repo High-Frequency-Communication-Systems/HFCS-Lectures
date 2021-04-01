@@ -1,0 +1,88 @@
+
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{decorations.pathmorphing,%
+decorations.pathreplacing,calc%
+}
+\usepackage{etoolbox}
+\usepackage{physics}
+\makeatletter
+
+\pgfcircdeclarebipole{}
+    {\ctikzvalof{bipoles/tline/height}}{tline}
+    {\ctikzvalof{bipoles/tline/height}}
+    {\ctikzvalof{bipoles/tline/width}}
+{   
+    %% First find distance from startpoint to endpoint
+    \pgfpointdiff{\pgfpointanchor{\ctikzvalof{bipole/name}start}{center}}
+                 {\pgfpointanchor{\ctikzvalof{bipole/name}end}{center}}
+    \pgfmathparse{veclen(\the\pgf@x,\the\pgf@y)}
+    %% The coordinate system has been changed so that the origin is at the midpoint and
+    %% the line is along the x axis. So shift back by half the length of the line, and 
+    %% make the cylinder of width roughly the length of the line, with a 40pt setback
+    %% on each side.
+    \pgftransformxshift{\pgfmathresult/2-30pt}
+    \pgf@circ@res@left=\dimexpr-\pgfmathresult pt+40pt\relax
+    %% Here is the original function, copied directly from the source of circuittikz, 
+    %% down to next %%
+    \pgf@circ@res@step=.2\pgf@circ@res@right % half x axis
+    \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+    \pgfpathellipse{\pgfpoint{\pgf@circ@res@right-\pgf@circ@res@step}{0}}
+                   {\pgfpoint{\pgf@circ@res@step}{0}}
+                   {\pgfpoint{0}{-\pgf@circ@res@up}}
+    \pgfpathmoveto{\pgfpoint{\pgf@circ@res@right-\pgf@circ@res@step}{\pgf@circ@res@up}}
+    \pgfpathlineto{\pgfpoint{\pgf@circ@res@left+\pgf@circ@res@step}{\pgf@circ@res@up}}
+    \pgfpatharc{-90}{90}{-\pgf@circ@res@step and -\pgf@circ@res@up}
+    \pgfpathlineto{\pgfpoint{\pgf@circ@res@right-\pgf@circ@res@step}{\pgf@circ@res@down}}
+    %% I have to fill the figure to block out the original line
+    \pgfsetfillcolor{white}
+    \pgfusepath{draw,fill}
+    %% Redraw part of the line that gets blocked by the cylinder by mistake
+    \pgfpathmoveto{\pgfpoint{\pgf@circ@res@right-2*\pgf@circ@res@step}{0pt}}
+    \pgfpathlineto{\pgfpoint{\pgf@circ@res@right}{0pt}}
+    \pgfusepath{draw}
+}
+\begin{document}
+\begin{circuitikz}[american voltages]
+\draw
+  (-1,0) to (6,0)
+  (6,0) to [R, l_=$G \Delta z$] (6,2) % Dielectric Loss
+  (4,0) to [C, l_=$C \Delta z$] (4,2) % Dielectric Loss
+  
+  (0,2)  to [R, l=$R \Delta z$] (2,2) % resistance
+  (2,2) to [L, l_=$L \Delta z$] (4,2) % inductance
+  (4,2) to (8,2)
+  (6,0) to (8,0);
+
+
+\filldraw[fill=white, line width=1pt] (-1,0) circle(0.9mm);
+\filldraw[fill=white, line width=1pt] (-1,2) circle(0.9mm);
+
+
+\filldraw[fill=white, line width=1pt] (8,2) circle(0.9mm);
+\filldraw[fill=white, line width=1pt] (8,0) circle(0.9mm);
+
+\draw[thick,->,color=black] (-1,2) to (0,2);
+\node (D) at (-.5,2.5) {$I(z,t)$};
+
+\draw[thick,->,color=gray, dashed] (0,0) to (0,2);
+\node (V) at (0.5,1) {$V(z,t)$};
+
+\draw[thick,->,color=black] (6,2) to (7,2);
+\node (D) at (7.5,2.5) {$I(z+ \Delta z,t)$};
+
+\draw[thick,->,color=gray, dashed] (8,0) to (8,2);
+\node (V) at (9,1) {$V(z + \Delta z,t)$};
+
+\draw[color=gray, dashed] (-1,0) to (-1,-.5);
+\node (z) at (-1,-.75) {$z$};
+
+\draw[color=gray, dashed] (8,0) to (8,-.5);
+\node (z) at (8.0,-.75) {$z+ \Delta z$};
+
+\draw[color=gray, dashed, <->] (-1,-.5) to (8,-.5);
+\node (z) at (3.5,-.75) {$\Delta z$};
+
+\end{circuitikz}
+\end{document}
