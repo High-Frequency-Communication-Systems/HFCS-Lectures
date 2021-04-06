@@ -50,15 +50,15 @@
     \frametitle{Lecture Outline}
     \begin{outline}[itemize]
         \1 The Smith Chart
-        \1 Load matching through stubs
         \1 The Magic of Quarter-wave Transformer
+        \1 Load matching through stubs
     \end{outline}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The Smith Chart}
+\section{Smith Chart}
 
 
 \begin{frame}
@@ -141,7 +141,7 @@
     \end{align*}
     \begin{figure}[h]
         \centering
-        \includegraphics[width=.4\textwidth]{smith_reactance_circle.pdf}
+        \includegraphics[width=.3\textwidth]{smith_reactance_circle.pdf}
     \end{figure}
     The top half is the \textit{inductive} region and the bottom half is the \textit{capacitive} region.
 \end{frame}
@@ -193,8 +193,8 @@
     \frametitle{Finding the Input Impedance}
     \begin{outline}
         \1 From the Smith chart, we first plot the normalised load impedance $z_L$
-        \1 We then draw a circle centering the origin with a radius such that $z_L$ lies on the circle
-        \1 Draw a line from the origin passing through $z_L$ to the outer cirle of the Smith chart
+        \1 We then draw a circle centred on the origin with a radius such that $z_L$ lies on the circle
+        \1 Draw a line from the origin passing through $z_L$ to the outer circle of the Smith chart
         \1 Move $l = 0.3 \lambda$ towards the generator
         \1 Draw a line from the origin to the new rotated point.
         \1 The intersection point with the circle and the line drawn gives us the normalised input impedance $z_{in} \approx 0.365 - \j 0.61 $.
@@ -208,7 +208,7 @@
         \includegraphics[width=.95\textwidth]{smith example VSWR cropped.pdf}
     \end{figure}
     \begin{outline}
-        \1 The ratio of the length of the line segments $l_{O - x}$ and $l_{O - 0C}$ gives us VSWR
+        \1 The ratio of the length of the line segments $l_{O - x}$ and $l_{O - OC}$ gives us VSWR
         \1 The point on the right of the Smith chart is the open-circuit point ($r = \infty, x = \infty$)
         \1 For this example, we get VSWR $\approx 3.9$.
     \end{outline}
@@ -219,7 +219,7 @@
     \frametitle{Finding the VSWR - Using the Radially Scaled Parameters}
     \begin{figure}[T!]
         \centering
-        \includegraphics[width=.50\textwidth]{smith example VSWR2.pdf}
+                \includegraphics[width=.50\textwidth]{smith example VSWR2.pdf}
     \end{figure}
     \begin{outline}
         \1 Some Smith charts provide radially scaled parameters at the bottom of the sheet.
@@ -327,7 +327,7 @@
     \begin{columns}[]
         \begin{column}[]{.5\textwidth}
             \begin{outline}
-                \1 For a $\SI{50}{\ohm}$ transmission line connected to a looad impedance $Z_L = \SI{35 - j 45.5}{\ohm}$
+                \1 For a $\SI{50}{\ohm}$ transmission line connected to a load impedance $Z_L = \SI{35 - j 45.5}{\ohm}$
                 \1 Find the position and length of the short circuit stub that matches the load to the line.
                 \1 $z_L$ becomes $0.70 - \j 0.95$
             \end{outline}  
@@ -401,7 +401,7 @@
             \begin{outline}
                 \1 For a $\SI{50}{\ohm}$ transmission line connected to a looad impedance $Z_L = \SI{60 + j 80}{\ohm}$
                 \1 A double-stub tuner spaced $d = \lambda/8$ distance from the load for matching.
-                \1 Find the lengths of the short circuit stubs that matches the load to the line.
+                \1 Find the lengths of the short circuit stubs that match the load to the line.
                 \1 $z_L$ becomes $1.2 + \j 1.6$
                 \1 $y_L$ becomes $0.3 - \j 0.40$
             \end{outline}  
@@ -424,7 +424,7 @@
                 \1 Rotate the above circle by $\lambda/8$ \textit{towards the load}
                 \1 Plot $y_L = 0.3 - \j 0.40$ and draw the \textcolor{green}{$g=0.3$-circle}
                 \1 Mark the points $y_{A,1} = 0.30 + \j 0.30$ and $y_{A,2} = 0.30 + \j 1.75$ that are points of intersection between the \textcolor{green}{$g=0.3$-circle} and rotated \textcolor{orange}{$g=1$-circle}
-                \1 The corresponding points on the \textcolor{orange}{$g=1$-circle} are $y_{B,1} = 1 + \j 1.40$ and $y_{B,2} = 1 + \j 3.50$.
+                \1 The corresponding points on the \textcolor{orange}{$g=1$-circle} are $y_{B,1} = 1 + \j 1.40$ and $y_{B,2} = 1 - \j 3.50$.
             \end{outline}  
         \end{column}
     \end{columns}
