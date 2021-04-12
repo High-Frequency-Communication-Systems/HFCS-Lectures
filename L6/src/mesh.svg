@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xml:space="preserve" width="600px" height="541px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
+     viewBox="0 0 600 542">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#000000;stroke-width:2}
+    .fil1 {fill:none}
+    .fil0 {fill:#FF00FE}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer 1">
+  <path class="fil0 str0" d="M75 525c265,0 482,-216 482,-481l-482 0 0 481z"/>
+  <path class="fil1 str0" d="M159 129l37 -85 58 94 61 -94 47 75 75 -75 51 73 68 -41 -58 -32 -10 73 -16 90 26 67 -77 -28 59 58 -77 5 37 49 -74 0 -3 72 -49 -40 -9 77 -50 -58 19 74 -64 -27 -1 51 -58 -39 -76 -61 60 -66 -60 -57 101 -61 -101 -58 84 -36z"/>
+  <path class="fil1 str0" d="M75 104l58 -60 26 85 95 9 108 -19 75 45 -16 82 -18 63 -37 49 -52 32 -59 19 -84 9 -96 -11"/>
+  <path class="fil1 str0" d="M242 496l-32 -40 -59 12 -42 56 -34 -58 76 2 20 -50 39 38 45 -47 -33 -72 107 -21 20 -110 -90 51 23 -62 -106 28 78 -85 28 57 80 -76 -13 87 88 -43 51 -46 50 61 -66 29 -52 39 -71 -40 54 103 -74 7 -14 74 -93 -53 -51 81 -36 -77 41 -52 0 -66 -17 -94 -84 -25"/>
+  <path class="fil1 str0" d="M390 408l-24 -49 -37 -43 -69 -59 -38 80 -46 -48 84 -32 -84 -34 -101 -1"/>
+  <path class="fil1 str0" d="M75 284l101 5"/>
+  <path class="fil1 str0" d="M135 341l87 -4"/>
+  <path class="fil1 str0" d="M141 521l10 -53 24 47"/>
+  <path class="fil1 str0" d="M336 448l-22 -58"/>
+  <path class="fil1 str0" d="M415 384l-49 -26"/>
+  <path class="fil1 str0" d="M460 333l-57 -24"/>
+  <path class="fil1 str0" d="M513 244l-41 -37 54 6"/>
+  <path class="fil1 str0" d="M546 145l-58 -28 64 -4"/>
+  <path class="fil1 str0" d="M349 206l-67 -11"/>
+  <path class="fil1 str0" d="M254 138l0 -94"/>
+  <path class="fil1 str0" d="M472 207l-35 -44 0 -119"/>
+ </g>
+</svg>

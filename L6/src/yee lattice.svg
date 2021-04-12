@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="529.24799"
+   height="291.41199"
+   version="1.1"
+   id="svg1887"
+   sodipodi:docname="yee lattice.svg"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">
+  <metadata
+     id="metadata1893">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1891">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3087"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2881"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2877"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2826"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2718"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2714"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2494"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2490"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2486"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2482"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2478"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2474"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2470"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2466"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2462"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2458"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview1889"
+     showgrid="false"
+     inkscape:zoom="1.5842083"
+     inkscape:cx="337.13672"
+     inkscape:cy="86.43695"
+     inkscape:current-layer="svg1887"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     transform="translate(44.200369,272.54836)"
+     font-size="14px"
+     font-family="Times, serif"
+     style="line-height:58px"
+     id="g1832">
+    <text
+       x="0"
+       y="14"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1830">(i, j, k)</text>
+  </g>
+  <g
+     transform="translate(260.09153,272.54836)"
+     font-size="14px"
+     font-family="Times, serif"
+     id="g1836">
+    <text
+       x="0"
+       y="14"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1834">(i+1, j, k)</text>
+  </g>
+  <g
+     transform="translate(19.350282,87.222774)"
+     font-size="14px"
+     font-family="Times, serif"
+     id="g1840">
+    <text
+       x="0"
+       y="14"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1838">(i, j, k+1)</text>
+  </g>
+  <g
+     transform="translate(392.59153,196.54936)"
+     font-size="14px"
+     font-family="Times, serif"
+     id="g1844">
+    <text
+       x="0"
+       y="14"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1842">(i+1, j+1, k)</text>
+  </g>
+  <g
+     transform="translate(392.59153,16.549362)"
+     font-size="14px"
+     font-family="Times, serif"
+     id="g1848">
+    <text
+       x="0"
+       y="14"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1846">(i+1, j+1, k+1)</text>
+  </g>
+  <g
+     transform="translate(227.91738,26.264564)"
+     font-size="24px"
+     fill="#ff0000"
+     font-family="Times, serif"
+     id="g1854">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1852">E<tspan
+   baseline-shift="sub"
+   id="tspan1850"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">z</tspan></text>
+  </g>
+  <g
+     transform="translate(198.34262,153.47907)"
+     font-size="24px"
+     fill="#ff0000"
+     font-family="Times, serif"
+     id="g1860">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1858">E<tspan
+   baseline-shift="sub"
+   id="tspan1856"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">x</tspan></text>
+  </g>
+  <g
+     transform="translate(345.15406,140.23213)"
+     font-size="24px"
+     fill="#ff0000"
+     font-family="Times, serif"
+     id="g1866">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text1864">E<tspan
+   baseline-shift="sub"
+   id="tspan1862"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">y</tspan></text>
+  </g>
+  <path
+     style="fill:none;stroke:#828282;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.8, 0.9;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="m 196.58254,95.543363 c 35.83359,-22.833497 71.66692,-45.666829 107.5,-68.500002"
+     id="path2456"
+     inkscape:original-d="m 196.58254,95.543363 c 35.83433,-22.832334 71.66766,-45.665668 107.5,-68.500002"
+     inkscape:path-effect="#path-effect2458" />
+  <path
+     style="fill:none;stroke:#828282;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.8, 0.9;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="m 108.70002,182.38996 c 57.60635,0.146 115.21168,0.292 172.81602,0.438"
+     id="path3085"
+     inkscape:path-effect="#path-effect3087"
+     inkscape:original-d="m 108.70002,182.38996 c 57.60635,0.147 115.21168,0.293 172.81602,0.438" />
+  <path
+     style="fill:none;stroke:#828282;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.8, 0.9;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="m 196.34154,95.543363 c 0,57.834327 0,115.667657 0,173.499987"
+     id="path2464"
+     inkscape:path-effect="#path-effect2466"
+     inkscape:original-d="m 196.34154,95.543363 c 0.001,57.834327 0.001,115.667657 0,173.499987" />
+  <path
+     style="fill:none;stroke:#828282;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.8, 0.9;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="m 169.93553,56.836362 c 57.60634,0.146003 115.21167,0.292003 172.81601,0.438"
+     id="path2472"
+     inkscape:path-effect="#path-effect2474"
+     inkscape:original-d="m 169.93553,56.836362 c 57.60634,0.147 115.21167,0.293 172.81601,0.438" />
+  <g
+     transform="translate(284.90993,175.92905)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g1884"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text1882">H<tspan
+   baseline-shift="sub"
+   id="tspan1880"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">z</tspan></text>
+  </g>
+  <path
+     style="fill:none;stroke:#828282;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.8, 0.9;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="m 342.75154,230.77436 c 0,-57.83234 0,-115.66567 0,-173.499998"
+     id="path2476"
+     inkscape:path-effect="#path-effect2478"
+     inkscape:original-d="m 342.75154,230.77436 c 0.001,-57.83234 0.001,-115.66567 0,-173.499998" />
+  <path
+     id="line1746"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.3;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 109.09154,96.193365 h 173.49998 m 0.52645,172.718375 -0.0264,-173.368377 M 109.59154,269.54836 V 95.543363 m -0.5,173.499987 174.02643,-0.13161"
+     sodipodi:nodetypes="cccccccc" />
+  <g
+     transform="translate(199.29316,231.49859)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g1872"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text1870">H<tspan
+   baseline-shift="sub"
+   id="tspan1868"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">y</tspan></text>
+  </g>
+  <g
+     transform="translate(343.72836,50.484115)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g1878"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text1876">H<tspan
+   baseline-shift="sub"
+   id="tspan1874"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">x</tspan></text>
+  </g>
+  <path
+     style="fill:none;stroke:#828282;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.8, 0.9;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="m 283.09152,182.71012 c 35.8336,-22.76051 71.66693,-45.52086 107.50002,-68.28105"
+     id="path2460"
+     inkscape:path-effect="#path-effect2462"
+     inkscape:original-d="m 283.09152,182.71012 c 35.83434,-22.75934 71.66768,-45.51967 107.50002,-68.28105" />
+  <path
+     id="path2822"
+     style="fill:none;stroke:#000000;stroke-width:1.3;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 216.10998,26.819223 h 173.49999 m 0.50002,173.354967 V 26.169221"
+     sodipodi:nodetypes="cccc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 283.5127,269.04823 c 35.64364,-23.10605 71.28703,-46.21195 106.93016,-69.31768"
+     id="path2824"
+     sodipodi:nodetypes="cc"
+     inkscape:original-d="m 283.5127,269.04823 c 35.64439,-23.10489 71.28778,-46.21079 106.93016,-69.31768"
+     inkscape:path-effect="#path-effect2826" />
+  <g
+     id="g2834"
+     transform="rotate(-122.70295,188.06686,207.79383)"
+     style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+    <line
+       x1="204.811"
+       y1="228.355"
+       x2="204.811"
+       y2="183.855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2828"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <polyline
+       points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+       fill="#b5aaff"
+       stroke="none"
+       id="polyline2830"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <polygon
+       points="199.148,196.355 204.561,181.355 209.974,196.355 "
+       fill="none"
+       stroke="#5138ff"
+       id="polygon2832"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <g
+     id="g2863"
+     transform="translate(44.366761,7.3363389)">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2836"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2857"
+       transform="translate(0.40338488)">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2838"
+         style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43519.961)" />
+      <polygon
+         points="209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2840"
+         style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43519.961)" />
+    </g>
+  </g>
+  <g
+     id="g2901"
+     transform="translate(177.78918,98.944764)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2893"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2899"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2895"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43124.174)" />
+      <polygon
+         points="209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2897"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43124.174)" />
+    </g>
+  </g>
+  <g
+     id="g2873"
+     transform="rotate(90,230.1969,162.432)">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2865"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2871"
+       transform="translate(0.40338488)">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2867"
+         style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43404.874)" />
+      <polygon
+         points="204.561,181.355 209.974,196.355 199.148,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2869"
+         style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43404.874)" />
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 283.5127,95.944939 C 319.15634,72.838885 354.79973,49.732988 390.44286,26.627259"
+     id="path2875"
+     sodipodi:nodetypes="cc"
+     inkscape:original-d="m 283.5127,95.944939 c 35.64439,-23.10489 71.28778,-46.21079 106.93016,-69.31768"
+     inkscape:path-effect="#path-effect2877" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 109.28538,95.944939 C 144.92903,72.838878 180.57243,49.732985 216.21556,26.627259"
+     id="path2879"
+     sodipodi:nodetypes="cc"
+     inkscape:original-d="m 109.28538,95.944939 c 35.64441,-23.10489 71.2878,-46.21079 106.93018,-69.31768"
+     inkscape:path-effect="#path-effect2881" />
+  <g
+     id="g2891"
+     transform="translate(70.718787,161.46668)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2883"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2889"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2885"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43343.12)" />
+      <polygon
+         points="209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2887"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43343.12)" />
+    </g>
+  </g>
+  <g
+     id="g2911"
+     transform="translate(-102.77847,161.46668)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2903"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2909"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2905"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43059.613)" />
+      <polygon
+         points="204.561,181.355 209.974,196.355 199.148,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2907"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43059.613)" />
+    </g>
+  </g>
+  <g
+     id="g2967"
+     transform="translate(44.943534,6.3716731)">
+    <line
+       x1="122.79993"
+       y1="262.71112"
+       x2="174.80785"
+       y2="262.72003"
+       fill="none"
+       stroke="#5138ff"
+       id="line2913"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2919"
+       transform="rotate(90,60.962622,111.66036)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2915"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43261.717)" />
+      <polygon
+         points="204.561,181.355 209.974,196.355 199.148,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2917"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,43261.717)" />
+    </g>
+  </g>
+  <line
+     x1="167.74345"
+     y1="96.245224"
+     x2="219.75136"
+     y2="96.254135"
+     fill="none"
+     stroke="#5138ff"
+     id="line2923"
+     style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <g
+     id="g2929"
+     transform="rotate(90,166.66734,50.899179)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <polyline
+       points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+       fill="#b5aaff"
+       stroke="none"
+       id="polyline2925"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(0.00981794,1085904.7,43031.543)" />
+    <polygon
+       points="209.974,196.355 199.148,196.355 204.561,181.355 "
+       fill="none"
+       stroke="#5138ff"
+       id="polygon2927"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="rotate(0.00981794,1085904.7,43031.543)" />
+  </g>
+  <g
+     id="g2987"
+     transform="rotate(-123.65728,199.14557,52.739471)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2979"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2985"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2981"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42924.877)" />
+      <polygon
+         points="204.561,181.355 209.974,196.355 199.148,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2983"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42924.877)" />
+    </g>
+  </g>
+  <g
+     id="g2997"
+     transform="rotate(-123.65728,286.33531,6.0448158)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2989"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g2995"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline2991"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42574.002)" />
+      <polygon
+         points="199.148,196.355 204.561,181.355 209.974,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon2993"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42574.002)" />
+    </g>
+  </g>
+  <g
+     id="g3007"
+     transform="rotate(90,252.95457,67.275669)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line2999"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g3005"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline3001"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42961.368)" />
+      <polygon
+         points="199.148,196.355 204.561,181.355 209.974,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon3003"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42961.368)" />
+    </g>
+  </g>
+  <g
+     id="g3017"
+     transform="rotate(-122.42783,334.15693,91.726668)"
+     style="fill:#00b3ff;fill-opacity:1">
+    <line
+       x1="212.41676"
+       y1="49.823048"
+       x2="212.42567"
+       y2="-2.184855"
+       fill="none"
+       stroke="#5138ff"
+       id="line3009"
+       style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g3015"
+       transform="translate(0.40338488)"
+       style="fill:#00b3ff;fill-opacity:1">
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline3011"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42506.634)" />
+      <polygon
+         points="199.148,196.355 204.561,181.355 209.974,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon3013"
+         style="fill:#00b3ff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(0.00981794,1085904.7,42506.634)" />
+    </g>
+  </g>
+  <g
+     transform="translate(199.29316,94.241234)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g3023"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text3021">H<tspan
+   baseline-shift="sub"
+   id="tspan3019"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">y</tspan></text>
+  </g>
+  <g
+     transform="translate(112.77571,175.92905)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g3029"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text3027">H<tspan
+   baseline-shift="sub"
+   id="tspan3025"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">z</tspan></text>
+  </g>
+  <g
+     transform="translate(163.71871,50.484115)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g3035"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text3033">H<tspan
+   baseline-shift="sub"
+   id="tspan3031"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">x</tspan></text>
+  </g>
+  <g
+     transform="translate(287.04787,-10.389375)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g3041"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text3039">H<tspan
+   baseline-shift="sub"
+   id="tspan3037"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">y</tspan></text>
+  </g>
+  <g
+     transform="translate(397.41596,85.924227)"
+     font-size="24px"
+     fill="#1f00ff"
+     font-family="Times, serif"
+     id="g3047"
+     style="fill:#00b3ff;fill-opacity:1">
+    <text
+       x="0"
+       y="24"
+       font-style="oblique"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:30px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1"
+       id="text3045">H<tspan
+   baseline-shift="sub"
+   id="tspan3043"
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00b3ff;fill-opacity:1">z</tspan></text>
+  </g>
+  <g
+     id="g3144"
+     transform="translate(-411.35054,63.123012)">
+    <g
+       id="g3095"
+       transform="rotate(-122.70295,299.23003,106.24534)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <line
+         x1="204.811"
+         y1="228.355"
+         x2="204.811"
+         y2="183.855"
+         fill="none"
+         stroke="#5138ff"
+         id="line3089"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <polyline
+         points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+         fill="#b5aaff"
+         stroke="none"
+         id="polyline3091"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <polygon
+         points="204.561,181.355 209.974,196.355 199.148,196.355 "
+         fill="none"
+         stroke="#5138ff"
+         id="polygon3093"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3105"
+       transform="translate(240.57952,69.900444)"
+       style="fill:#ffffff;fill-opacity:1">
+      <line
+         x1="212.41676"
+         y1="49.823048"
+         x2="212.42567"
+         y2="-2.184855"
+         fill="none"
+         stroke="#5138ff"
+         id="line3097"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g3103"
+         transform="translate(0.40338488)"
+         style="fill:#ffffff;fill-opacity:1">
+        <polyline
+           points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+           fill="#b5aaff"
+           stroke="none"
+           id="polyline3099"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           transform="rotate(0.00981794,1085904.7,43017.508)" />
+        <polygon
+           points="204.561,181.355 209.974,196.355 199.148,196.355 "
+           fill="none"
+           stroke="#5138ff"
+           id="polygon3101"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           transform="rotate(0.00981794,1085904.7,43017.508)" />
+      </g>
+    </g>
+    <g
+       id="g3115"
+       transform="translate(330.19636,-142.98763)"
+       style="fill:#ffffff;fill-opacity:1">
+      <line
+         x1="122.79993"
+         y1="262.71112"
+         x2="174.80785"
+         y2="262.72003"
+         fill="none"
+         stroke="#5138ff"
+         id="line3107"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.10369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g3113"
+         transform="rotate(90,60.962622,111.66036)"
+         style="fill:#ffffff;fill-opacity:1">
+        <polyline
+           points="204.561,181.355 209.974,196.355 199.148,196.355 204.561,181.355 "
+           fill="#b5aaff"
+           stroke="none"
+           id="polyline3109"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           transform="rotate(0.00981794,1085904.7,43208.384)" />
+        <polygon
+           points="209.974,196.355 199.148,196.355 204.561,181.355 "
+           fill="none"
+           stroke="#5138ff"
+           id="polygon3111"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           transform="rotate(0.00981794,1085904.7,43208.384)" />
+      </g>
+    </g>
+    <text
+       x="428.37091"
+       y="152.7388"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text3117">x</text>
+    <text
+       x="489.17316"
+       y="104.27705"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text3121">y</text>
+    <text
+       x="461.57925"
+       y="80.75029"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:19.4545px;line-height:14px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       id="text3125">z</text>
+  </g>
+</svg>
