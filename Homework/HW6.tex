@@ -2,6 +2,13 @@
 \usepackage[utf8]{inputenc}
 
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 
 \usepackage{pdfsync}
@@ -41,13 +48,6 @@ font={\fontsize{5pt}{5}\selectfont}}
 \usepackage{esint} % various fancy integral symbols
 \usepackage{outlines}
 
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-}
 
 
 \usepackage{physics} % For using the oridnary derivative
@@ -93,24 +93,25 @@ font={\fontsize{5pt}{5}\selectfont}}
 \begin{questions}
     \pointsinrightmargin 
     \bracketedpoints
-\question[3] Modify the code in the notebook and simulate a PEC slab of width  $w = \SI{25}{\mm}$.
+\question[3] Modify the code in the notebook and simulate a PEC slab of width  $w = \SI{25}{\mm}$. You may place it starting at $\SI{150}{\mm}$
 
-\question[2] Create a sinusoidal excitation source $J_z = \sin(n\times\pi/10)$ that lasts in the time duration $n \ge 1$ and $n \le 10$
+\question[3] Create a hardwired sinusoidal excitation source $J_z = \sin(n\times\pi/10)$ that lasts in the time duration $n \ge 1$ and $n \le 10$.
 
 \question
 For the boundary conditions, write down the expressions for the below and show them for the sinsoidal excitation above:
 \begin{parts}
     \part[2]
-    PEC boundary
+    PEC boundary at the right side
     \part[2]
-    PMC boundary
+    PMC boundary at the right side
     
     \end{parts}
 
+    Set the \texttt{maxTime} parameter to \texttt{1000} to visualise the effect of the different boundary conditions above.
 
 \question[5]
 
-Create a structure as shown in the figure below and find the transmission and reflection of a wave. Use the absorbing boundary conditions and find the transmission at $\SI{10}{\cm}$ distance from the structure on the right.
+Create a structure as shown in the figure below and visualise the transmitted and reflected fields. Use the absorbing boundary conditions and a hard-wired Gaussian excitation source. Set the \texttt{maxTime} parameter to \texttt{2000} to visualise the effect of the different boundary conditions above.
 
 \begin{figure}[htbp]
     \centering
@@ -118,7 +119,7 @@ Create a structure as shown in the figure below and find the transmission and re
     \caption{Multilayer Structure}
 \end{figure}
 
-Note: the thickness units in the simulation are arbitrary. Please go to the next page for submission instructions.
+Note: The thickness units in the simulation are arbitrary. Please go to the next page for submission instructions.
 
 \end{questions}
 
