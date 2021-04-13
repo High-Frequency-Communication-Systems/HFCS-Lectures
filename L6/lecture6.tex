@@ -12,7 +12,6 @@
         @misc{schneider_understanding_nodate,
         title = {Understanding the {FDTD} {Method}},
         url = {https://eecs.wsu.edu/~schneidj/ufdtd/},
-        urldate = {2021-04-12},
         author = {Schneider, John}
     }
     \end{filecontents*}
@@ -324,7 +323,7 @@
 \section{Finite Difference Time Domain method}
 
 \begin{frame}
-    \frametitle{The Finite Difference Negotiation}
+    \frametitle{The Finite Difference Time Domain Method}
     \begin{columns}[T] % align columns
         \begin{column}{.6\textwidth}
             A point in space in a uniform rectangular lattice can be denoted as $(i\Delta x,j\Delta y,k \Delta z)$.
@@ -465,7 +464,7 @@
     \begin{minted}{python}
     hy[i] = hy[i] + (ez[i + 1] - ez[i]) / imp0
 
-    ez[i] = ez[m] + (hy[i] - hy[i - 1]) * imp0
+    ez[i] = ez[i] + (hy[i] - hy[i - 1]) * imp0
 \end{minted}
     Here \texttt{imp0} is the characteristic impedance, and $S_c = 1$ is assumed 1. Note the magnetic field is calculated first and then the electric field. We place the expressions above in a loop.
 \end{frame}
@@ -587,7 +586,7 @@ ez[50] += math.exp(-(n - sourcePeakTime)**2 / sourceSigma)
     We can therefore define $\E$ and $\u$ at any point in the FDTD simulation:
     \begin{minted}{python}
 hy[i] = hy[i] + (ez[i + 1] - ez[i]) / imp0 / muR[i]
-ez[i] = ez[m] + (hy[i] - hy[i - 1]) * imp0 / epsR[i]
+ez[i] = ez[i] + (hy[i] - hy[i - 1]) * imp0 / epsR[i]
     \end{minted}
 
 \end{frame}
