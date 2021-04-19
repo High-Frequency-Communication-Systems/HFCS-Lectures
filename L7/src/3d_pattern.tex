@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage[margin=1in]{geometry}
+\usepackage{verbatim}
+\usepackage{pgfplots} 
+\pgfplotsset{width=8cm,compat=1.16}
+\usepgfplotslibrary{polar} 
+\usepackage{tikz-3dplot}
+
+\begin{document}
+  
+\tdplotsetmaincoords{70}{135}
+    \begin{tikzpicture}[scale=2,line join=bevel,tdplot_main_coords, fill opacity=.9]
+        \pgfsetlinewidth{.4pt}
+        \tdplotsphericalsurfaceplot[parametricfill]{72}{24}%
+        {abs(sin(\tdplottheta))}{black}{\tdplotphi}%
+        {\draw[color=black,thick,->] (0,0,0) -- (2,0,0) node[anchor=north east]{$z$};}%
+        {\draw[color=black,thick,->] (0,0,0) -- (0,2,0) node[anchor=north west]{$x$};}%
+        {\draw[color=black,thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$y$};}
+    \end{tikzpicture}
+% \begin{figure}[]
+% \begin{center}
+%         \begin{tikzpicture}
+%             \begin{polaraxis}[axis lines = none]
+%                 \addplot[domain=0:360,samples=73,smooth] (x+90,{abs(sin(x))});
+%             \end{polaraxis}
+%             \draw[-stealth] ([yshift=1.5cm]current axis.south) -- ([yshift=-1.5cm]current axis.north) node[anchor=north,yshift=1cm]{$z$};
+%             \draw[-stealth] (current axis.west) -- (current axis.east) node[anchor=west]{$x$};
+%         \end{tikzpicture}
+%         \caption{radiation pattern Hertzian dipole in x-z plane}
+% \end{center}
+% \end{figure}
+
+\end{document}
