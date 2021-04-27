@@ -221,7 +221,7 @@ The total field is given by:
                 \1 Two analyse an array, we start by using point sources as individual elements
                 \2 The final pattern is obtained by multiplication
                 \1 First, we will ignore the mutual coupling between elements.
-                \1 Consider an array of two point sources separated by a distance $d$ on the $y$-axis.
+                \1 Consider an array of two point sources separated by a distance $d$ on the $z$-axis.
             \end{outline}
             \begin{outline}
                 \1 Assuming that both the antenna elements are excited by the current $I_1 = I_0 \exp (\j \alpha/2)$ and $I_2 = I_0 \exp (-\j \alpha/2)$ where $0 \le \alpha \le 2 \pi$.
@@ -264,7 +264,7 @@ Neglecting any mutual coupling, we obtain the total fields by simple vector summ
         &= \j k \eta \va{h} G(r) \left\{ \e^{\frac{k d cos \theta + \alpha}{2}} + \e^{-\frac{k d cos \theta + \alpha}{2}}\right\} \\
         &= \underbrace{\j k \eta \va{h} G(r)}_{Element \, Factor} \underbrace{2 \cos \left[\frac{1}{2}\left(k d \cos \theta + \alpha\right)\right]}_{Array \, Factor}
     \end{align*}
-We can control and change the pattern by varying $d$ and $\alpha$, that are the spacing and phase shifts.
+We can control and change the pattern by varying $d$ and $\alpha$, which are the spacing and phase shifts.
 \end{frame}
 
 
@@ -389,13 +389,13 @@ From  \eqref{eq:N_element_AF_1} and \eqref{eq:N_element_AF} we get:
 
 \begin{frame}
     \frametitle{Visualising the N Element Array Factor}
-Noting that the above expression resembles a \textcolor{red}{sinc} function, we can extend this to find the AF of any discrete array made of uniformly spaced elements. A major difference however is the sidelobes don't decay with the increasing function argument.
+Noting that the above expression resembles a \textcolor{red}{sinc} function, we can extend this to find the AF of any discrete array made of uniformly spaced elements. A major difference, however is the sidelobes don't decay with the increasing function argument.
 
 In general, we plot the AF in the normalised form (divide by $N$).
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.5\textwidth]{sinc.pdf}
+    \includegraphics[width=.4\textwidth]{sinc.pdf}
     \caption{The normalised AF of a 3 element array.}
     \label{fig:3_element}
 \end{figure} 
@@ -423,12 +423,12 @@ In general, we plot the AF in the normalised form (divide by $N$).
 \end{align*}
         \end{column}
         \begin{column}{.5\textwidth}
-            \begin{figure}[!htbp]
+            \begin{figure}[T!]
                 \centering
-                \subfloat[$N=5$]{\includegraphics[width=1.25in]{sinc_5.pdf}
+                \subfloat[$N=5$]{\includegraphics[width=1.05in]{sinc_5.pdf}
                 \label{fig:field_at_20}}
                 \\
-                \subfloat[$N=10$]{\includegraphics[width=1.25in]{sinc_10.pdf}
+                \subfloat[$N=10$]{\includegraphics[width=1.05in]{sinc_10.pdf}
                 \label{fig:field_at_60}}
                 \caption{Array factors for $5$ and $10$ element uniform array.}
                 \label{fig:E_z fields}
@@ -521,7 +521,7 @@ The BWFN is:
 
 \begin{frame}
     \frametitle{Improving the Endfire Array}
-For practical applications, we require a single pencil beam. To achieve it in the end-fire configuration, one of the ways to generate a single lobe is to use backing ground plane. Another way to do this is to slightly decrease the element spacing below $\lambda/2$.
+For practical applications, we require a single pencil beam. To achieve it in the end-fire configuration, one of the ways to generate a single lobe is to use a backing ground plane. Another way to do this is to slightly decrease the element spacing below $\lambda/2$.
 
 \begin{columns}[T] % align columns
     \begin{column}{.7\textwidth}

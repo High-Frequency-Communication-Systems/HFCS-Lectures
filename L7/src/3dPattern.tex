@@ -1,0 +1,24 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{colormaps}
+% \usepackage{siunitx}
+\pgfplotsset{width=8cm,compat=1.6}
+\pgfplotsset{colormap/jet}
+% \usepgfplotslibrary{polar}
+% \usepackage{tikz-3dplot}
+
+\begin{document}
+\begin{tikzpicture}
+
+    % \pgfmathsetmacro{\alpha}{0}
+    %   \pgfmathsetmacro{\d}{1/4}
+      \begin{axis}[view/h=45]
+        \addplot3[domain=0:360,domain y=0:360,samples=51,
+        surf,%mesh,point meta=1, %<-if you want a mesh
+    z buffer=sort]
+       ({(sin(x+90)*sin(x+90))*cos(y)}, 
+        {(sin(x+90)*sin(x+90))*sin(y)}, 
+        {(sin(x+90)*sin(x+90))*sin(x)});
+\end{axis}
+\end{tikzpicture}
+\end{document}

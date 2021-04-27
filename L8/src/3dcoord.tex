@@ -1,0 +1,212 @@
+\documentclass{article}
+\usepackage{verbatim}
+
+% \usepackage{pgfplots} 
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
+\usepackage{tikz} 
+\usepackage{physics}  
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage[active,tightpage]{preview}  % generates a tightly fitting border around the work
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% from https://tex.stackexchange.com/a/375604/121799
+%along x axis
+\makeatletter
+\define@key{x sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{x sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{x sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{x spherical}{% %%%rotation around x
+    \setkeys{x sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*cos(\mytheta)}{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*sin(\mytheta)*sin(\myphi)}}
+
+%along y axis
+\define@key{y sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{y sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{y sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{y spherical}{% %%%rotation around x
+    \setkeys{y sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*cos(\mytheta)}{\myradius*sin(\mytheta)*sin(\myphi)}}
+
+
+%along z axis
+\define@key{z sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{z sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{z sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{z spherical}{% %%%rotation around x
+    \setkeys{z sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*sin(\mytheta)*sin(\myphi)}{\myradius*cos(\mytheta)}}
+
+\makeatother
+
+% \tikzset{declare function={myx(x,y,z)=\x*sin(\y)*}}
+% {{Cos[x]*Cos[y], Cos[y]*Sin[x], 
+%   Sin[y]}, {-(Cos[z]*Sin[x]) - 
+%    Cos[x]*Sin[y]*Sin[z], 
+%   Cos[x]*Cos[z] - Sin[x]*Sin[y]*
+%     Sin[z], Cos[y]*Sin[z]}, 
+%  {-(Cos[x]*Cos[z]*Sin[y]) + 
+%    Sin[x]*Sin[z], 
+%   -(Cos[z]*Sin[x]*Sin[y]) - 
+%    Cos[x]*Sin[z], Cos[y]*Cos[z]}}
+
+
+\begin{document}
+
+\tdplotsetmaincoords{60}{110}
+
+\pgfmathsetmacro{\rvec}{.8}
+\pgfmathsetmacro{\thetavec}{30}
+\pgfmathsetmacro{\phivec}{55}
+\pgfmathsetmacro{\dphi}{-8}
+\pgfmathsetmacro{\dtheta}{8}
+\pgfmathsetmacro{\drvec}{0.15}
+\pgfmathsetmacro{\Rvec}{\rvec+\drvec}
+\pgfmathsetmacro{\Thetavec}{\thetavec+\dtheta}
+\pgfmathsetmacro{\Phivec}{\phivec+\dphi}
+
+\pgfmathsetmacro{\h}{0}
+\pgfmathsetmacro{\l}{.1}
+
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+
+%-----------------------
+\coordinate (O) at (0,0,0);
+
+
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+\tdplotsetcoord{P1}{\Rvec}{\thetavec}{\phivec}
+\tdplotsetcoord{P2}{\Rvec}{\Thetavec}{\phivec}
+\tdplotsetcoord{P3}{\rvec}{\Thetavec}{\phivec}
+\tdplotsetcoord{p}{\Rvec}{\thetavec}{\phivec}
+
+\tdplotsetcoord{Q}{\rvec}{\thetavec}{\Phivec}
+\tdplotsetcoord{Q1}{\Rvec}{\thetavec}{\Phivec}
+\tdplotsetcoord{Q2}{\Rvec}{\Thetavec}{\Phivec}
+\tdplotsetcoord{Q3}{\rvec}{\Thetavec}{\Phivec}
+
+\tdplotsetcoord{r1}{\Rvec}{\thetavec}{\phivec}
+\tdplotsetcoord{r2}{\Rvec + .2}{\thetavec}{\phivec}
+
+\tdplotsetcoord{E1}{\Rvec}{\thetavec}{\phivec}
+\tdplotsetcoord{E2}{\Rvec}{\thetavec + 15}{\phivec}
+
+%draw figure contents
+%--------------------
+%draw the main coordinate system axes
+\draw[thick,-latex] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+\draw[thick,-latex] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+\draw[thick,-latex] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+%draw a line from origin to point (P) 
+\draw[,color=red] (O) -- (P);
+\draw[,color=red] (O) -- (P1);
+
+\draw[,color=red] (O) -- (P2);
+\draw[,color=red] (O) -- (P3);
+
+
+
+
+\draw[dashed, color=red] (O) -- (Pxy);
+\draw[dashed, color=red] (P) -- (Pxy);
+%
+\draw[dashed, color=red] (O) -- (P2xy);
+\draw[dashed, color=red] (P2) -- (P2xy);
+
+% %draw a line from origin to point (Q) 
+\draw[,color=red] (O) -- (Q);
+\draw[,color=red] (O) -- (Q2);
+\draw[color=red] (O) -- (Q3);
+
+\draw[,color=red] (P) -- (P1) --(P2) --(P3)--(P);
+%draw projection on xy plane, and a connecting line
+\draw[dashed, color=red] (O) -- (Qxy);
+\draw[dashed, color=red] (Q) -- (Qxy);
+%
+\draw[dashed, color=red] (O) -- (Q2xy);
+\draw[dashed, color=red] (Q2) -- (Q2xy);
+
+\pgfmathsetmacro{\Rproj}{\Rvec*sin(\Thetavec)}
+
+\draw[color=black] (Pxy) -- (Qxy);
+\draw[color=black] (P2xy) -- (Q2xy);
+
+
+\tdplotdrawarc[-latex]{(O)}{0.3}{0}{\phivec}{anchor=north}{$\phi$}
+
+
+\tdplotsetthetaplanecoords{\phivec}
+% \begin{scope}[tdplot_rotated_coords]
+% % Uncomment these lines if you want to know where x', y' and z' point to
+% \draw[-latex,blue] (-1.5,0,0) -- (1.5,0,0)  node[above right]  {$x'$};
+% \draw[-latex,blue] (0,-1.5,0) -- (0,1.5,0)  node[below] {$y'$};
+% \draw[-latex,blue] (0,0,-1.5) -- (0,0,1.5)  node[above left]  {$z'$};
+% \end{scope}
+
+
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+
+
+\draw[dashed,tdplot_rotated_coords,color=gray] (\rvec,0,0) arc (0:90:\rvec);
+\draw[dashed,tdplot_rotated_coords,color=gray] (\Rvec,0,0) arc (0:90:\Rvec);
+
+
+\draw[dashed,color=gray] (\rvec,0,0) arc (0:90:\rvec);
+\draw[dashed,color=gray] (\Rvec,0,0) arc (0:90:\Rvec);
+
+
+
+
+\tdplotsetthetaplanecoords{\Phivec}
+
+
+\draw[dashed,tdplot_rotated_coords,color=gray] (\rvec,0,0) arc (0:90:\rvec);
+\draw[dashed,tdplot_rotated_coords,color=gray] (\Rvec,0,0) arc (0:90:\Rvec);
+
+\begin{scope}[tdplot_main_coords]
+\draw[blue,fill=blue!30,opacity=0.3] plot[variable=\x,domain=\thetavec:\Thetavec] 
+(z spherical cs: radius = \rvec, phi = \Phivec, theta= \x)
+-- plot[variable=\x,domain=\Phivec:\phivec] 
+(z spherical cs: radius = \rvec, phi = \x, theta= \Thetavec)
+-- plot[variable=\x,domain=\Thetavec:\thetavec] 
+(z spherical cs: radius = \rvec, phi = \phivec, theta= \x) 
+-- plot[variable=\x,domain=\phivec:\Phivec] 
+(z spherical cs: radius = \rvec, phi = \x, theta= \thetavec);
+%
+\draw[blue,fill=blue!30] plot[variable=\x,domain=\thetavec:\Thetavec] 
+(z spherical cs: radius = \Rvec, phi = \Phivec, theta= \x)
+-- plot[variable=\x,domain=\Phivec:\phivec] 
+(z spherical cs: radius = \Rvec, phi = \x, theta= \Thetavec)
+-- plot[variable=\x,domain=\Thetavec:\thetavec] 
+(z spherical cs: radius = \Rvec, phi = \phivec, theta= \x) 
+-- plot[variable=\x,domain=\phivec:\Phivec] 
+(z spherical cs: radius = \Rvec, phi = \x, theta= \thetavec);
+%
+% if you want to convince yourself that this works:
+% \draw[blue,fill=red!30] plot[variable=\x,domain=80:40] 
+% (z spherical cs: radius = \Rvec, phi = 20, theta= \x)
+% -- plot[variable=\x,domain=20:60] 
+% (z spherical cs: radius = \Rvec, phi = \x, theta= 40)
+% -- plot[variable=\x,domain=40:80] 
+% (z spherical cs: radius = \Rvec, phi = 60, theta= \x) 
+% -- plot[variable=\x,domain=60:20] 
+% (z spherical cs: radius = \Rvec, phi = \x, theta= 80);
+% 
+\end{scope}
+
+\draw[thick,-latex,color=blue] (r1) -- (r2) node[anchor=east]{$\va{r}$};
+\draw[thick,-latex,color=blue] (Q2xy) -- (P2xy) node[anchor=north]{$\va{H}$};
+\draw[thick,-latex,color=blue] (E1) -- (E2) node[anchor=north]{$\va{E}$};
+
+\draw[-latex,very thick, color=green!20!black] (0,0,\h - \l/2) --  node[anchor=north east]{} (0,0,\h + \l/2) node[midway, color = black, anchor= south east]{$I \dd{l}$};
+
+
+
+\end{tikzpicture}
+
+% \input{src/test.Tex}
+\end{document}
