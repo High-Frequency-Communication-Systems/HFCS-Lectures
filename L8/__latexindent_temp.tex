@@ -7,31 +7,27 @@
     \usepackage{minted}
     \usepackage{bookmark}
     \usepackage[style=verbose]{biblatex}
+    \renewcommand{\footnotesize}{\fontsize{5pt}{7pt}\selectfont}
     \usepackage{filecontents}% to embed the file `myreferences.bib` in your `.tex` file
     \begin{filecontents*}{refs.bib}
 
         @article{abohmra_ultrawideband_2021,
         title = {An {Ultrawideband} {Microfabricated} {Gold}-based {Antenna} {Array} for {Terahertz} {Communication}},
         issn = {1548-5757},
-        doi = {10.1109/LAWP.2021.3072562},
-        journal = {IEEE Antennas and Wireless Propagation Letters},
+        journal = {IEEE AWPL},
         author = {Abohmra, Abdoalbaset al and Abbas, Hasan Tahir and Kazim, Jalil ur Rehman and Saqib Rabbani, Muhammad and Li, Chong and Alomainy, Akram and Imran, Muhammad and Abbasi, Qammer Hussain},
         year = {2021},
-        keywords = {antenna, Antenna arrays, Antenna measurements, Antennas, Bandwidth, Coplanar waveguides, Fabrication, gold, PICA, Substrates, terahertz},
-        pages = {1--1}
     }
     
     @article{ma_millimeter-wave_2019,
         title = {Millimeter-{Wave} {Circularly} {Polarized} {Array} {Antenna} {Using} {Substrate}-{Integrated} {Gap} {Waveguide} {Sequentially} {Rotating} {Phase} {Feed}},
         volume = {18},
         issn = {1548-5757},
-        doi = {10.1109/LAWP.2019.2910657},
         number = {6},
-        journal = {IEEE Antennas and Wireless Propagation Letters},
+        journal = {IEEE AWPL},
         author = {Ma, Chaojun and Ma, Zu-Hui and Zhang, Xiupu},
         month = jun,
         year = {2019},
-        keywords = {Antenna array, Antenna arrays, Antenna feeds, Bandwidth, circularly polarized (CP), Gain, Impedance, millimeter-wave (MMW), substrate integrated gap waveguide (SIGW)},
         pages = {1124--1128}
     }
     \end{filecontents*}
@@ -213,7 +209,7 @@ The beam solid angle $\Omega_A$ then becomes:
 
 \begin{frame}
     \frametitle{Directivity Expressions}
-The directivity for broadside and endfire arrays is thus:
+The directivity for the broadside and end-fire arrays is thus:
 
 \begin{align*}
     D {}=& \frac{4\pi }{\Omega_A} = \frac{1}{\frac{1}{N}+\frac{1}{N^{2}} \sum_{m=1}^{N-1} \frac{N-m}{m k d} 2 \cos m \alpha \, \sin m k d}
@@ -256,8 +252,8 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
             \begin{column}{.6\textwidth}
                 \begin{figure}[h!]
                     \centering
-                    \includegraphics[width=0.65\textwidth]{planar_array.pdf}
-                    \caption{a 2D rectangular array.}
+                    \includegraphics[width=0.95\textwidth]{planar_array.pdf}
+                    \caption{A 2D rectangular array.}
                 \end{figure}
             \end{column}
         \end{columns}
@@ -287,7 +283,7 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
 \begin{frame}
     \frametitle{Example - 5 x 5 Planar Array}
 
-    Considering a $5 \times 5$ planar array with element spacings $d_x = d_y =  \lambda$ and the phases $\alpha_x = \alpha = -\pi/(2 \sqrt{2})$. The radiation pattern looks like:
+    Considering a $5 \times 5$ planar array with element spacings $d_x = d_y =  \lambda/2$ and the phases $\alpha_x = \alpha_y = -\pi/(2 \sqrt{2})$. The radiation pattern looks like:
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=.35\textwidth]{3d_polar_plot_3.eps}
@@ -324,8 +320,9 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
 \begin{frame}
     \frametitle{Corporate Feeding Network}
     \begin{columns}[] % align columns
-        \begin{column}{.6\textwidth}
+        \begin{column}{.5\textwidth}
             \begin{outline}
+                \small
                 \1 Most common feeding network
                 \2 Also called \textit{parallel} feed
                 \1 We have equal line lengths to each element
@@ -334,18 +331,20 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
                 \2 We call it wideband as the operation is independent of frequency
             \end{outline}   
         \end{column}
-        \begin{column}{.4\textwidth}
+        \begin{column}{.5\textwidth}
+            \small
             \begin{figure}[h!]
                 \centering
-                \includegraphics[width=.5\textwidth]{corporate.pdf}
+                \includegraphics[width=.45\textwidth]{corporate.pdf}
             \end{figure}
             \begin{figure}[h!]
                 \centering
-                \includegraphics[width=.95\textwidth]{PICA Array.pdf}
-                \caption{A Planar Inverted Cone Antenna Array \, \footcite{abohmra_ultrawideband_2021}.}
+                \includegraphics[width=.75\textwidth]{PICA Array.pdf}
+                \caption{A Planar Inverted Cone Antenna Array \, \footnotemark[1].}
             \end{figure}
         \end{column}%
     \end{columns}
+    \footnotetext[1]{Abdoalbaset al Abohmra et al. “An Ultrawideband Microfabricated Gold-based Antenna Array for Terahertz Communication”. In: IEEE AWPL (2021). ISSN: 1548-5.}
 \end{frame}
 
 \begin{frame}
@@ -380,8 +379,6 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
                 \2 Additional phase shift is introduced commonly through diodes (PIN etc.)
                 \1 MEMS based switches can turn a particular arm on or off.
                 \2 Such feeds can withstand high power inputs
-                \1 By changing the frequency, the electrical line length of the feed is changed.
-                \2 Due to this, we have dispersion that limits bandwidth
             \end{outline}   
         \end{column}
         \begin{column}{.5\textwidth}
@@ -397,8 +394,9 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
 \begin{frame}
     \frametitle{Other Feeding Networks}
     \begin{columns}[] % align columns
-        \begin{column}{.6\textwidth}
+        \begin{column}{.7\textwidth}
             \begin{outline}
+                \small
                 \1 For millimetre wave communications, corporate and series feeding architectures become very complicated
                 \1 Other techniques such as \textit{sequentially rotated phase} feeding networks are emerging as attractive candidates
                 \2 Each antenna element is physically rotated
@@ -410,12 +408,55 @@ In general, the directivity from \eqref{eq:directivity} can be visualised as:
         \begin{column}{.4\textwidth}
             \begin{figure}[h!]
                 \centering
-                \includegraphics[width=.8\textwidth]{SRP.pdf}
-                \caption{A sequentially rotated phase feeding network \, \footcite{ma_millimeter-wave_2019}.}
+                \includegraphics[width=.95\textwidth]{SRP.pdf}
+                \caption{\small A sequentially rotated phase feeding network \footnotemark[1].}
             \end{figure}
         \end{column}%
     \end{columns}
-    
+    \footnotetext[1]{Chaojun Ma, Zu-Hui Ma, and Xiupu Zhang. “Millimeter-Wave Circularly Polarized Array Antenna Using Substrate-Integrated Gap Waveguide Sequentially Rotating Phase Feed", In: IEEE AWPL (2019). ISSN: 1548-5757.}
+\end{frame}
+
+\section{Software Defined Radio}
+
+\begin{frame}
+    \frametitle{Software Defined Radio - Motivation}
+    \begin{outline}
+    \1 A communication system consists of many layers of operations.
+    \1 The physical layer is the most important of all.
+    \1 Typically, physical layer processing is done via dedicated hardware
+    \1 Radio is the technology through which signals are wirelessly transmitted and received
+    \1 Software-defined radio has some or all physical layer functions implemented via software
+\end{outline}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Defined Radio}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.8\textwidth]{SDR_et_WF.pdf}
+    \caption{A Typical SDR workflow}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{GNU Radio}
+    \begin{columns}[] % align columns
+        \begin{column}{.5\textwidth}
+        \begin{outline}
+            \small
+    \1 A graphical user interface consisting of \textit{flowgraphs} through which different signal processing functions such as analog-digital conversion can be performed.
+    \1 Some additions let us write \texttt{Python} codes within each block
+    \1 The software is meant to interface with Universal Software Radio Peripheral (USRP) modules to construct a complete communication system.
+\end{outline}   
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.95\textwidth]{FSK_example_fg.png}
+    \caption{GNU Radio Interface.}
+\end{figure}
+\end{column}%
+\end{columns}   
 
 \end{frame}
 \end{document}
