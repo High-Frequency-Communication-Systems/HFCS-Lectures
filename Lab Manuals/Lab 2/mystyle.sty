@@ -1,0 +1,97 @@
+
+\ProvidesPackage{mystyle}
+
+
+%{{{ --- Packages ---------------------
+\usepackage{pdfsync}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{tikzscale} % Scale the figure not the font
+\tikzset{
+font={\fontsize{5pt}{5}\selectfont}}
+\usepackage{tikzscale} % Scale the figure not the font
+\usepackage{textpos}
+\usepackage{standalone}
+\usepackage{color}
+\pgfplotsset{tick scale binop=\times}
+\usepackage{tikz-dimline}
+\usepackage[skins,theorems]{tcolorbox}
+\usepackage{animate}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{cleveref}
+\usepackage{colortbl}
+% \usepackage{csquotes}
+% \usepackage{helvet}
+% \usepackage{millennial}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\usepackage{esint} % various fancy integral symbols
+\usepackage{outlines}
+\usepackage{xltxtra}
+\usepackage{xelatexemoji} %% For emojis
+
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage{bookmark}
+\usepackage{mdframed}
+
+\usepackage{outlines} % Items, subitems , subsubstems
+\usepackage{fancyhdr}
+
+
+\usepackage{physics} % For using the oridnary derivative
+\usepackage{siunitx}
+\sisetup{per=slash, load=abbr, output-complex-root = j, complex-root-position = before-number, round-mode=figures,round-precision=4}
+
+%% Tikz Libraries
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{timeline}
+\usetikzlibrary{decorations.pathreplacing}
+
+
+%% Customisation
+% \newcommand{\V}[1]{\v} % vectors \v{c}
+% \renewcommand{\v}[1]{\mathbf{#1}} % vectors
+\newcommand{\ti}[1]{\tilde{#1}} % spectral representation
+\newcommand{\tnsr}[1]{\underline{\underline{#1}}}
+
+% Symbols
+\renewcommand{\O}{\omega}  % omega
+\newcommand{\E}{\varepsilon}  % epsilon
+\renewcommand{\u}{\mu}  % mu
+\newcommand{\p}{\rho}  % rho
+\newcommand{\x}{\times}  % times
+\renewcommand{\inf}{\infty}  % infinity
+\newcommand{\infint}{\int\limits_{-\inf}^\inf} % integral by R
+\newcommand{\e}{\mathrm{e}} % Straight-up exponential
+\renewcommand{\j}{{j}\mkern1mu} % Straight-up exponential
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
