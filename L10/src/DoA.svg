@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="446.56061mm"
-   height="852.98907mm"
-   viewBox="0 0 446.56061 852.98907"
+   height="278.00241mm"
+   viewBox="0 0 446.56061 278.00241"
    version="1.1"
    id="svg32139"
    sodipodi:docname="DoA.svg"
@@ -261,27 +261,27 @@
     <marker
        inkscape:stockid="DimmArrow_Start_n00002"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="DimmArrow_Start_n00002"
        style="overflow:visible">
       <path
-         d="M 0.0,0.0 L -10.000000,1.763270 L -10.000000,-1.763270 L 0.0,0.0 z "
-         style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1.0"
-         transform="scale (1.0)rotate(180)translate (10.0,0)"
+         d="M 0,0 -10,1.76327 V -1.76327 Z"
+         style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1"
+         transform="rotate(180,-5,0)"
          id="path37184" />
     </marker>
     <marker
        inkscape:stockid="DimmArrow_End_n00002"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="DimmArrow_End_n00002"
        style="overflow:visible">
       <path
-         d="M 0.0,0.0 L -10.000000,1.763270 L -10.000000,-1.763270 L 0.0,0.0 z "
-         style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1.0"
-         transform="scale (1.0)translate (10.0,0)"
+         d="M 0,0 -10,1.76327 V -1.76327 Z"
+         style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1"
+         transform="translate(10)"
          id="path37187" />
     </marker>
   </defs>
@@ -293,10 +293,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.44463602"
-     inkscape:cx="638.7644"
-     inkscape:cy="2729.7256"
+     inkscape:cx="620.77216"
+     inkscape:cy="266.42274"
      inkscape:document-units="mm"
-     inkscape:current-layer="g33804"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-nodes="true"
@@ -312,7 +312,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -320,7 +320,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="g33804"
-     transform="translate(8.2486462,650.11991)">
+     transform="translate(8.2486462,75.133256)">
     <g
        id="g2808"
        transform="matrix(1.3489381,0,0,-1.3489381,-280.62401,402.09365)"
@@ -646,56 +646,6 @@
        inkscape:groupmode="layer"
        id="layer1"
        transform="matrix(1.105994,0,0,1.105994,-354.12835,-594.51674)">
-      <g
-         transform="matrix(0.352778,0,0,0.352778,402.776,-50.2743)"
-         ns4:version="1.3.1"
-         ns4:texconverter="pdflatex"
-         ns4:pdfconverter="inkscape"
-         ns4:text="$\\theta$\n"
-         ns4:preamble="/Users/hasanabbas/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkscapeMadeEasy/basicLatexPackages.tex"
-         ns4:scale="1.0"
-         ns4:alignment="middle center"
-         ns4:jacobian_sqrt="0.352778"
-         id="g34426">
-        <defs
-           id="id-3851a126-e405-411c-a043-d6b89fa20dbf">
-          <g
-             id="id-92a8f5f5-c5e8-4189-a0cc-c70bb4bf2599">
-            <symbol
-               overflow="visible"
-               id="id-5dc013f8-8f72-4e72-8eba-a02af0911d9d">
-              <path
-                 style="stroke:none;stroke-width:0"
-                 d=""
-                 id="id-3f3d6c5b-00cd-4ad8-934e-163f4658a3c7" />
-            </symbol>
-            <symbol
-               overflow="visible"
-               id="id-64cf798d-f9d8-4d6b-84ce-6464c80d8393">
-              <path
-                 style="stroke:none;stroke-width:0"
-                 d="m 4.53125,-4.984375 c 0,-0.65625 -0.171875,-2.046875 -1.1875,-2.046875 -1.390625,0 -2.921875,2.8125 -2.921875,5.09375 0,0.9375 0.28125,2.046875 1.1875,2.046875 1.40625,0 2.921875,-2.859375 2.921875,-5.09375 z M 1.46875,-3.625 C 1.640625,-4.25 1.84375,-5.046875 2.25,-5.765625 2.515625,-6.25 2.875,-6.8125 3.328125,-6.8125 c 0.484375,0 0.546875,0.640625 0.546875,1.203125 0,0.5 -0.078125,1 -0.3125,1.984375 z m 2,0.328125 C 3.359375,-2.84375 3.15625,-2 2.765625,-1.28125 c -0.34375,0.6875 -0.71875,1.171875 -1.15625,1.171875 -0.328125,0 -0.53125,-0.296875 -0.53125,-1.21875 0,-0.421875 0.0625,-1 0.3125,-1.96875 z m 0,0"
-                 id="id-3397eefd-5157-4e08-84f6-c1cee7ebf43c" />
-            </symbol>
-          </g>
-        </defs>
-        <g
-           id="id-66647255-75be-41c0-8341-5d24014a7858"
-           transform="translate(-149.134,-127.734)">
-          <g
-             style="fill:#000000;fill-opacity:1"
-             id="id-e9569a30-3f7f-4d55-a641-5e3d627e502a">
-            <g
-               transform="translate(148.712,134.765)"
-               id="g34422">
-              <path
-                 style="stroke:none;stroke-width:0"
-                 d="m 4.53125,-4.984375 c 0,-0.65625 -0.171875,-2.046875 -1.1875,-2.046875 -1.390625,0 -2.921875,2.8125 -2.921875,5.09375 0,0.9375 0.28125,2.046875 1.1875,2.046875 1.40625,0 2.921875,-2.859375 2.921875,-5.09375 z M 1.46875,-3.625 C 1.640625,-4.25 1.84375,-5.046875 2.25,-5.765625 2.515625,-6.25 2.875,-6.8125 3.328125,-6.8125 c 0.484375,0 0.546875,0.640625 0.546875,1.203125 0,0.5 -0.078125,1 -0.3125,1.984375 z m 2,0.328125 C 3.359375,-2.84375 3.15625,-2 2.765625,-1.28125 c -0.34375,0.6875 -0.71875,1.171875 -1.15625,1.171875 -0.328125,0 -0.53125,-0.296875 -0.53125,-1.21875 0,-0.421875 0.0625,-1 0.3125,-1.96875 z m 0,0"
-                 id="id-b0526ca2-a4c0-4f27-8297-d6534a6d75bc" />
-            </g>
-          </g>
-        </g>
-      </g>
       <g
          id="g35018"
          transform="translate(-81.238701,15.164558)">
