@@ -1,0 +1,65 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'flute_2deg2.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%%
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{405.21520255bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.37584511)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{flute_2deg2.pdf}}%
+    \put(0.04188141,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\color{yellow}{\textit{\textbf S}}}}}}%
+    \put(0.93113626,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\color{yellow}{\textit{\textbf D}}}}}}%
+    \put(0.47366195,0.16082841){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\color{yellow}{\textit{\textbf G}}}}}}%
+    \put(0.04108141,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\color{black}{\textit{\textbf S}}}}}}%
+    \put(0.93103626,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\color{black}{\textit{\textbf D}}}}}}%
+    \put(0.47306195,0.16082841){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\color{black}{\textit{\textbf G}}}}}}%
+    \put(0.04188141,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{S}}}}}%
+    \put(0.93113626,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{D}}}}}%
+    \put(0.47366195,0.16082841){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{G}}}}}%
+
+    \put(0.42212794,0){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{L$\approx \SI[round-precision=1]{.1}{\micm}$}}}}}%
+  \end{picture}%
+\endgroup%

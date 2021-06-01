@@ -1,0 +1,69 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '2deg_quantum_wire.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%%
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{440.42819071bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.60537872)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{2deg_quantum_wire.pdf}}%
+    \put(0.69438473,0.35131881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.6771288,0.34405315){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.43359349,0.579185){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\tiny{z}}}}}%
+    \put(0.32110098,0.57587329){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(-0.00158936,0.23460688){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{2DEG}}}}%
+    \put(0.70165039,0.35313523){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\tiny{$\E_1$}}}}}%
+    \put(0.7022127,0.1247921){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\tiny{$\E_2$}}}}}%
+    \put(0.96923522,0.2763251){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\tiny{x}}}}}%
+    \put(0.53238335,0.29137714){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{$k_x$}}}}%
+    \put(0.36955918,0.23760224){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{{w}}}}}%
+    \put(0.24189273,0.56538473){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{{a}}}}}%
+    \put(0.3201364,0.56538473){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\tiny{b}}}}}%
+    \put(0.15034766,0.50591956){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{{c}}}}}%
+    \put(0.16599638,0.35099708){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{{d}}}}}%
+    \put(0.59620154,0.57406148){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{Quantum Wire Grating}}}}%
+  \end{picture}%
+\endgroup%

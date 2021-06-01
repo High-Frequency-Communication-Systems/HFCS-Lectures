@@ -1,0 +1,67 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'mstruc_gated.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%%
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{289.07769012bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.47945656)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{mstruc_gated.pdf}}%
+    \put(0.84539911,0.43560911){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{Barrier}}}}%
+    \put(0.84579436,0.36011046){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{2DEG}}}}%
+    \put(0.84606799,0.28455599){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{Substrate}}}}%
+    \put(0.1604657,0.16448063){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{S}}}}%
+    \put(0.82151877,0.16572406){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{D}}}}%
+    \put(0.49203289,0){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{L}}}}%
+    \put(0.42894947,0.46368711){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{Objective Lens}}}}%
+    \put(0.00606001,0.18848739){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{I}}}}%
+    \put(0.8879326,0.11977842){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{h}}}}%
+    \put(0.2054613,0.27607501){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{z}}}}%
+    \put(0.38473862,0.15135623){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{x}}}}%
+    \put(0.49094342,0.07038059){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{G}}}}%
+    \put(0.05790792,0.10941148){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{d}}}}%
+  \end{picture}%
+\endgroup%

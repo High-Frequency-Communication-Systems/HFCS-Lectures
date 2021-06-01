@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \begin{axis} [
+        enlargelimits=false,
+        axis equal image,
+        axis on top,
+        xlabel=$x~(\mathrm{nm})$,
+        x label style={at={(axis description cs:0.5,0.09)}},
+y label style={at={(axis description cs:0.19,.5)}},
+    ]
+        \addplot graphics [
+            xmin=0,
+            xmax=500,
+            ymin=0,
+            ymax=500,
+        ] {Plsim153};
+    \end{axis}
+\end{tikzpicture}

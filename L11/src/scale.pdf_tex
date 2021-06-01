@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'scale.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%%
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{423.59245312bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.7029672)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{scale.pdf}}%
+    \put(0.03864415,0.21388436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{1}{\MHz}}}}%
+    \put(0.40218101,0.00042881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Device Dimension}}}%
+    \put(0.85182544,0.33152916){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Microwave}}}%
+    \put(0.85182544,0.4524093){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Terahertz}}}%
+    \put(0.85182544,0.56942943){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Optical}}}%
+    \put(0.81453074,0.04963267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI{1}{\mm}}}}%
+    \put(0.67468178,0.04963267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI[round-precision=1]{.1}{\mm}}}}%
+    \put(0.55624721,0.04963267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI{10}{\micm}}}}%
+    \put(0.4428387,0.04963267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI{1}{\micm}}}}%
+    \put(0.32678696,0.04963267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI[round-precision=1]{.1}{\micm}}}}%
+    \put(0.19071513,0.04963267){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI{10}{\nm}}}}%
+    \put(0.03864415,0.09992422){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\SI{1}{\kHz}}}}%
+    \put(0.03864415,0.32630448){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{1}{\GHz}}}}%
+    \put(0.03864415,0.44026462){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{1}{\THz}}}}%
+    \put(0.03864415,0.55576478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{1}{\peta\Hz}}}}%
+    \put(0.21816948,0.47125287){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Plasmonics}}}%
+    \put(0.60276438,0.51283296){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Photonics}}}%
+    \put(0.22150774,0.23458902){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Electronics}}}%
+  \end{picture}%
+\endgroup%
