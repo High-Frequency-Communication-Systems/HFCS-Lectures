@@ -12,7 +12,7 @@
 \begin{axis}[%
 xmin=2,
 xmax=70,
-xlabel={$k_x (\SI{}{\per \micro \metre})$},
+xlabel={$k_x$ (\SI{}{\per \micro \metre})},
 ymin=100,
 ymax=1200,
 ylabel={$f (\si{\tera \hertz})$},
