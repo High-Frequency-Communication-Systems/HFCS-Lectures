@@ -129,12 +129,12 @@ Dividing \eqref{eq:further_simplifying_H_x_3D} by dividing by $\left( 1 + \frac{
 \begin{align}
   \left. H_{x} \right|^{n + 1/2}_{i,j,k} ={} & \underbrace{\left(
     \frac{1 - \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}{1 + \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}
-  \right)}_{D_{a,\left. H_{x} \right|_{i,j,k}}} \left. H_{x} \right|^{n - 1/2}_{i,j,k} \nonumber                                                                                                                                                  \\
-                                              & + \underbrace{\left(
+  \right)}_{D_{a,\left. H_{x} \right|_{i,j,k}}} \left. H_{x} \right|^{n - 1/2}_{i,j,k} \nonumber                                                                                                                                                 \\
+                                             & + \underbrace{\left(
     \frac{\frac{\Delta t}{\u_{i,j,k}}}{1 + \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}
     \right)}_{D_{b,\left. H_{x} \right|_{i,j,k}}} \left[
-  \frac{\left. E_y \right|^{n}_{i,j,k+1/2} - \left. E_y \right|^{n}_{i,j,k-1/2}}{\Delta z} - \right. \nonumber                                                                                                                                    \\
-                                              & \left. \frac{\left. E_z \right|^{n}_{i,j+1/2,k} - \left. E_y \right|^{n}_{i,j-1/2,k}}{\Delta y} - \rho'_{i,j,k} \frac{\left. H_x \right|^{n+1/2}_{i,j,k} + \left. H_x \right|^{n-1/2}_{i,j,k}}{2}
+  \frac{\left. E_y \right|^{n}_{i,j,k+1/2} - \left. E_y \right|^{n}_{i,j,k-1/2}}{\Delta z} - \right. \nonumber                                                                                                                                   \\
+                                             & \left. \frac{\left. E_z \right|^{n}_{i,j+1/2,k} - \left. E_y \right|^{n}_{i,j-1/2,k}}{\Delta y} - \rho'_{i,j,k} \frac{\left. H_x \right|^{n+1/2}_{i,j,k} + \left. H_x \right|^{n-1/2}_{i,j,k}}{2}
   \right]
   \label{eq:final_Hx_3D}
 \end{align}
@@ -146,21 +146,21 @@ Using the same procedures, we can find out the expressions for other components 
   \begin{align}
     \left. H_{y} \right|^{n + 1/2}_{i,j,k} ={} & \underbrace{\left(
       \frac{1 - \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}{1 + \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}
-    \right)}_{D_{a,\left. H_{y} \right|_{i,j,k}}} \left. H_{y} \right|^{n - 1/2}_{i,j,k}  \nonumber                                                  \\
-                                                & + \underbrace{\left(
+    \right)}_{D_{a,\left. H_{y} \right|_{i,j,k}}} \left. H_{y} \right|^{n - 1/2}_{i,j,k}  \nonumber                                                 \\
+                                               & + \underbrace{\left(
       \frac{\frac{\Delta t}{\u_{i,j,k}}}{1 + \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}
       \right)}_{D_{b,\left. H_{y} \right|_{i,j,k}}} \left[
-    \frac{\left. E_z \right|^{n}_{i+1/2,j,k} - \left. E_z \right|^{n}_{i-1/2,j,k}}{\Delta x}  \right. \nonumber                                      \\
-                                                & \left. - \frac{\left. E_x \right|^{n}_{i,j,k+1/2} - \left. E_x \right|^{n}_{i,j,k-1/2}}{\Delta z}
-    \right] \label{eq:final_Hy_3D}                                                                                                                     \\
+    \frac{\left. E_z \right|^{n}_{i+1/2,j,k} - \left. E_z \right|^{n}_{i-1/2,j,k}}{\Delta x}  \right. \nonumber                                     \\
+                                               & \left. - \frac{\left. E_x \right|^{n}_{i,j,k+1/2} - \left. E_x \right|^{n}_{i,j,k-1/2}}{\Delta z}
+    \right] \label{eq:final_Hy_3D}                                                                                                                  \\
     \left. H_{z} \right|^{n + 1/2}_{i,j,k} c  \underbrace{\left(
       \frac{1 - \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}{1 + \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}
-    \right)}_{D_{a,\left. H_{z} \right|_{i,j,k}}} \left. H_{z} \right|^{n - 1/2}_{i,j,k} + \nonumber                                                 \\
-                                                & \underbrace{\left(
+    \right)}_{D_{a,\left. H_{z} \right|_{i,j,k}}} \left. H_{z} \right|^{n - 1/2}_{i,j,k} + \nonumber                                                \\
+                                               & \underbrace{\left(
       \frac{\frac{\Delta t}{\u_{i,j,k}}}{1 + \frac{\rho'_{i,j,k} \Delta t}{2 \u_{i,j,k}}}
       \right)}_{D_{b,\left. H_{z} \right|_{i,j,k}}} \left[
     \frac{\left. E_x \right|^{n}_{i,j+1/2,k} - \left. E_x \right|^{n}_{i,j-1/2,k}}{\Delta y}  \right. \nonumber                                     \\
-                                                & \left. -  \frac{\left. E_y \right|^{n}_{i+1/2,j,k} - \left. E_y \right|^{n}_{i-1/2,j,k}}{\Delta x}
+                                               & \left. -  \frac{\left. E_y \right|^{n}_{i+1/2,j,k} - \left. E_y \right|^{n}_{i-1/2,j,k}}{\Delta x}
     \right] \label{eq:final_Hz_3D}
   \end{align}
 \end{subequations}
@@ -171,30 +171,30 @@ Similarly, the electric field components are:
   \begin{align}
     \left. E_{x} \right|^{n + 1}_{i,j,k} ={} & \underbrace{\left(
       \frac{1 - \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}{1 + \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}
-    \right)}_{C_{a,\left. E_{x} \right|_{i,j,k}}} \left. E_{x} \right|^{n}_{i,j,k} \nonumber                                                              \\
-                                              & + \underbrace{\left(
+    \right)}_{C_{a,\left. E_{x} \right|_{i,j,k}}} \left. E_{x} \right|^{n}_{i,j,k} \nonumber                                                             \\
+                                             & + \underbrace{\left(
       \frac{\frac{\Delta t}{\E_{i,j,k}}}{1 + \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}
       \right)}_{C_{b,\left. E_{x} \right|_{i,j,k}}} \left[
-    \frac{\left. H_z \right|^{n+1/2}_{i,j+1/2,k} - \left. H_z \right|^{n+1/2}_{i,j-1/2,k}}{\Delta y}  \right. \nonumber                                   \\
-                                              & \left. - \frac{\left. H_y \right|^{n+1/2}_{i,j,k+1/2} - \left. H_y \right|^{n+1/2}_{i,j,k-1/2}}{\Delta z}
-    \right] \label{eq:final_Ex_3D}                                                                                                                          \\
+    \frac{\left. H_z \right|^{n+1/2}_{i,j+1/2,k} - \left. H_z \right|^{n+1/2}_{i,j-1/2,k}}{\Delta y}  \right. \nonumber                                  \\
+                                             & \left. - \frac{\left. H_y \right|^{n+1/2}_{i,j,k+1/2} - \left. H_y \right|^{n+1/2}_{i,j,k-1/2}}{\Delta z}
+    \right] \label{eq:final_Ex_3D}                                                                                                                       \\
     \left. E_{y} \right|^{n + 1}_{i,j,k} ={} & \underbrace{\left(
       \frac{1 - \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}{1 + \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}
-    \right)}_{C_{a,\left. E_{y} \right|_{i,j,k}}} \left. E_{y} \right|^{n}_{i,j,k} \nonumber                                                              \\
-                                              & + \underbrace{\left(
+    \right)}_{C_{a,\left. E_{y} \right|_{i,j,k}}} \left. E_{y} \right|^{n}_{i,j,k} \nonumber                                                             \\
+                                             & + \underbrace{\left(
       \frac{\frac{\Delta t}{\E_{i,j,k}}}{1 + \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}
       \right)}_{C_{b,\left. E_{y} \right|_{i,j,k}}} \left[
-    \frac{\left. H_x \right|^{n+1/2}_{i,j,k+1/2} - \left. H_x \right|^{n+1/2}_{i,j,k-1/2}}{\Delta z}  \right. \nonumber                                   \\
-                                              & \left. - \frac{\left. H_z \right|^{n+1/2}_{i+1/2,j,k} - \left. H_z \right|^{n+1/2}_{i-1/2,j,k}}{\Delta x}
-    \right] \label{eq:final_Ey_3D}                                                                                                                          \\
+    \frac{\left. H_x \right|^{n+1/2}_{i,j,k+1/2} - \left. H_x \right|^{n+1/2}_{i,j,k-1/2}}{\Delta z}  \right. \nonumber                                  \\
+                                             & \left. - \frac{\left. H_z \right|^{n+1/2}_{i+1/2,j,k} - \left. H_z \right|^{n+1/2}_{i-1/2,j,k}}{\Delta x}
+    \right] \label{eq:final_Ey_3D}                                                                                                                       \\
     \left. E_{z} \right|^{n + 1}_{i,j,k} ={} & \underbrace{\left(
       \frac{1 - \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}{1 + \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}
-    \right)}_{C_{a,\left. E_{z} \right|_{i,j,k}}} \left. E_{z} \right|^{n}_{i,j,k} \nonumber                                                              \\
-                                              & + \underbrace{\left(
+    \right)}_{C_{a,\left. E_{z} \right|_{i,j,k}}} \left. E_{z} \right|^{n}_{i,j,k} \nonumber                                                             \\
+                                             & + \underbrace{\left(
       \frac{\frac{\Delta t}{\E_{i,j,k}}}{1 + \frac{\sigma_{i,j,k} \Delta t}{2 \E_{i,j,k}}}
       \right)}_{C_{b,\left. E_{z} \right|_{i,j,k}}} \left[
-    \frac{\left. H_y \right|^{n+1/2}_{i+1/2,j,k} - \left. H_y \right|^{n+1/2}_{i-1/2,j,k}}{\Delta x} \right. \nonumber                                    \\
-                                              & \left. - \frac{\left. H_x \right|^{n+1/2}_{i,j+1/2,k} - \left. H_x \right|^{n+1/2}_{i,j-1/2,k}}{\Delta y}
+    \frac{\left. H_y \right|^{n+1/2}_{i+1/2,j,k} - \left. H_y \right|^{n+1/2}_{i-1/2,j,k}}{\Delta x} \right. \nonumber                                   \\
+                                             & \left. - \frac{\left. H_x \right|^{n+1/2}_{i,j+1/2,k} - \left. H_x \right|^{n+1/2}_{i,j-1/2,k}}{\Delta y}
     \right] \label{eq:final_Ez_3D}
   \end{align}
 \end{subequations}
@@ -238,8 +238,8 @@ For the $2D$ case we assume $(\pdv{z} = 0)$, and then write the uncoupled expres
 Using the coefficients in \eqref{eq:coefficients}, the 2D $TM$ mode central difference equations from \eqref{eq:TM mode} are:
 \begin{subequations}
   \begin{align}
-    \left. H_{x} \right|^{n + 1/2}_{i,j} ={} & \left. H_x \right|^{n - 1/2}_{i,j} - \frac{\Delta t}{\u_{i,j}} \left[\frac{\left. E_z \right|^{n }_{i,j+1/2} - \left. E_z \right|^{n}_{i,j-1/k2}}{\Delta y}\right]                                                        \label{eq:H_x_TM_central_difference}      \\
-    \left. H_{y} \right|^{n + 1/2}_{i,j} ={} & \left. H_y \right|^{n - 1/2}_{i,j} - \frac{\Delta t}{\u_{i,j}} \left[\frac{\left. E_z \right|^{n }_{i+1/2,j} - \left. E_z \right|^{n}_{i-1/2,j}}{\Delta x}\right]                                                          \label{eq:H_y_TM_central_difference}     \\
+    \left. H_{x} \right|^{n + 1/2}_{i,j} ={} & \left. H_x \right|^{n - 1/2}_{i,j} - \frac{\Delta t}{\u_{i,j}} \left[\frac{\left. E_z \right|^{n }_{i,j+1/2} - \left. E_z \right|^{n}_{i,j-1/k2}}{\Delta y}\right]                                                        \label{eq:H_x_TM_central_difference}    \\
+    \left. H_{y} \right|^{n + 1/2}_{i,j} ={} & \left. H_y \right|^{n - 1/2}_{i,j} - \frac{\Delta t}{\u_{i,j}} \left[\frac{\left. E_z \right|^{n }_{i+1/2,j} - \left. E_z \right|^{n}_{i-1/2,j}}{\Delta x}\right]                                                          \label{eq:H_y_TM_central_difference}   \\
     \left. E_{z} \right|^{n + 1}_{i,j}   ={} & \left. E_z \right|^{n}_{i,j} - \frac{\Delta t}{\E_{i,j}} \left[\frac{\left. H_y \right|^{n+1/2}_{i+1/2,j} - \left. H_y \right|^{n+1/2}_{i-1/2,j}}{\Delta x} - \frac{\left. H_x \right|^{n+1/2}_{i,j+1/2} - \left. H_x \right|^{n+1/2}_{i,j-1/2}}{\Delta y}\right]
     \label{eq:E_z_TM_central_difference}
   \end{align}
@@ -414,14 +414,14 @@ Running the Matlab file, we should get a 2D Gaussian source starting from the or
 \begin{figure}[!htbp]
   \centering
   \subfloat[20]{\includegraphics[width=2.5in]{Abbas_3_7_E_Field_20.eps}
-  \label{fig:field_at_20}}
+    \label{fig:field_at_20}}
   \subfloat[60]{\includegraphics[width=2.5in]{Abbas_3_7_E_Field_60.eps}
-  \label{fig:field_at_60}}
+    \label{fig:field_at_60}}
   \\
   \subfloat[80]{\includegraphics[width=2.5in]{Abbas_3_7_E_Field_80.eps}
-  \label{fig:field_at_80}}
+    \label{fig:field_at_80}}
   \subfloat[160]{\includegraphics[width=2.5in]{Abbas_3_7_E_Field_160.eps}
-  \label{fig:field_at_160}}
+    \label{fig:field_at_160}}
   \caption{The $E_z$ component visualised at different time intervals.}
   \label{fig:E_z fields}
 \end{figure}
@@ -510,7 +510,7 @@ Let's try to replicate some of the results presented in Yee's seminal paper on F
   \end{minted}
 \end{mdframed}
 
-Here the variable, \texttt{iflaga} either assumes the value 1 (free space) or 2 (PEC). The complete code can be found in the program \texttt{Program 2.m}. 
+Here the variable, \texttt{iflaga} either assumes the value 1 (free space) or 2 (PEC). The complete code can be found in the program \texttt{Program 2.m}.
 
 
 \subsection*{Exercise}
@@ -523,7 +523,7 @@ Here the variable, \texttt{iflaga} either assumes the value 1 (free space) or 2 
 
 \section{Boundary Conditions}
 
-As we saw in class that we require FDTD to model \textit{open} regions where the spatial domain is unbounded. However, practically it is not possible as it requires an infinite amount of computer memory. Therefore, in order to limit the size of the simulation, we create a finite simulation domain with \textit{absorbing boundary conditions} (ABCs).  
+As we saw in class that we require FDTD to model \textit{open} regions where the spatial domain is unbounded. However, practically it is not possible as it requires an infinite amount of computer memory. Therefore, in order to limit the size of the simulation, we create a finite simulation domain with \textit{absorbing boundary conditions} (ABCs).
 
 A class of ABCs work on \textit{extrapolating} the field values at the boundary. One of the most famous ones is the Liao ABC \cite{liao_transmitting_1984} which works on updating the numerical fields in space and time using a Newton backward-difference polynomial.
 
@@ -531,16 +531,16 @@ A class of ABCs work on \textit{extrapolating} the field values at the boundary.
 The idea is that for any point on the grid bounday $x_{MAX}$, we need to calculate the updated field $u(x_{MAX}, t + \Delta_t)$ using the field values that we already have in the memory. As an example, the update field expressions for a 1D case can be written as:
 
 \begin{align}
-\Delta^1 E(x ,t) ={} & \Delta^1 E_1 = E_2 - E_1  = E(x,t) - E(x - \Delta_x, t - \Delta_t) \nonumber \\
-\Delta^2 E_1 ={} & \Delta^1 E_1 - \Delta^1 E_2 \nonumber \\
-={} & E(x,t) - \Delta^1 E(x - \Delta_x, t - \Delta_t) \nonumber \\
-={} & E(x,t) - 2E(x - \Delta_x, t - \Delta_t) + E(x - 2\Delta_x, t - 2\Delta_t)
+  \Delta^1 E(x ,t) ={} & \Delta^1 E_1 = E_2 - E_1  = E(x,t) - E(x - \Delta_x, t - \Delta_t) \nonumber \\
+  \Delta^2 E_1 ={}     & \Delta^1 E_1 - \Delta^1 E_2 \nonumber                                        \\
+  ={}                  & E(x,t) - \Delta^1 E(x - \Delta_x, t - \Delta_t) \nonumber                    \\
+  ={}                  & E(x,t) - 2E(x - \Delta_x, t - \Delta_t) + E(x - 2\Delta_x, t - 2\Delta_t)
 \end{align}
 
 For the $N^{th}$ term, we get:
 
 \begin{align}
-  \Delta^N E(x ,t) ={} & \sum_{j = 1}^{N+1} C_{j-1}^{N} E\left[x - (j -1)\Delta_x, t - (j -1)\Delta_t\right] \nonumber \\
+  \Delta^N E(x ,t) ={}         & \sum_{j = 1}^{N+1} C_{j-1}^{N} E\left[x - (j -1)\Delta_x, t - (j -1)\Delta_t\right] \nonumber \\
   \mathrm{where,} \, C_k^N ={} & \frac{\N\,!}{(N - k)\,! \, k\,!}
 \end{align}
 
@@ -639,7 +639,7 @@ We then implement the Liao ABCs as:
   \end{minted}
 \end{mdframed}
 
-In \texttt{Program 3.m}, the Liao ABCs are implemented for the same structure as in the Yee paper. 
+In \texttt{Program 3.m}, the Liao ABCs are implemented for the same structure as in the Yee paper.
 
 
 \subsection*{Exercise}
@@ -652,7 +652,7 @@ In \texttt{Program 3.m}, the Liao ABCs are implemented for the same structure as
 \subsection*{Home Exercise}
 
 \begin{mdframed}[backgroundcolor=blue!20]
-Create a sinusoidal source on the left boundary in a 2D $TM$ case and replace the PEC square in the Yee paper simulation with a dielectric square of $\E = 4$ of the same size.
+  Create a sinusoidal source on the left boundary in a 2D $TM$ case and replace the PEC square in the Yee paper simulation with a dielectric square of $\E = 4$ of the same size.
 \end{mdframed}
 
 \section{Code Availability}
