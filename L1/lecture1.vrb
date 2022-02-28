@@ -1,13 +1,8 @@
-\frametitle{Course Assessments}
-  \begin{table}
-      \begin{tabular}{ll}
-      \toprule
-      Assessment & Weightage\\
-      \midrule
-      Homework & 30\% \\
-      Exam & 20\% \\
-      Lab Exercises & 20\% \\
-      Lab Project \& Presentation & 20\% \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
+\frametitle{\textcolor{red}{Your First Task}}
+  \begin{outline}
+    \1 Make a project plan for the mmWave Cubesat antenna
+    \1 You will be marked individually but are welcome to work as a team
+    \1 Prepare a Gantt chart for the project
+    \1 Come up with an expected budget of the project
+    \1 You can work in groups of 2 or 3
+  \end{outline}
