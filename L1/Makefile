@@ -1,8 +1,5 @@
 DOC  := lecture1.tex
 
-RERUN := "(undefined references|Rerun to get (cross-references|the bars|point totals) right|Table widths have changed. Rerun LaTeX.|Linenumber reference failed)"
-RERUNBIB := "No file.*\.bbl|Citation.*undefined"
-
 all: src doc
 
 figs:

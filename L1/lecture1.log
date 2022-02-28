@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.2.28)  28 FEB 2022 15:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.2.28)  28 FEB 2022 16:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2156,32 +2156,28 @@ Overfull \hbox (10.8901pt too wide) in paragraph at lines 3--11
 
  (./lecture1.vrb) [11
 
-]
-\openout4 = `lecture1.vrb'.
-
- (./lecture1.vrb) [12
-
-] [13
+] [12
 
 ] (./src/EM.tex)
 File: src/EM.tex Graphic file (type tex)
- [14
+ [13
 
 ]
 File: src/em_vs_ckt.pdf Graphic file (type pdf)
 <use src/em_vs_ckt.pdf>
+ [14
 
-[15
+] [15
 
 ] [16
 
-] [17
-
 ]
-Overfull \vbox (9.41402pt too high) detected at line 262
+Overfull \vbox (9.41402pt too high) detected at line 250
  []
 
-[18
+[17
+
+] [18
 
 ] [19
 
@@ -2189,32 +2185,32 @@ Overfull \vbox (9.41402pt too high) detected at line 262
 
 ] [21
 
-] [22
-
 ]
 File: src/DISPERSION.pdf Graphic file (type pdf)
 <use src/DISPERSION.pdf>
- [23
+ [22
 
-] [24
+] [23
 
 ]
 File: src/circuit.pdf Graphic file (type pdf)
 <use src/circuit.pdf>
 
-Overfull \vbox (9.3058pt too high) detected at line 424
+Overfull \vbox (9.3058pt too high) detected at line 412
  []
 
-[25
+[24
+
+] [25
 
 ] [26
-
-] [27
 
 ]
 File: src/BC.pdf Graphic file (type pdf)
 <use src/BC.pdf>
- [28
+ [27
+
+] [28
 
 ] [29
 
@@ -2223,8 +2219,6 @@ File: src/BC.pdf Graphic file (type pdf)
 ] [31
 
 ] [32
-
-] [33
 
 ]
 \tf@nav=\write9
@@ -2237,19 +2231,16 @@ File: src/BC.pdf Graphic file (type pdf)
 \openout11 = `lecture1.snm'.
 
  (./lecture1.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `lecture1.out' has not changed.
 (rerunfilecheck)             Checksum: C96409F304475FF6F1FF297298143112;464.
  ) 
 Here is how much of TeX's memory you used:
- 58058 strings out of 476180
- 1419729 string characters out of 5809554
- 1873776 words of memory out of 5000000
- 77628 multiletter control sequences out of 15000+600000
+ 58057 strings out of 476180
+ 1419690 string characters out of 5809554
+ 1873780 words of memory out of 5000000
+ 77629 multiletter control sequences out of 15000+600000
  480978 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,37n,129p,746b,1398s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on lecture1.pdf (33 pages).
+Output written on lecture1.pdf (32 pages).
