@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.2.28)  7 MAR 2022 14:33
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.2.28)  14 MAR 2022 15:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -693,18 +693,9 @@ y
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
 y))) (./beamerthemeglasgow.sty
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 w
-     % Beamer glasgow theme
-? 
 Package: beamerthemeglasgow 
 \@mtheme@voffset=\skip64
+
 (/usr/local/texlive/2021/texmf-dist/tex/latex/pdfsync/pdfsync.sty
 Package: pdfsync 2008/01/26 v1.1
 )
@@ -2049,16 +2040,12 @@ File: UoG_keyline.pdf Graphic file (type pdf)
 Overfull \vbox (77.53185pt too high) detected at line 48
  []
 
-
-Overfull \vbox (11.0pt too high) has occurred while \output is active []
-
- [1
+[1
 
 ]
 \openout4 = `lecture2.vrb'.
 
-
-(./lecture2.vrb) [2
+ (./lecture2.vrb) [2
 
 ]
 \openout4 = `lecture2.vrb'.
@@ -2186,10 +2173,10 @@ Package rerunfilecheck Info: File `lecture2.out' has not changed.
 (rerunfilecheck)             Checksum: 10004031ED3A6C733A642970AD4DCA25;317.
  ) 
 Here is how much of TeX's memory you used:
- 63178 strings out of 476180
- 1532891 string characters out of 5809554
- 2015198 words of memory out of 5000000
- 82754 multiletter control sequences out of 15000+600000
+ 63176 strings out of 476180
+ 1532857 string characters out of 5809554
+ 2014198 words of memory out of 5000000
+ 82752 multiletter control sequences out of 15000+600000
  480954 words of font info for 148 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,64n,129p,746b,2918s stack positions out of 5000i,500n,10000p,200000b,80000s
