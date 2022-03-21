@@ -35,7 +35,7 @@
 
 \title{High Frequency Communication Systems}
 \subtitle{Lecture 4}
-\date{Spring 2021}
+\date{Spring 2022}
 \author{Hasan T Abbas \& Qammer H Abbasi}
 % \institute{}
 
@@ -387,7 +387,7 @@ As $l > 0.1 \lambda$, the given circuit can be treated as a transmission line.
   \begin{align*}
     Z_{in} = Z(-l) &= Z_0 \frac{Z_L + \j Z_0 \tan{\beta l}}{Z_0 + \j Z_L \tan{\beta l}}  \\
     &= 50 \times \frac{(36 + \j 20) + \j 50 \tan{(2 \pi \times 0.6)}}{50 +  \j (36 + \j 20) \tan{(2 \pi \times 0.6)}} \\
-    Z_{in}&= \SI{86.15 - j10.93}{\ohm}
+    Z_{in}&= \complexqty{86.15 - j10.93}{\ohm}
   \end{align*}
 
   
@@ -403,7 +403,7 @@ As $l > 0.1 \lambda$, the given circuit can be treated as a transmission line.
   The current in the circuit is:
   \begin{align*}
     I_{in} &= \frac{V_G}{Z_G + Z_{in}} \\
-    &= \frac{100}{50 + 86.15 - \j 10.93} = \SI{0.73 + j 0.06}{\ampere}
+    &= \frac{100}{50 + 86.15 - \j 10.93} = \complexqty{0.73 + j 0.06}{\ampere}
   \end{align*}
   The average input power is:
   \begin{align*}
@@ -420,7 +420,7 @@ We first calculate the current $I(z)$ in the transmission line.
 At $z = -l$, $I(-l) = I_{in}$ and treating $\frac{V_{+}}{Z_0} = I_{+}$
 \begin{align*}
   I(-l) = I_{in} &= I_{+} \left( e^{+\j \beta l} - \Gamma_{in} e^{-\j \beta l}\right) \\
-  I_{+} &= I_{in}/\left( e^{+\j \beta l} - \Gamma_{in} e^{-\j \beta l}\right)  = \SI{-0.47 + j 0.89}{\ampere}
+  I_{+} &= I_{in}/\left( e^{+\j \beta l} - \Gamma_{in} e^{-\j \beta l}\right)  = \complexqty{-0.47 + j 0.89}{\ampere}
 \end{align*}
 The current at the load is:
 \begin{align*}
