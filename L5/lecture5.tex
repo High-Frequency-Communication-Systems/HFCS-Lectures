@@ -35,7 +35,7 @@
     
     \title{High Frequency Communication Systems}
     \subtitle{Lecture 5}
-    \date{Spring 2021}
+    \date{Spring 2022}
     \author{Hasan T Abbas \& Qammer H Abbasi}
     % \institute{}
     
@@ -50,15 +50,15 @@
     \frametitle{Lecture Outline}
     \begin{outline}[itemize]
         \1 The Smith Chart
-        \1 The Magic of Quarter-wave Transformer
-        \1 Load matching through stubs
+        \1 Quarter-wave Transformer (Magic)
+        \1 Some Examples - Load matching through stubs
     \end{outline}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Smith Chart}
+\section{The Smith Chart}
 
 
 \begin{frame}
@@ -73,7 +73,7 @@
 \begin{frame}
     \frametitle{Why Smith Chart}
     \begin{outline}
-        \1 Developed by P Smith in 1939
+        \1 A nomogram (graphical calculator) invented by Phillip Smith and Mizuhashi Tusaku
         \1 To this day, it is an integral part of microwave circuit design
         \1 Provides a tool to visualise the transmission line phenomena such as impedance matching
         \1 \textcolor{red}{It is simply a polar plot of the reflection coefficient, $\Gamma$}
@@ -97,7 +97,7 @@
 
 \begin{frame}
     \frametitle{Plotting Impedances}
-    For lossles TLs, the \textit{normalised} load impedance at $l = 0$ is a complex number:
+    For lossless TL's, the \textit{normalised} load impedance at $l = 0$ is a complex number:
     \begin{align*}
         z_L  = \frac{Z_L}{Z_0} & = \frac{1 + |\Gamma|\e^{\j \theta}}{1 - |\Gamma|\e^{\j \theta}}
     \end{align*}
@@ -116,8 +116,8 @@
 \begin{frame}
     \frametitle{The Resistance and Reactance Circles}
     \begin{outline}
-        \1 Lets look at some examples
-        \2 Taking $r_L = 1$ and lets plot in the $\Gamma_r ,\Gamma_i$ plane
+        \1 Let's look at some examples
+        \2 Taking $r_L = 1$ and let's plot in the $\Gamma_r ,\Gamma_i$ plane
         \2 But first, the equation for the resistance circle is:
     \end{outline}
     \begin{align*}
@@ -153,6 +153,32 @@
             \begin{outline}
                 \1 We normally normalise the impedance to $\SI{50}{\ohm}$.
                 \1 However, the chart can be used for any value.
+                \1 \textcolor{green}{$z_{L,1} = $ ?}
+                \1 \textcolor{red}{$z_{L,2} =  $ ? }
+                \1 \textcolor{blue}{$z_{L,3} = $ ? }
+                \1 \textcolor{orange}{$z_{L,4} = $ ?}
+            \end{outline}
+            \begin{figure}
+                \includegraphics[width=.75\textwidth]{QR-code.png}
+            \end{figure}
+        \end{column}
+        \begin{column}[T]{.6\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\textwidth]{smith simple impedances.pdf}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+
+%% Exercise
+\begin{frame}
+    \frametitle{Plotting Impedance}
+    \begin{columns}[T] % align columns
+        \begin{column}{.4\textwidth}
+            \begin{outline}
+                \1 We normally normalise the impedance to $\SI{50}{\ohm}$.
+                \1 However, the chart can be used for any value.
                 \1 \textcolor{green}{$z_{L,1} = 0.4 + \j 0.7$}
                 \1 \textcolor{red}{$z_{L,2} = 2 $}
                 \1 \textcolor{blue}{$z_{L,3} = 3 - \j 2$}
@@ -170,7 +196,7 @@
 
 \begin{frame}
     \begin{figure}[t!]
-        \frametitle{Example - Finding the Input Impedance}
+        \frametitle{Example — Finding the Input Impedance}
         \centering
         \includegraphics[width=.9\textwidth]{tline_terminated_example.pdf}
     \end{figure}
@@ -216,15 +242,14 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Finding the VSWR - Using the Radially Scaled Parameters}
+    \frametitle{Finding the VSWR — Using the Radially Scaled Parameters}
     \begin{figure}[T!]
         \centering
-                \includegraphics[width=.50\textwidth]{smith example VSWR2.pdf}
+        \includegraphics[width=.50\textwidth]{smith example VSWR2.pdf}
     \end{figure}
     \begin{outline}
         \1 Some Smith charts provide radially scaled parameters at the bottom of the sheet.
         \1 By drawing a vertical line from the left of the circle to the bottom, we can then read off the different values.
-        \1 Some examples are shown in the next slide
     \end{outline}
 \end{frame}
 
@@ -242,14 +267,14 @@
 \end{frame}
 \begin{frame}
     \frametitle{Finding the Reflection Coefficient}
-\begin{outline}
-    \1 The ratio of the length of the line segments $l_{O - x}$ and $l_{O - SC}$ gives us $|\Gamma|$
-    \1 The point on the left of the Smith chart is the short-circuit point ($r = 0, x = 0$)
-\end{outline}
-\begin{figure}[T!]
-    \centering
-    \includegraphics[width=.9\textwidth]{smith example Gamma_cropped.pdf}
-\end{figure}
+    \begin{outline}
+        \1 The ratio of the length of the line segments $l_{O - x}$ and $l_{O - SC}$ gives us $|\Gamma|$
+        \1 The point on the left of the Smith chart is the short-circuit point ($r = 0, x = 0$)
+    \end{outline}
+    \begin{figure}[T!]
+        \centering
+        \includegraphics[width=.9\textwidth]{smith example Gamma_cropped.pdf}
+    \end{figure}
 
 \end{frame}
 
@@ -262,7 +287,7 @@
                 \1 On the Smith chart, it represents the diametrically opposite point on the $|\Gamma|$-circle
                 \1 For $z_L = 0.4 + \j .7$, $y_L = 1/z_L = 0.6 - \j 1.08 $
                 \1 Alternatively, we can use an admittance Smith chart
-            \end{outline} 
+            \end{outline}
         \end{column}
         \begin{column}[]{.6\textwidth}
             \begin{figure}[T!]
@@ -282,27 +307,27 @@
 
 \begin{frame}
     \frametitle{Stub Matching}
-\begin{columns}[T]
-    \begin{column}[]{.4\textwidth}
-        \begin{outline}
-            \1 Stub matching introduces additional impedances/admittances in the line (often in parallel)
-            \1 As parallel \textit{admittances} are added up, it is convnenient to use a Smith chart showing admittance rather than impedance. 
-            \2 The result is a horizontally flipped admittance Smith chart.
-        \end{outline}  
-    \end{column}
-    \begin{column}[]{.6\textwidth}
-        \begin{figure}[T!]
-            \centering
-            \includegraphics[width=.9\textwidth]{admittance.pdf}
-        \end{figure}
-    \end{column}
-\end{columns}
+    \begin{columns}[T]
+        \begin{column}[]{.4\textwidth}
+            \begin{outline}
+                \1 Stub matching introduces additional impedances/admittances in the line (often in parallel)
+                \1 As parallel \textit{admittances} are added up, it is convenient to use a Smith chart showing admittance rather than impedance.
+                \2 The result is a horizontally flipped admittance Smith chart.
+            \end{outline}
+        \end{column}
+        \begin{column}[]{.6\textwidth}
+            \begin{figure}[T!]
+                \centering
+                \includegraphics[width=.9\textwidth]{admittance.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
 
 \begin{frame}
-    \frametitle{Single Stub Matching - The Problem}
+    \frametitle{Single Stub Matching — The Problem}
     \begin{columns}[]
         \begin{column}[]{.5\textwidth}
             \begin{outline}
@@ -311,7 +336,7 @@
                 \1 In other words, $y_s + y_A = y_{in} = 1$
                 \1 As we are using a short circuit stub, $y_s = - \j b_A$
                 \1 \textcolor{red}{The objective is to find the lengths $d$ and $l$ that generate a unity real part and zero imaginary part of admittance respectively.}
-            \end{outline}  
+            \end{outline}
         \end{column}
         \begin{column}[]{.5\textwidth}
             \begin{figure}[]
@@ -327,10 +352,10 @@
     \begin{columns}[]
         \begin{column}[]{.5\textwidth}
             \begin{outline}
-                \1 For a $\SI{50}{\ohm}$ transmission line connected to a load impedance $Z_L = \SI{35 - j 45.5}{\ohm}$
+                \1 For a $\SI{50}{\ohm}$ transmission line connected to a load impedance $Z_L = \complexqty{35 - j 45.5}{\ohm}$
                 \1 Find the position and length of the short circuit stub that matches the load to the line.
                 \1 $z_L$ becomes $0.70 - \j 0.95$
-            \end{outline}  
+            \end{outline}
         \end{column}
         \begin{column}[]{.5\textwidth}
             \begin{figure}[]
@@ -352,7 +377,7 @@
                 \1 Plot the \textcolor{orange}{$g =1 $} circle and note down the two points of intersection $y_{A,1} = 1 + \j b_{A,1}$ and $y_{A,2} = 1 + \j b_{A,2}$.
                 \1 Find the distances $d_1$ and $d_2$ from the generator for the two points above
                 \1 Find the lengths $l_1$ and $l_2$ to get the admittances $ - \j b_{A,1}$ and $ - \j b_{A,2}$
-            \end{outline}  
+            \end{outline}
         \end{column}
     \end{columns}
 \end{frame}
@@ -383,7 +408,7 @@
                 \2 This distance is a function of frequency and therefore, changes if the source frequency is changed
                 \2 Also, we can't engineer the length of the stub of any given value
                 \1 To avoid this and use matching at more than one frequency, we use double stub matching
-            \end{outline}  
+            \end{outline}
         \end{column}
         \begin{column}[]{.5\textwidth}
             \begin{figure}[]
@@ -399,12 +424,12 @@
     \begin{columns}[]
         \begin{column}[]{.5\textwidth}
             \begin{outline}
-                \1 For a $\SI{50}{\ohm}$ transmission line connected to a looad impedance $Z_L = \SI{60 + j 80}{\ohm}$
+                \1 For a $\SI{50}{\ohm}$ transmission line connected to a load impedance $Z_L = \complexqty{60 + j 80}{\ohm}$
                 \1 A double-stub tuner spaced $d = \lambda/8$ distance from the load for matching.
                 \1 Find the lengths of the short circuit stubs that match the load to the line.
                 \1 $z_L$ becomes $1.2 + \j 1.6$
                 \1 $y_L$ becomes $0.3 - \j 0.40$
-            \end{outline}  
+            \end{outline}
         \end{column}
         \begin{column}[]{.5\textwidth}
             \begin{figure}[]
@@ -420,12 +445,12 @@
     \begin{columns}[]
         \begin{column}[]{1\textwidth}
             \begin{outline}[enumerate]
-                \1 Plot the \textcolor{orange}{$g =1 $-circle} 
+                \1 Plot the \textcolor{orange}{$g =1 $-circle}
                 \1 Rotate the above circle by $\lambda/8$ \textit{towards the load}
                 \1 Plot $y_L = 0.3 - \j 0.40$ and draw the \textcolor{green}{$g=0.3$-circle}
                 \1 Mark the points $y_{A,1} = 0.30 + \j 0.30$ and $y_{A,2} = 0.30 + \j 1.75$ that are points of intersection between the \textcolor{green}{$g=0.3$-circle} and rotated \textcolor{orange}{$g=1$-circle}
                 \1 The corresponding points on the \textcolor{orange}{$g=1$-circle} are $y_{B,1} = 1 + \j 1.40$ and $y_{B,2} = 1 - \j 3.50$.
-            \end{outline}  
+            \end{outline}
         \end{column}
     \end{columns}
 \end{frame}
@@ -443,12 +468,12 @@
     \begin{outline}
         \1 At the load ($A-A'$), the admittance is $y_A = y_L + y_{S,A}$
         \1 The admittances of the stub are $y_{A,1} - y_L  = 0.3 + \j 0.30 - (0.30 - \j 0.40) = \j 0.70$ and $y_{A,2} - y_L = 0.30 + \j 1.75 - (0.30 - \j 0.40) = \j 2.15$
-        \1 Similarly, the admittances are simply the conjugate of of $y_B$
+        \1 Similarly, the admittances are simply the conjugate of $y_B$
         \1 They are $y_{B,1} = -\j 1.40$ and $y_{B,2} = -\j 3.50$
         \1 The lengths of the stub can be found in the same manner as we did for the single stub.
     \end{outline}
 
-    
+
 
 \end{frame}
 
