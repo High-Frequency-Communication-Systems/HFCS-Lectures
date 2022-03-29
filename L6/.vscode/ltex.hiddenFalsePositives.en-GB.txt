@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QHFCS-Lectures\nHigh Frequency Communication Systems Lectures\\E$"}

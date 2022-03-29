@@ -83,7 +83,7 @@
 
     \title{High Frequency Communication Systems}
     \subtitle{Lecture 6}
-    \date{Spring 2021}
+    \date{Spring 2022}
     \author{Hasan T Abbas \& Qammer H Abbasi}
     % \institute{}
     
@@ -136,7 +136,7 @@
                 \2 Only at a single frequency
                 \1 These methods are relatively more accurate than time domain methods
                 \2 However, mathematically they are more complex
-                \1 Finite element method (FEM) is the most computational tool used in all areas of engineering including electromagnetic simulation (e.g HFSS, CST and COMSOL)
+                \1 Finite element method (FEM) is the most computational tool used in all areas of engineering including electromagnetic simulation (e.g. HFSS, CST and COMSOL)
                 \2 It solves partial differential equations by discretisation into \textit{finite elements}
             \end{outline}
         \end{column}
@@ -180,8 +180,8 @@
     \frametitle{Solving differential equations}
     \begin{outline}
         \1 The goal is to solve differential equations \textit{numerically} given some initial and boundary conditions
-        \1 Maxwell's equations has operators such as curl $\curl$, divergence $\div$, and laplacian $\laplacian$
-        \1 Lets first express the derivative term as a difference formula
+        \1 Maxwell's equations has operators such as curl $\curl$, divergence $\div$, and Laplacian $\laplacian$
+        \1 Lets first express the derivative term as a difference formula.
     \end{outline}
 
 \end{frame}
@@ -355,12 +355,12 @@
         \1 The algorithm employs second-order ($O(\Delta^2)$) central differences.
     \end{outline}
     \begin{outline}[enumerate]
-        \1 Replace all the derivatives in Ampere’s and Faraday’s laws with finite differences.
+        \1 Replace all the derivatives in Ampere's and Faraday's laws with finite differences.
 
         \2 Discretize space and time so that the electric and magnetic fields are staggered in both space and time.
         \1 Evaluate the magnetic fields one time-step into the future ($n+1$)
         \1 Evaluate the electric fields into the future ($n +  1$)
-        \1 Repeat Steps 3 and 4 until all the fields have been computed
+        \1 Repeat Steps 3 and 4 until all the fields have been computed.
     \end{outline}
 \end{frame}
 
@@ -442,7 +442,7 @@
         \1 These coefficients determine how far the energy propagates in a single step in time and space.
         \1 Knowing $c = 1/\sqrt{\E_0 \u_0}$, the maximum distance energy can travel in \textit{one} time step is $c \Delta_t$
         \1 Courant number $S_c$ is the ratio $c \Delta_t / \Delta_x$
-        \2 It determines the stability of the simulation
+        \2 It determines the stability of the simulation.
     \end{outline}
 
     \begin{align*}
@@ -480,7 +480,7 @@
         \2 \textcolor{red}{We can apply absorbing boundary conditions}
         \1 Only having one impedance results in a homogeneous medium
         \2 \textcolor{red}{We can assign each node a $\E$ and $\u$}
-        \1 Right now we havent talked about introducing energy into the system
+        \1 Right now we haven't talked about introducing energy into the system
         \2 \textcolor{red}{We can create a hard-wired source}
     \end{outline}
 
@@ -517,7 +517,7 @@ print(ez[sensorLocation])
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitle{Modeling Open Space}
+    \frametitle{Modelling Open Space}
     \frametitle{Plotting Impedance}
     \begin{columns}[T] % align columns
         \begin{column}{.4\textwidth}
@@ -544,12 +544,12 @@ print(ez[sensorLocation])
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitle{Modeling Sources}
+    \frametitle{Modelling Sources}
 
     \begin{outline}
         \1  In FDTD, we can either use \textit{hard-wired} sources or \textit{additive sources}.
         \1 The former is easier to implement but suffers from severe discontinuity on the point of generation
-        \1 The latter just introduces a current term in the electric field update equation
+        \1 The latter just introduces a current term in the electric field update equation.
     \end{outline}
 
     \scriptsize
@@ -594,7 +594,7 @@ ez[i] = ez[i] + (hy[i] - hy[i - 1]) * imp0 / epsR[i]
 \begin{frame}
     \frametitle{Further Reading}
 
-    Chapters 2 \& 3 - Understanding the FDTD Method \footcite{schneider_understanding_nodate}
+    Chapters 2 \& 3 — Understanding the FDTD Method \footcite{schneider_understanding_nodate}
   
 
 
