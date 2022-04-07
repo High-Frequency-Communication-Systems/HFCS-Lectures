@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 
 \usepackage{mystyle}
@@ -21,16 +21,16 @@ In this lab session, you will learn about:
 
 As discussed in the class, we are only going to compute only one field component at a time. Moreover, the corner points are not considered when it comes to computing the fields. This is because of the \textit{wedge condition} due to which the fields shoot to infinity. The last observation is that we need to space the computation parts uniformly across the whole region of space.
 
-In this lab session, we look at the higher dimension cases of FDTD a bit closely. We will be using some \texttt{MATLAB} routines for this purpose. One marked difference is that we are going to define the update coefficients so that material properties can be introduced more efficiently.
+In this lab session, we look at the higher dimension cases of FDTD a bit closely. Although we show \texttt{MATLAB} routines in this lab manual, you are expected to build upon the \texttt{Python} notebook as introduced in the class. One marked difference in our approach this time is that we are going to define the update coefficients so that material properties can be introduced more efficiently.
 
-Using the discretisation approach that we learnt in the class, we can represent any point in space that is transformed from a continuous domain to a discrete domain $(i\Delta x,j\Delta y,k \Delta z)$.
+Using the discretisation approach that we learned in the class, we can represent any point in space that is transformed from a continuous domain to a discrete domain $(i\Delta x,j\Delta y,k \Delta z)$.
 
 After doing this, we can then express any function $u$ in the finite difference notation in terms of space and time as:
 \begin{align}
   u(i\Delta x,j\Delta y,k \Delta z, n \Delta t) & = u_{i,j,k}^n
 \end{align}
 
-As shown in Fig. \ref{fig:yee_lattice}, we can programatically express the space coordinates $x$,$y$, and $z$ with the variable $i$, $j$, and $k$ respectively. For time $t$ , the variable $n$ is reserved.
+As shown in Fig. \ref{fig:yee_lattice}, we can programatically express the space coordinates $x$,$y$, and $z$ with the variable $i$, $j$, and $k$ respectively. For time $t$, the variable $n$ is reserved.
 
 \begin{figure}[h!]
   \centering
@@ -381,7 +381,7 @@ figure(1)
 EzSurf = surf(xdg,ydg,Ez,'EdgeColor','interp','FaceLighting','gouraud');
 shading interp % Avoid jittered shading
 set(gcf,'Color','white'); % Set background color to white
-set (gca,'FontName','times new roman') % Set axes fonts to Times New Roman
+set (gca,'FontName','times new roman') % Set axes fonts
 box on %
 colorbar % Show colorbar on the right of the figure
 grid on
@@ -525,10 +525,10 @@ Here the variable, \texttt{iflaga} either assumes the value 1 (free space) or 2 
 
 As we saw in class that we require FDTD to model \textit{open} regions where the spatial domain is unbounded. However, practically it is not possible as it requires an infinite amount of computer memory. Therefore, in order to limit the size of the simulation, we create a finite simulation domain with \textit{absorbing boundary conditions} (ABCs).
 
-A class of ABCs work on \textit{extrapolating} the field values at the boundary. One of the most famous ones is the Liao ABC \cite{liao_transmitting_1984} which works on updating the numerical fields in space and time using a Newton backward-difference polynomial.
+A class of ABCs work on \textit{extrapolating} the field values at the boundary. One of the most famous ones is the Liao ABC \cite{liao_transmitting_1984} which works on updating the numerical fields in space and time using a Newton backwards-difference polynomial.
 
 
-The idea is that for any point on the grid bounday $x_{MAX}$, we need to calculate the updated field $u(x_{MAX}, t + \Delta_t)$ using the field values that we already have in the memory. As an example, the update field expressions for a 1D case can be written as:
+The idea is that for any point on the grid boundary $x_{MAX}$, we need to calculate the updated field $u(x_{MAX}, t + \Delta_t)$ using the field values that we already have in the memory. As an example, the update field expressions for a 1D case can be written as:
 
 \begin{align}
   \Delta^1 E(x ,t) ={} & \Delta^1 E_1 = E_2 - E_1  = E(x,t) - E(x - \Delta_x, t - \Delta_t) \nonumber \\
@@ -541,7 +541,7 @@ For the $N^{th}$ term, we get:
 
 \begin{align}
   \Delta^N E(x ,t) ={}         & \sum_{j = 1}^{N+1} C_{j-1}^{N} E\left[x - (j -1)\Delta_x, t - (j -1)\Delta_t\right] \nonumber \\
-  \mathrm{where,} \, C_k^N ={} & \frac{\N\,!}{(N - k)\,! \, k\,!}
+  \mathrm{where,} \, C_k^N ={} & \frac{N\,!}{(N - k)\,! \, k\,!}
 \end{align}
 
 The \textit{extrapolation} can be understood from Fig. \ref{fig:backward_difference} where the point on the right is extrapolated from the neighbouring points, depending on the order of the Liao ABC.
