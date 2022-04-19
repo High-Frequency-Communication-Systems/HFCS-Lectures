@@ -86,7 +86,7 @@
 
     \title{High Frequency Communication Systems}
     \subtitle{Lecture 7}
-    \date{Spring 2021}
+    \date{Spring 2022}
     \author{Hasan T Abbas \& Qammer H Abbasi}
     % \institute{}
     
@@ -240,7 +240,7 @@ The total field is given by:
 
 
 \begin{frame}
-    \frametitle{Two element array - Total Fields}
+    \frametitle{Two element array - Total Field}
 Neglecting any mutual coupling, we obtain the total fields by simple vector summation:
 \begin{align*}
     \va{E_t} {}=& \va{E_1} + \va{E_2} \\
@@ -256,7 +256,7 @@ Neglecting any mutual coupling, we obtain the total fields by simple vector summ
 \end{frame}
 
 \begin{frame}
-    \frametitle{Two element array - Total Fields}
+    \frametitle{Two element array - Total Field}
 
     The total \textit{far-field} thus becomes:
     \begin{align*}
@@ -271,7 +271,7 @@ We can control and change the pattern by varying $d$ and $\alpha$, which are the
 \begin{frame}
     \frametitle{Example - Varying the pattern}
 
-    Lets look at different cases where we consider different values of $d$ and $\alpha$.
+    Let's look at different cases where we consider different values of $d$ and $\alpha$.
     \begin{outline}
         \1 $\alpha = \ang{0}$ and $d = \lambda/4$, for which the array factor (AF) is
     \end{outline}
@@ -284,7 +284,7 @@ We can control and change the pattern by varying $d$ and $\alpha$, which are the
     \centering
     \includegraphics[width=.55\textwidth]{total_pattern_d_quarter_alpha_0.pdf}
     \caption{The total field pattern for $\alpha = \ang{0}$ and $d = \lambda/4$.}
-    \label{fig:antenna_array}
+    \label{fig:antenna_array_quarter}
 \end{figure} 
 \end{frame}   
 
@@ -303,7 +303,7 @@ We can control and change the pattern by varying $d$ and $\alpha$, which are the
     \centering
     \includegraphics[width=.55\textwidth]{total_pattern_d_quarter_alpha_90.pdf}
     \caption{The total field pattern for $\alpha = \ang{90}$ and $d = \lambda/4$.}
-    \label{fig:antenna_array}
+    \label{fig:antenna_array_quarter_90s}
 \end{figure}  
 
 \end{frame}
@@ -323,7 +323,7 @@ We can control and change the pattern by varying $d$ and $\alpha$, which are the
     \centering
     \includegraphics[width=.55\textwidth]{total_pattern_d_quarter_alpha_minus90.pdf}
     \caption{The total field pattern for $\alpha = \ang{-90}$ and $d = \lambda/4$.}
-    \label{fig:antenna_array}
+    \label{fig:antenna_array_alpha_-90}
 \end{figure}  
 
 \end{frame}
@@ -507,10 +507,10 @@ The BWFN is:
             \begin{figure}[t!]
                 \centering
                 \subfloat[Broadside]{\includegraphics[width=1.25in]{broadside.pdf}
-                \label{fig:field_at_20}}
+                \label{fig:field_at_broadside}}
                 \\
                 \subfloat[Endfire]{\includegraphics[width=1.25in]{endfire.pdf}
-                \label{fig:field_at_80}}
+                \label{fig:field_at_endfire}}
               \end{figure}
         \end{column}%
     \end{columns}
@@ -525,7 +525,7 @@ For practical applications, we require a single pencil beam. To achieve it in th
 
 \begin{columns}[T] % align columns
     \begin{column}{.7\textwidth}
-Some of the famous antennas such as the \textit{Yagi-Uda} implements this. The \textit{Hansen-Woodyard} endfire array also does it by introducing an \textcolor{red}{excess phase delay}:
+Some famous antennas such as the \textit{Yagi-Uda} implements this. The \textit{Hansen-Woodyard} endfire array also does it by introducing an \textcolor{red}{excess phase delay}:
 \small
 \begin{align*}
     \alpha {}=& \pm \left(k d + \delta \right)
@@ -540,7 +540,7 @@ The end expressions for \textit{Hansen-Woodyard} array are:
         \begin{figure}[t!]
             \centering
             \includegraphics[width=.95\textwidth]{endfire_two.pdf}
-            \caption{Slight change of the phase}
+            \caption{Slight change of the phase.}
           \end{figure}
     \end{column}%
 \end{columns}
@@ -548,7 +548,7 @@ The end expressions for \textit{Hansen-Woodyard} array are:
 
 \begin{frame}
     \frametitle{Example - The Hanson-Woodyard Array}
-Considering an example, where a five-element Hansen Woodyard has element spacing $d  = 0.37 \lambda$ and the element-element phase shift, $\alpha = 0.94 \pi$. Lets find the radiation pattern.
+Considering an example, where a five-element Hansen Woodyard has element spacing $d  = 0.37 \lambda$ and the element-element phase shift, $\alpha = 0.94 \pi$. Let's find the radiation pattern.
 
 \begin{figure}[h!]
     \centering
@@ -577,10 +577,10 @@ Let's plot the array patterns for a five-element broadside array.
     \begin{figure}[!htbp]
         \centering
         \subfloat[]{\includegraphics[width=.45\textwidth]{triangular_dist.pdf}
-        \label{fig:field_at_20}}
+        \label{fig:field_triangular_dist}}
         \hfil
         \subfloat[]{\includegraphics[width=.45\textwidth]{triangular.pdf}
-        \label{fig:field_at_60}}
+        \label{fig:field_triangular}}
       \end{figure}
 \end{frame}
 
