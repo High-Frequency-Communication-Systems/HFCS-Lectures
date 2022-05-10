@@ -91,7 +91,7 @@
 
 \title{High Frequency Communication Systems}
 \subtitle{Lecture 10}
-\date{Spring 2021}
+\date{Spring 2022}
 \author{Hasan T Abbas \& Qammer H Abbasi}
 % \institute{}
 
@@ -176,8 +176,7 @@
     \frametitle{mmWave Propagation}
 
     \begin{outline}
-        \1 The wave propagation can be modelled macroscopically (\textit{large-scale channel effects}) or microscopically (\textit{small-scale channel effects}
-        )
+        \1 The wave propagation can be modelled macroscopically (\textit{large-scale channel effects}) or microscopically (\textit{small-scale channel effects})
         \1 Lets start with the \textit{Friis} transmission equation:
     \end{outline}
 
@@ -188,7 +187,7 @@
     \begin{figure}[h!]
         \centering
         \includegraphics[width=0.75\textwidth]{table.pdf}
-        \caption{Freespace Path Loss at different frequencies.}
+        \caption{Free space Path Loss at different frequencies.}
     \end{figure}
 
 \end{frame}
@@ -264,7 +263,7 @@
 
 \begin{frame}
     \frametitle{Example - Finding the Number of Antennas}
-    Consider, we want to have the same quality of service (i.e. same link budget) in the scenario below. What is the approximate number of antenna elements required in the mmWave case?
+    Consider, we want to have the same quality of service (i.e., same link budget) in the scenario below. What is the approximate number of antenna elements required in the mmWave case?
 
     Treat the antennas as ideal with the distance from the transmitter and similar efficiencies.
 
@@ -274,19 +273,19 @@
     \end{figure}
 \end{frame}
 
-% \begin{frame}
-%     \frametitle{Example - Solution}
+\begin{frame}
+    \frametitle{Example - Solution}
 
-%     From the \textit{Friis} formula, we can estimate the link budget. We would like to have the same power received in both cases.
+    From the \textit{Friis} formula, we can estimate the link budget. We would like to have the same power received in both cases.
 
-%     An approximate value, discounting the efficiencies, interference and noise can be written as:
-%     \begin{align*}
-%         N_2 \approx \left(\frac{f_2}{f_1}\right)^2 N_1 \\
-%         N_2 \approx 136.11 \times 64
-%     \end{align*}
+    An approximate value, discounting the efficiencies, interference, and noise can be written as:
+    \begin{align*}
+        N_2 \approx \left(\frac{f_2}{f_1}\right)^2 N_1 \\
+        N_2 \approx 136.11 \times 64
+    \end{align*}
 
-%     We need $\approx 136$ times more antennas to maintain the link budget!
-% \end{frame}
+    We need $\approx 136$ times more antennas to maintain the link budget!
+\end{frame}
 
 \section{mmWave Antennas}
 
@@ -360,7 +359,7 @@
     \begin{columns}[T]
         \begin{column}{.5\textwidth}
             \begin{outline}
-                \1 Due to the high dielectic permittivity of \ch{Si} ($\E = 11.7$), the direction of radiation is \textcolor{red}{into} the substrate rather than out.
+                \1 Due to the high dielectric permittivity of \ch{Si} ($\E = 11.7$), the direction of radiation is \textcolor{red}{into} the substrate rather than out.
                 \1 Moreover, the waves get attenuated in the substrate before they can leave the structure
                 \1 Hemispherical dielectric lenses are used to \textit{focus} the waves before they radiate from the structure.
             \end{outline}
@@ -398,7 +397,7 @@
 \begin{frame}
     \frametitle{Class Activity}
 
-    Alice is an antenna designer and needs to decide the best material as well as the topology of the antenna that will be \textit{integrated} with a CMOS circuit. The current design is giving her a poor radiation efficiency of \SI{30}{\percent}. Suggest some improvements to increase the antenna performance.
+    Li is an antenna designer and needs to decide the best material as well as the topology of the antenna that will be \textit{integrated} with a CMOS circuit. The current design is giving her a poor radiation efficiency of \SI{30}{\percent}. Suggest some improvements to increase the antenna performance.
 
     \begin{figure}[h!]
         \centering
@@ -406,14 +405,14 @@
     \end{figure}
 \end{frame}
 
-% \begin{frame}
-%     \frametitle{Class Activity - Solution}
+\begin{frame}
+    \frametitle{Class Activity - Solution}
 
-%     \begin{figure}
-%         \centering
-%         \includegraphics[width=.75\textwidth]{exercise_solution.pdf}
-%     \end{figure}
-% \end{frame}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.75\textwidth]{exercise_solution.pdf}
+    \end{figure}
+\end{frame}
 
 
 \begin{frame}
@@ -433,7 +432,31 @@
     \end{figure}
 \end{frame}
 
-\section{Beamforming Algorithms}
+\section{Beamforming}
+
+
+\begin{frame}
+    \frametitle{Beamforming in Communication Systems — Motivation}
+    \begin{columns}[T]
+        \begin{column}[]{.6\textwidth}
+            \begin{outline}
+                \1 Need to combat multipath fading
+                    \2 Increase signal to noise ratio
+                    \2 Decrease inteference betweeen users
+                \1 We typically rely on antenna diversity
+                    \2 More antennas, more power at the receiver
+                    \2 We treat beamforming as an optimisation problem
+            \end{outline}            
+        \end{column}
+        \begin{column}{.4\textwidth}
+            \begin{figure}[T!]
+                \centering
+                {\includegraphics[width=.95\textwidth]{MIMO.pdf}
+                    \label{fig:beamforming}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
 
 \begin{frame}
     \frametitle{Beamforming Algorithms}
@@ -527,7 +550,7 @@
 
     Chapter 4
 
-    T. S. Rappaport, R. W. Heath, R. C. Daniels, and J. N. Murdock, Millimeter wave wireless communications. Upper Saddle River, NJ: Prentice Hall, 2015.
+    T. S. Rappaport, R. W. Heath, R. C. Daniels, and J. N. Murdock, Millimetre-wave wireless communications. Upper Saddle River, NJ: Prentice-Hall, 2015.
 
 \end{frame}
 \end{document}
