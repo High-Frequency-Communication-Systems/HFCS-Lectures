@@ -24,7 +24,7 @@ The aim of this lab session is to introduce you to software-defined radio (SDR).
 
 Software-defined radios (SDRs) are slowly emerging as important elements of communication systems as they greatly help us in understanding the theoretical concepts of wireless communications using practical exercises. A complete standalone communication system can be constructed with the help of SDRs that includes the transmission and reception of electromagnetic waves. Although the term, SDR may indicate that there is extensive knowledge of software development required, in reality, we rely on a lot of readily available tools in the form of blocks through which we can achieve the desired functionality. We must be cognizant of the fact of the use of SDRs involves working with the radio wave spectrum which is regulated by national agencies in every country. 
 
-Decades ago, SDRs were mainly used in military applications where there is often a need to construct on-demand communication networks. With the advancements in hardware design, these days the cost of SDRs has become affordable and therefore, we can now develop our own flexible communication networks. The core component of a modern SDR is the analogue-to-digital converter (ADC) after which digital signal processing (DSP) can be implemented in software. The DSP based implementation allows to construct of complex components that would otherwise be very complicated using analogue or hardware means. The block-level architecture of an SDR is shown in Fig. \ref{fig:SDR_block}. The radiofrequency (RF) frontend mainly consists of flexible hardware components that can be used for both transmission and reception of radio waves. When the SDR is acting as a receiver, the next step is the ADC module that is followed by a digital down-converter (DDC) that converts the intermediate frequency signal to baseband. This step allows convenience in software processing in the DSP module which is fully programmable. Processes such as modulation, signal processing, encoding and equalisation can be performed in the DSP module. When the SDR acts as a transmitter, the baseband signal is upconverted using a digital up-converter (DUC) followed by a digital-analogue converter (DAC) before the RF frontend transmits the signal as a radio wave.
+Decades ago, SDRs were mainly used in military applications where there is often a need to construct on-demand communication networks. With the advancements in hardware design, these days the cost of SDRs has become affordable and therefore, we can now develop our own flexible communication networks. The core component of a modern SDR is the analogue-to-digital converter (ADC) after which digital signal processing (DSP) can be implemented in software. The DSP based implementation allows constructing of complex components that would otherwise be very complicated using analogue or hardware means. The block-level architecture of an SDR is shown in Fig. \ref{fig:SDR_block}. The radio frequency (RF) frontend mainly consists of flexible hardware components that can be used for both transmission and reception of radio waves. When the SDR is acting as a receiver, the next step is the ADC module that is followed by a digital down-converter (DDC) that converts the intermediate frequency signal to baseband. This step allows convenience in software processing in the DSP module which is fully programmable. Processes such as modulation, signal processing, encoding, and equalisation can be performed in the DSP module. When the SDR acts as a transmitter, the baseband signal is upconverted using a digital up-converter (DUC) followed by a digital-analogue converter (DAC) before the RF frontend transmits the signal as a radio wave.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \centering
@@ -38,7 +38,7 @@ There are two types of SDRs; the first one RTL-SDR are very low-cost, but we can
 
 
 \subsection{ADALM-PLUTO}
-One of the well-known high-performance SDRs available today is the ADALM-PLUTO having a frequency range of \SIrange{0.3}{3.8}{\giga \hertz}. The connectivity with the host computer is provided by the USB 2 interface enabled by \texttt{libiio} and remote network driver interface specification (RNDIS). Due to this, we can simply access the Pluto SDR using the IP address, \texttt{192.168.2.1}. The Pluto DSP architecture is based on the Xilinx Zynq 7010 field-programmable grid array (FPGA) in which we can store and run different functionalities. The RF frontend is based on the AD9361 transceiver that consists of modules such as a local oscillator (LO) that can be tuned, RF filters and GSM antennas that have a radiation pattern similar to a dipole antenna. Further details about the Pluto SDR can be found \href{https://wiki.analog.com/university/tools/pluto/users}{here}.
+One of the well-known high-performance SDRs available today is the ADALM-PLUTO having a frequency range of \SIrange{0.3}{3.8}{\giga \hertz}. The connectivity with the host computer is provided by the USB 2 interface enabled by \texttt{libiio} and remote network driver interface specification (RNDIS). Due to this, we can simply access the Pluto SDR using the IP address, \texttt{192.168.2.1}. The Pluto DSP architecture is based on the Xilinx Zen 7010 field-programmable grid array (FPGA) in which we can store and run different functionalities. The RF frontend is based on the AD9361 transceiver that consists of modules such as a local oscillator (LO) that can be tuned, RF filters and GSM antennas that have a radiation pattern similar to a dipole antenna. Further details about the Pluto SDR can be found \href{https://wiki.analog.com/university/tools/pluto/users}{here}.
 
 \section{Initial Configuration}
 
@@ -53,6 +53,7 @@ Before we start using the Pluto SDR, it is important to install relevant drivers
 \subsection{Install LIBIIO Drivers}
 
 In order to interface embedded devices with a host computer, a \texttt{C/C++} library that enables generic access to industrial input output (IIO) devices has been developed that includes ADCs and DACs. Rather than installing the drivers using a setup file, here we will \textcolor{red}{build} the drivers using some \texttt{Linux} terminal commands. Try with the following commands in the \texttt{Linux} terminal. Type the commands after the symbol \texttt{\$} one by one in the terminal window:
+
 \begin{mdframed}[backgroundcolor=gray!20]
   \tiny
   \begin{minted}[breaklines]{shell-session}
@@ -71,26 +72,27 @@ In order to interface embedded devices with a host computer, a \texttt{C/C++} li
   \end{minted}
 \end{mdframed}
 
-The first two lines above install some required packages before we can build \texttt{libiio}. We then download the package contents of \texttt{libini} using the \texttt{git} command and then use \texttt{make} commands to build and install the package. The package \texttt{libiio} is installed in a similar manner. The last line above ensures that the \texttt{libiio}directory can be found when other packages are looking for it. Detailed instructions can be found at \href{https://wiki.analog.com/resources/tools-software/linux-software/libiio}{here}.
-
-\begin{tcolorbox}[colback=blue!5]
-  On Windows, the latest installation file can be downloaded from \href{https://github.com/analogdevicesinc/libiio/releases}{here}.
-\end{tcolorbox}
-
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.45\textwidth}
   \centering
   \includegraphics[width=.75\linewidth]{pluto_in_hand.png}
   \caption{A picture of Analog Devices ADALM-Pluto SDR to be used in the lab.}
   \label{fig:SDR_pluto}
   \end{wrapfigure}
+
+The first two lines above install some required packages before we can build \texttt{libiio}. We then download the package contents of \texttt{libini} using the \texttt{git} command and then use \texttt{make} commands to build and install the package. The package \texttt{libiio} is installed in a similar manner. The last line above ensures that the \texttt{libiio}directory can be found when other packages are looking for it. Detailed instructions can be found at \href{https://wiki.analog.com/resources/tools-software/linux-software/libiio}{https://wiki.analog.com/resources/tools-software/linux-software/libiio}.
+
+\begin{tcolorbox}[colback=blue!5]
+  On Windows, the latest installation file can be downloaded from \href{https://github.com/analogdevicesinc/libiio/releases}{here}.
+\end{tcolorbox}
  
+
 
 Once \texttt{libiio} is installed, we need to make sure, everything is running fine. One indication is that the \texttt{LED1} on the ADALM-Pluto SDR is blinking when we plug in the module to the computer. As shown in Fig. \ref{fig:SDR_pluto}, the \texttt{Ready} LED should also be turned ON. To further validate everything is running as expected, type in the Ubuntu terminal (command prompt in Windows) the following:
 
 \begin{mdframed}[backgroundcolor=gray!20]
   \tiny
   \begin{minted}{shell-session}
-    $ iio_info –s
+    $ iio_info -s
   \end{minted}
 \end{mdframed}
 
@@ -101,7 +103,7 @@ The next step of the configuration is the installation of the visualisation tool
 \begin{mdframed}[backgroundcolor=gray!20]
   \tiny
   \begin{minted}[breaklines]{shell-session}
-    $ apt-get -y install libglib2.0-dev libgtk2.0-dev      libgtkdatabox-dev libmatio-dev libfftw3-dev libxml2     libxml2-dev bison flex libavahi-common-dev      libavahi-client-dev libcurl4-openssl-dev      libjansson-dev cmake libaio-dev libserialport-dev
+    $ apt-get -y install libglib2.0-dev libgtk2.0-dev libgtkdatabox-dev libmatio-dev libfftw3-dev libxml2 libxml2-dev bison flex libavahi-common-dev libavahi-client-dev -openssl-dev libjansson-dev cmake libaio-dev libserialport-dev
     $ git clone https://github.com/analogdevicesinc/libad9361-iio.git
     $ cd libad9361-iio
     $ cmake ./
@@ -155,7 +157,7 @@ You should be able to open the GNU Radio by typing \texttt{gnuradio-companion} i
 
 Before we delve into some exercises, it is important to grasp some concepts of GNU Radio by following the Basics tutorial on the \href{https://wiki.gnuradio.org/index.php/TutorialsCoreConcepts}{software website}. ∫
 
-\section{Exercise 1 - Running a FM Radio Receiver}
+\section{Exercise 1 — Running an FM Radio Receiver}
 
 It is hoped that by now, you will have installed all the drivers and modules required properly. In this exercise, we will use GNU Radio to run a flowgraph through which we can receive radio waves from an FM radio station. To do so, please make sure that the Pluto SDR is connected to the host computer. In order to check whether everything is working fine, open a terminal and type:
 

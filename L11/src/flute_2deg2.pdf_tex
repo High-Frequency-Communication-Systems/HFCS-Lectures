@@ -60,6 +60,6 @@
     \put(0.93113626,0.09257282){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{D}}}}}%
     \put(0.47366195,0.16082841){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{G}}}}}%
 
-    \put(0.42212794,0){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{L$\approx \SI[round-precision=1]{.1}{\micm}$}}}}}%
+    \put(0.42212794,0){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\textit{L$\approx \SI[round-precision=1]{.1}{\mu cm}$}}}}}%
   \end{picture}%
 \endgroup%

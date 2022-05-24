@@ -1,0 +1,4 @@
+{"rule":"OXFORD_SPELLING_Z_NOT_S","sentence":"^\\QProcesses such as modulation, signal processing, encoding, and equalisation can be performed in the DSP module.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThe communication is also enabled via the USB interface, however, there are special drivers (libiio) required for proper working.\\E$"}
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThe RF frontend is based on the AD9361 transceiver that consists of modules such as a local oscillator (LO) that can be tuned, RF filters and GSM antennas that have a radiation pattern similar to a dipole antenna.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QA picture of Analog Devices ADALM-Pluto SDR to be used in the lab.\\E$"}
