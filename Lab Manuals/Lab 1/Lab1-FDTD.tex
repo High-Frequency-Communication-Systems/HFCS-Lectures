@@ -7,7 +7,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{High Frequency Communication Systems}
+\rhead{High-Frequency Communication Systems}
 \lhead{Lab Manual 1 - FDTD}
 \rfoot{\thepage}
 \begin{document}
@@ -19,7 +19,7 @@ In this lab session, you will learn about:
   \1 Boundary Conditions
 \end{outline}
 
-As discussed in the class, we are only going to compute only one field component at a time. Moreover, the corner points are not considered when it comes to computing the fields. This is because of the \textit{wedge condition} due to which the fields shoot to infinity. The last observation is that we need to space the computation parts uniformly across the whole region of space.
+As discussed in class, we are only going to compute only one field component at a time. Moreover, the corner points are not considered when it comes to computing the fields. This is because of the \textit{wedge condition} due to which the fields shoot to infinity. The last observation is that we need to space the computation parts uniformly across the whole region of space.
 
 In this lab session, we look at the higher dimension cases of FDTD a bit closely. Although we show \texttt{MATLAB} routines in this lab manual, you are expected to build upon the \texttt{Python} notebook as introduced in the class. One marked difference in our approach this time is that we are going to define the update coefficients so that material properties can be introduced more efficiently.
 
@@ -35,7 +35,7 @@ As shown in Fig. \ref{fig:yee_lattice}, we can programatically express the space
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.5\textwidth]{yee lattice.pdf}
-  \caption{The Yee Lattice showing the space indices and field computation points.}
+  \caption{The Yee Lattice shows the space indices and field computation points.}
   \label{fig:yee_lattice}
 \end{figure}
 
@@ -53,7 +53,7 @@ Similarly, the time derivative was also chosen to be at $1/2$ time increments:
 
 \section{Finite Difference Time-Domain method}
 
-For the sake of complying with duality we introduced a magnetic current term in the Maxwell's equations. Although, there is no physical basis for it, yet the term is introduced so that dual of the electric current is present in the Ampere's law:
+For the sake of complying with duality, we introduced a magnetic current term in Maxwell's equations. Although, there is no physical basis for it, the term is introduced so that dual of the electric current is present in Ampere's law:
 
 \begin{subequations}
   \begin{align}
@@ -95,7 +95,7 @@ As an example, the central difference approximation for \eqref{eq:H_x_3D} become
   \right]                                                        \label{eq:H_x_3d_central_difference}
 \end{align}
 
-Notice that in \eqref{eq:H_x_3d_central_difference}, $\va{E}$ and $\va{H}$ exist $1/2$ time step apart. As the electric fields occupy the time step $n$, the magnetic fields only exist at half-time step $n - 1/2$, or  $n + 1/2$. This means that $\left. H_x \right|^n_{i,j,k}$ needs to be \textit{approximated}. Often times, we just use the average:
+Notice that in \eqref{eq:H_x_3d_central_difference}, $\va{E}$ and $\va{H}$ exist $1/2$ time step apart. As the electric fields occupy the time step $n$, the magnetic fields only exist at half-time step $n - 1/2$, or  $n + 1/2$. This means that $\left. H_x \right|^n_{i,j,k}$ needs to be \textit{approximated}. Oftentimes, we just use the average:
 
 \begin{align}
   \left. H_x \right|^n_{i,j,k} & = \frac{\left. H_x \right|^{n+1/2}_{i,j,k} + \left. H_x \right|^{n-1/2}_{i,j,k}}{2}
@@ -120,7 +120,7 @@ After collecting $\left. H_{x} \right|^{n + 1/2}_{i,j,k}$ and $\left. H_{x} \rig
   +  \frac{\Delta t}{\u_{i,j,k}} \left[
   \frac{\left. E_y \right|^{n}_{i,j,k+1/2} - \left. E_y \right|^{n}_{i,j,k-1/2}}{\Delta z} - \frac{\left. E_z \right|^{n}_{i,j+1/2,k} - \left. E_y \right|^{n}_{i,j-1/2,k}}{\Delta y}
   \right]
-  \label{eq:further_simplifying_H_y_3D}
+  \label{eq:further_simplifying_H_x_3D}
 \end{align}
 
 
@@ -265,7 +265,7 @@ Now let's look at a \texttt{Matlab} routine that implements the 2D TM mode field
   \scriptsize
   \begin{minted}{matlab}
 % This program computes and plots the TM mode fields in 
-% 2D rectagnular space with PEC boundaries using 
+% 2D rectangular space with PEC boundaries using 
 % Yee's FDTD Algorithm. 
 %
 %% Define Parameters
@@ -277,7 +277,7 @@ xmu0 = 4*pi*1e-7; % Free space permeability
 a = 10; b = 10; % Space Dimensions
 % Number of grid points in x and y direction
 nx = 100; ny = 100; 
-% Convert to integer in-case of odd number
+% Convert to integer in case of odd number
 nx2 = ceil(nx/2); ny2 = ceil(ny/2); 
 nt = 200; % Number of time-steps
 nskip = 5; % Time-steps to skip while recording
@@ -435,7 +435,7 @@ Running the Matlab file, we should get a 2D Gaussian source starting from the or
 
 \section{Stability}
 
-There has been extensive work done regarding the stability of the FDTD simulations. Stability ensures that any sources created don't shoot up in value as the simulation is progressed in time. As we saw in the lectures, the Courant number is a criterion for the stability of the FDTD simulation. It is different for 1-, 2-, and 3- dimensions. In order to find the stability conditions, the difference based Maxwell equations are treated as an eigenvalue problem and the eigenmodes determine the numerical stability. Essentially, we want to avoid the uncontrolled growth of all the possible spatial modes in the FDTD grid. As an example, a mode consisting of a sinusoidal function must have values in the limit $-1, \dots, 1$. Generally speaking, if we assume equal spatial spacing, ie, $\Delta_x = \Delta_y = \Delta_z = \Delta$, then a good rule of thumb for stability condition is:
+There has been extensive work done regarding the stability of the FDTD simulations. Stability ensures that any sources created don't shoot up in value as the simulation is progressed in time. As we saw in the lectures, the Courant number is a criterion for the stability of the FDTD simulation. It is different for 1-, 2-, and 3- dimensions. In order to find the stability conditions, the difference-based Maxwell equations are treated as an eigenvalue problem and the eigenmodes determine the numerical stability. Essentially, we want to avoid the uncontrolled growth of all the possible spatial modes in the FDTD grid. As an example, a mode consisting of a sinusoidal function must have values in the limit $-1, \dots, 1$. Generally speaking, if we assume equal spatial spacing, ie, $\Delta_x = \Delta_y = \Delta_z = \Delta$, then a good rule of thumb for stability condition is:
 
 \begin{align}
   \Delta_t \le \frac{\Delta}{2c}
@@ -525,7 +525,7 @@ Here the variable, \texttt{iflaga} either assumes the value 1 (free space) or 2 
 
 As we saw in class that we require FDTD to model \textit{open} regions where the spatial domain is unbounded. However, practically it is not possible as it requires an infinite amount of computer memory. Therefore, in order to limit the size of the simulation, we create a finite simulation domain with \textit{absorbing boundary conditions} (ABCs).
 
-A class of ABCs work on \textit{extrapolating} the field values at the boundary. One of the most famous ones is the Liao ABC \cite{liao_transmitting_1984} which works on updating the numerical fields in space and time using a Newton backwards-difference polynomial.
+A class of ABCs works on \textit{extrapolating} the field values at the boundary. One of the most famous ones is the Liao ABC \cite{liao_transmitting_1984} which works on updating the numerical fields in space and time using a Newton backward-difference polynomial.
 
 
 The idea is that for any point on the grid boundary $x_{MAX}$, we need to calculate the updated field $u(x_{MAX}, t + \Delta_t)$ using the field values that we already have in the memory. As an example, the update field expressions for a 1D case can be written as:
@@ -645,7 +645,7 @@ In \texttt{Program 3.m}, the Liao ABCs are implemented for the same structure as
 \subsection*{Exercise}
 
 \begin{mdframed}[backgroundcolor=blue!20]
-  Plot the 1D electric fields at \texttt{n = 5} and try see how the  Figs 3 - 6 in \cite{kane_yee_numerical_1966} now look like.
+  Plot the 1D electric fields at \texttt{n = 5} and try to see how the  Figs 3 - 6 in \cite{kane_yee_numerical_1966} now look like.
 \end{mdframed}
 
 

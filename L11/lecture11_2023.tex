@@ -1,0 +1,770 @@
+\documentclass[10pt]{beamer}
+
+\usetheme{glasgow}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage{bookmark}
+% \sisetup{per-mode=symbol,per-symbol = p}
+\usepackage[style=verbose]{biblatex}
+\renewcommand{\footnotesize}{\fontsize{5pt}{7pt}\selectfont}
+% \usepackage{filecontents}% to embed the file `myreferences.bib` in your `.tex` file
+% \begin{filecontents*}[noheader]{references.bib}
+%     @book{rappaport_millimeter_2015,
+% 	address = {Upper Saddle River, NJ},
+% 	title = {Millimeter wave wireless communications},
+% 	isbn = {978-0-13-217228-8},
+% 	publisher = {Prentice Hall},
+% 	author = {Rappaport, Theodore S. and Heath, Robert W. and Daniels, Robert C. and Murdock, James N.},
+% 	year = {2015},
+% 	keywords = {Millimeter wave communication systems, Wireless communication systems}
+% }
+
+% \addbibresource{references.bib}
+
+
+% \usepackage[noadjust]{cite}
+\usepgfplotslibrary{dateplot}
+
+\usemintedstyle{trac}
+
+% ($ (A)!r!(B) $) the location of images to be used
+\graphicspath{{src/}}
+
+%% Customisation
+% \newcommand{\V}[1]{\v} % vectors \v{c}
+% \renewcommand{\v}[1]{\mathbf{#1}} % vectors
+\newcommand{\ti}[1]{\tilde{#1}} % spectral representation
+\newcommand{\tnsr}[1]{\underline{\underline{#1}}}
+
+% Symbols
+\renewcommand{\O}{\omega}  % omega
+\newcommand{\E}{\varepsilon}  % epsilon
+\renewcommand{\u}{\mu}  % mu
+\newcommand{\p}{\rho}  % rho
+\newcommand{\x}{\times}  % times
+\renewcommand{\inf}{\infty}  % infinity
+\newcommand{\infint}{\int\limits_{-\inf}^\inf} % integral by R
+\newcommand{\e}{\mathrm{e}} % Straight-up exponential
+\renewcommand{\j}{{j}\mkern1mu} % Straight-up exponential
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+\usepackage{animate}
+
+
+
+%     % Define a the counter cnt. Used to identify files generated for use
+% % with Gnuplot.
+% \newcounter{cnt}
+% \setcounter{cnt}{0}
+
+% % Macro for drawing one frame of the F-distribution animation.
+% \newcommand{\fdst}[4]{%
+%     % shade the critical region tail
+%     \draw[fill,orange]  (#1,0) -- plot[id=5\thecnt,domain=#1:5.5,samples=50]
+%         function {#4*(x**(0.5*#2-1))*((1+#2*x/#3)**(-0.5*#2-0.5*#3))}
+%             -- (5.5,0) -- cycle;
+
+%     % draw the F distribution curve
+%     \draw[color=blue!50!black,thick]
+%         plot[id=f4\thecnt,smooth,domain=0:5.5,samples=100]
+%         function {#4*(x**(0.5*#2-1))*((1+#2*x/#3)**(-0.5*#2-0.5*#3))};
+
+%     % draw the F axis
+%     \draw[->] (0,0) -- (6,0) node[right] {$F$};
+%     % label the critical region boundary
+%     \draw (#1,0) -- (#1,-0.02) node[below] {$#1$};
+%     % label 0
+%     \draw (0,0) -- (0,-0.02) node[below] {$0$};
+
+%     % add some lables for degrees of freedom and alpha level
+%     \draw (2,0.5) node[right] {$df_1 = #2$};
+%     \draw (2,0.4) node[right] {$df_2 = #3$};
+%     \draw (2,0.3) node[right] {$\alpha = 0.10$};
+
+%     % draw the y axis
+%     \draw[very thin,->] (0,0) -- (0,0.8);
+% }
+
+
+\title{High Frequency Communication Systems}
+\subtitle{Lecture 11}
+\date{Spring 2023}
+\author{Hasan T Abbas \& Qammer H Abbasi}
+% \institute{}
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+% \begin{frame}
+%     \frametitle{Course Evaluation Survey}
+
+%     \begin{figure}[h!]
+%         \centering
+%         \includegraphics[width=.5\textwidth]{QRCode for High-Frequency Communication Systems.png}
+%         \caption{Survey available at https://forms.office.com/r/uzegCvGdPE.}
+%     \end{figure}
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+    \frametitle{Lecture Outline}
+    \begin{outline}[itemize]
+        \1 Terahertz Communications
+        \1 Terahertz Generation
+        \1 Plasmonics
+        \1 Metasurfaces et al.
+    \end{outline}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Terahertz Communications}
+
+\begin{frame}
+    \frametitle{The Terahertz Spectrum}
+    \begin{columns}
+        \normalsize
+        \begin{column}{.6\textwidth}
+            \begin{outline}
+                \1 The electromagnetic (EM) spectrum between \SIrange{0.1}{10}{\THz} is called the \textit{THz band}.
+                \1 Naturally, higher carrier frequency yields higher bandwidth
+                \2 Not necessarily higher channel capacity
+                \1 We can achieve bandwidths up to \SI{20}{Gbps}
+                \2 A typical 8K film requires \SI{200}{Mbps} bandwidth!
+                \2 For comparison, optical fibre communication can provide \SI{39}{Tbps} bandwidth!
+                \1 THz communications provide a promising application for back hauling of base stations.
+            \end{outline}
+        \end{column}
+        \begin{column}{.4\textwidth}
+            \scriptsize
+            \begin{figure}[T!]
+                \centering
+                \includegraphics[width=.95\textwidth]{backhaul.pdf}
+                \label{fig:backhaul_network}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Terahertz Communications}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.95\textwidth]{THz Attenuation.pdf}
+        \caption{EM wave attenuation and free-space path-loss due to \ch{H2O} molecules in the air in the THz spectrum \tiny{[Nagatsuma, T., \textit{et al}. Nature Photon 10, 371-379 (2016)]}.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Terahertz Technology}
+    \normalsize
+    \begin{columns}
+        \normalsize
+        \begin{column}{.6\textwidth}
+            \begin{outline}
+                \1 Just like mmWave communications, THz waves have considerably high free-space pathloss
+                \2 This requires even higher gain antennas ($\sim \SI{100}{\dB}$)
+                \1 Current THz device technology does not allow us to increase the power levels
+                \1 Since THz lies in the middle of microwave and optical frequencies, we get the \textit{best of both worlds}.
+                \2 We have non-ionising waves
+                \2 We can construct devices similar to optical technologies.
+            \end{outline}
+        \end{column}
+        \begin{column}{.44\textwidth}
+            \scriptsize
+            \begin{figure}
+                \centering
+                \includegraphics[width=.95\textwidth]{Scale.pdf}
+                \label{fig:Terahertz_technology}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \includegraphics[width=.95\textwidth]{sources_and_power.jpeg}
+                \label{fig:sources_power}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\section{Terahertz Sources}
+
+
+\begin{frame}
+    \frametitle{Terahertz Generation}
+
+    There are many ways to generate efficient THz signals. However, all the technologies have not fully developed to be widely available.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=1\textwidth]{terahertz_sources.pdf}
+    \end{figure}
+    Today, we will focus on the plasmonic technologies.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Terahertz Sources}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.75\textwidth]{Curto_resonator.pdf}
+        \caption{Different Source techniques at THz and optical frequencies.}
+    \end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Terahertz Sources — Extension of Microwave Technologies}
+    \small
+    \begin{outline}
+        \1 Microwave based vacuum tube technologies are extended to THz frequencies
+        \2 The process involves conversion of modulated electron current to electromagnetic radiation
+        \2 These are often called \textit{fast-wave} devices
+        \2 The phase velocity of the generated electromagnetic wave is greater than the speed of light
+    \end{outline}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.65\textwidth]{electron_gun.pdf}
+        \caption{A typical vacuum-tube source \tiny{[Rieh, J-S.,  Intro to Terahertz Electronics, Springer (2021)]}.}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Photonic Terahertz Sources}
+    \begin{figure}[t!]
+        \centering
+        \includegraphics[width=.6\textwidth]{photonic_sources.pdf}
+    \end{figure}
+    \begin{outline}
+        \1 The main idea is the optical-THz signal conversion through lasers
+        \1 Non-linear optical (NLO) materials are used to generate \textit{monochromatic} THz waves
+        \2 II-VI Semiconductor crystals such as \ch{ZnTe}, and \ch{CdTe} are commonly used as NLO materials
+    \end{outline}
+\end{frame}
+
+\section{Plasmonics}
+
+\begin{frame}
+    \frametitle{Plasmonics Overview}
+    % ----------------------------------------------------------
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{outline}[itemize]
+                \1 Interfacial wave phenomena
+                \2 Metal-dielectric interface
+                \2 Semiconductor heterostructure
+                \1 Surface plasmon polaritons (SPPs)
+            \end{outline}
+            %
+            \begin{outline}[itemize]
+                \1 Plasma frequency
+                \2 Metals — Optical frequency
+                \2 Semiconductors — Terahertz
+            \end{outline}
+            %
+        \end{column}
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \centering
+                \fontsize{6}{7}\selectfont% Reduce the fontsize
+                \def\svgwidth{.8\linewidth}
+                \input{src/spp.pdf_tex}
+                \label{fig:spp}
+                \caption{SPPs at optical frequencies}
+            \end{figure}
+            %
+            \begin{figure}
+                \centering
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{.8\linewidth}
+                \input{src/spp_2deg.pdf_tex}
+                \label{fig:spp_2deg}
+                \caption{SPPs in the THz regime}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+\begin{frame}
+    \frametitle{Surface Plasmon Polaritons}
+
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Slow surface waves
+                    \1 Reduced Wavelength
+                    \1 Focusing beyond the diffraction limit
+                \end{outline}
+                \begin{outline}[itemize]
+                    \1 Optical SPP
+                \end{outline}
+                \setlength{\belowdisplayshortskip}{-7pt}
+                \setlength{\abovedisplayshortskip}{2pt}
+                \begin{equation} \nonumber
+                    \Re \left[ \E_{\text{metal}}(\O)\right] < 0
+                \end{equation}
+                \begin{outline}[itemize]
+                    \1 THz SPP
+                \end{outline}
+                \begin{equation} \nonumber
+                    \Im \left[ \sigma_{s}(\O)\right] < 0
+                \end{equation}
+            \end{minipage}
+        \end{column}
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \centering \hspace*{-1.25cm}
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{1.1\linewidth}
+                \input{src/spps_comp.pdf_tex}
+                \label{fig:spp_2deg2}
+                \caption{Dispersion Curve comparison}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+\begin{frame}
+    \frametitle{Nanoantennas}
+
+    \begin{columns} % align columns
+        \begin{column}{.4\textwidth}
+            % \begin{minipage}[T][.1\textheight][c]{\linewidth}
+            \vspace*{-1cm}
+            \begin{outline}[itemize]
+                \1 Convert Localized near-field to efficient far-field radiation
+                \1 Low Q-factor
+                \1 Tiny size
+                \1 \color{red}{High Purcell Factor}
+            \end{outline}
+            % \setlength{\belowdisplayshortskip}{-7pt}
+            % \setlength{\abovedisplayshortskip}{2pt}
+            \begin{equation} \nonumber
+                {P}  = \frac{{Q}}{{V}}
+            \end{equation}
+            \begin{outline}[itemize]
+                \1 Directive radiation
+            \end{outline}
+            % \end{minipage}
+            %
+        \end{column}
+        %
+        \begin{column}{.55\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \centering
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{1.0\linewidth}
+                \input{src/curto.pdf_tex}
+                \caption{Optical resonant cavities for electric field enhancement}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+%   % ------------------------------------------------------------
+\begin{frame}
+    \frametitle{Nanoantennas}
+
+    \begin{columns} % align columns
+        \begin{column}{.45\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Scaled-down microwave antenna designs
+                    \1 Shift of resonance with width unlike in microwave regime
+                \end{outline}
+                \begin{figure}
+                    \includegraphics[scale=.03]{bowtie_field_map.png}
+                    % \caption{Subwavelength Transmission through a Silver slit}
+                \end{figure}
+            \end{minipage}
+        \end{column}
+        %
+        \begin{column}{.55\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \centering
+                \subfloat{\includegraphics[height = 1.4in]{generate_fig8c.tikz}
+                    \label{fig:sim_his}}\\
+                \centering
+                \subfloat{\includegraphics[height = .8in]{fig8_a.png}
+                    \label{fig:narrow}}
+                \subfloat{\includegraphics[height = .8in]{fig8_d.png}
+                    \label{fig:wide}}
+                % \caption{(a) Maximum enhancement of a gold nanodipole excited at \SI{550}{\nm} (b) narrow and (c) wide profile. A narrow structure does not maintain resonance when widened without also changing its length.}
+                \label{fig:simulationop}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+\begin{frame}
+    \frametitle{Two-dimensional Electron Gas (2DEG)}
+
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Semiconductor Heterostructure in high electron mobility transistor (HEMT)
+                    \1 High concentration of free electrons ($\sim \num{1e11}-\SI{1e14}{\cm^{-2}}$)
+                    \1 Very high Mobility ($\sim \num{1e3}-\SI{1e6}{\cm^{2}/V/s}$)
+                    \1 Formation of Quantum Well
+                    \2 Two-dimensional confinement of electrons
+                \end{outline}
+            \end{minipage}
+            %
+        \end{column}
+        %
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \centering
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{.8\linewidth}
+                \input{src/hemt2.pdf_tex}
+                \caption{Typical GaAs/AlGaAs HEMT}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{.8\linewidth}
+                \input{src/2deg_bandgap.pdf_tex}
+                \caption{Band diagram of a GaAs/AlGaAs heterostructure}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+%       % ------------------------------------------------------------
+\begin{frame}
+    \frametitle{2DEG (contd.)}
+
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Plasma waves in 2DEG
+                    \1 Dyakonov-Shur instability
+                    \2 Voltage bias at source and drain terminals
+                    \2 Plasma resonance
+                    \2 THz emission
+                    \1 Electronic Flute
+                    \2 Tunable resonance with gate voltage
+                \end{outline}
+            \end{minipage}
+            %
+        \end{column}
+        %
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{1.1\linewidth}
+                \input{src/flute_2deg2.pdf_tex}
+                % \caption{Typical GaAs/AlGaAs HEMT}
+            \end{figure}
+            \begin{equation} \nonumber
+                \begin{split}
+                    \lambda &= \frac{c}{f} \\
+                    & \Longrightarrow  300 \u \mathrm{m}
+                \end{split}
+                \label{eq:disp_TE_two}
+            \end{equation}
+        \end{column}%
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SPP Dispersion Relation}
+    \begin{columns}[T] % align columns
+        \begin{column}{.5\textwidth}
+            \begin{outline}[itemize]
+                \1 SPP solution (pole expression)
+            \end{outline}
+            \begin{equation} \nonumber
+                k_{sp}=\frac{\O}{c}\sqrt {\dfrac {\E_{1}\E_{2}(\O)} {\E_{1} + \E_{2}(\O)}}
+                \label{eq:dis_spp}
+            \end{equation}
+            \begin{outline}[itemize]
+                \1 Accurate material description
+            \end{outline}
+            \begin{equation} \nonumber
+                \E_2(\O) = \E_{\inf} - \frac{\O_{d}^{2}}{\O^2 - \j\gamma \O} + \sum \limits_{i = 1}^N G_i(\O)
+                \label{eq:eps_drude_cp}
+            \end{equation}
+            \begin{equation} \nonumber
+                G_i(\O) = C_i \left[ \frac{e^{\j \phi_i}}{\O_i + \O - \j \Gamma_i} + \frac{e^{-\j \phi_i}}{\O_i - \O + \j \Gamma_i} \right]
+                \label{eq:CP_terms}
+            \end{equation}
+        \end{column}
+        \begin{column}[T]{.45\textwidth}
+            \centering
+            \begin{figure}
+                \subfloat{\includegraphics[height = 1.25in]{ep_silver.tikz}
+                    \label{fig:ep_gold}}
+
+                \subfloat{\includegraphics[height = 1.25in]{disp_silver.tikz}
+                    \label{fig:ep_silver}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+%     % ------------------------------------------------------------
+\begin{frame}
+    \frametitle{Theory and Methods}
+    \frametitle{2DEG Circuit model}
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Drude-Lorentz Surface Conductivity
+                \end{outline}
+                %
+                \begin{equation} \nonumber
+                    \sigma_s = \frac{N_s e^2}{m^{\ast}}\frac{\tau}{1 + \j \tau \O}
+                    \label{eq:Y2deg}
+                \end{equation}
+                \begin{itemize}
+                    \item[] {\makebox[.3cm][l]{$N_s$} — Surface charge density}
+                    \item[] {\makebox[.3cm][l]{$\tau$} — Scattering time}
+                    \item[] {\makebox[.3cm][l]{$m^{\ast}$} — Effective electron mass}
+                \end{itemize}
+                \begin{outline}[itemize]
+                    \1 Equivalent Circuit
+                \end{outline}
+                \begin{equation} \nonumber
+                    \sigma_s = \frac{1}{Z} = \frac{1}{R + {1}/{\j \O C}}
+                    \label{eq:simga_TL}
+                \end{equation}
+            \end{minipage}
+        \end{column}
+        %
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \includegraphics[height = 1.5in]{cond_2deg_gan.tikz}
+                \label{fig:cond_2deg}
+                \caption{Room temperature GaN/AlGaN 2DEG surface conductivity}
+            \end{figure}
+            %
+            \begin{figure} \vspace*{-.75cm}
+                \centering
+                \fontsize{6}{7}\selectfont
+                \def\svgwidth{.75\linewidth}
+                \input{src/circuit.pdf_tex}
+                % \caption{Typical GaAs/AlGaAs HEMT}
+            \end{figure}
+        \end{column}%
+    \end{columns}
+\end{frame}
+%           % ------------------------------------------------------------
+%           % ------------------------------------------------------------
+%           % ------------------------------------------------------------
+%           % ------------------------------------------------------------
+%           % ------------------------------------------------------------
+%           % ------------------------------------------------------------
+%           % ------------------------------------------------------------
+\begin{frame}
+    \frametitle{Dispersion Relation for a 2D Sheet}
+    \begin{columns}[T] % align columns
+        \begin{column}{.5\textwidth}
+            \begin{outline}[itemize]
+                \1 Conductive Sheet in free space
+                \1 TM mode surface wave
+            \end{outline}
+            \begin{equation} \nonumber
+                k^{\mathrm{TM}}_{\mathrm P} = \frac{\O}{c} \sqrt{1 - \left(\frac{2}{\eta_0 \sigma_s}\right)^2}
+                \label{eq:TM_pole}%
+            \end{equation}
+            \begin{outline}[itemize]
+                \1 Below plasma frequency
+            \end{outline}
+            \begin{equation} \nonumber
+                \Im \sigma_s < 0
+                \label{eq:2deg_surface_wave}%
+            \end{equation}%
+            \begin{outline}[itemize]
+                \1 At low temperature
+            \end{outline}%
+            \begin{equation} \nonumber
+                \Im |\sigma_s| \gg \Re |\sigma_s|
+                \label{eq:2deg_low_loss}
+            \end{equation}
+        \end{column}
+        \begin{column}[T]{.45\textwidth}
+            \centering
+            \begin{figure}
+                \subfloat{\includegraphics[height = 1.25in]{disp_gaas_sheet_77.tikz}
+                    \label{fig:disp_2deg_77}}
+
+                \subfloat{\includegraphics[height = 1.25in]{disp_gaas_sheet_rt.tikz}
+                    \label{fig:disp_2deg_rt}}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\section{Metasurfaces}
+\begin{frame}
+    \frametitle{Wavefront Shaping.}
+
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Mould the shape of a wavefront
+                    \1 Challenge — Below optical frequencies, the EM wave loses its coherence when we move away from the source
+                \end{outline}
+            \end{minipage}
+        \end{column}
+        %
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \includegraphics[height = 1.5in]{Metasurface.jpeg}
+                \label{fig:cond_2deg}
+                \caption{A metasurface illustration, from \tiny{[Achouri, Karim and Caloz, Christophe. Nanophotonics, vol. 7, no. 6, 2018]}.}
+            \end{figure}
+            %
+        \end{column}%
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{A Phase Control Approach}
+
+    \begin{columns} % align columns
+        \begin{column}{.5\textwidth}
+            \begin{minipage}[T][.1\textheight][c]{\linewidth}
+                \begin{outline}[itemize]
+                    \1 Mould the shape of a wavefront
+                    \1 Challenge — Below optical frequencies, the EM wave loses its coherence when we move away from the source
+                \end{outline}
+            \end{minipage}
+        \end{column}
+        %
+        \begin{column}{.5\textwidth}
+            % Use this to preserve fonts from Inkspace
+            \begin{figure}
+                \includegraphics[height = 1.5in]{pr_meta.png}
+                \label{fig:cond_2deg}
+                \caption{Programmable Metasurface, from \tiny{[Zhang, L., Chen, X.Q., Liu, S. et al. Nat Commun 9, 4334 (2018)]}.}
+            \end{figure}
+            %
+        \end{column}%
+    \end{columns}
+\end{frame}
+
+\section{Terahertz Applications}
+
+\begin{frame}
+    \frametitle{Terahertz Detection}
+    Relying on the principle of reciprocity, we can use photoconductive antennas to detect THz radiation.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.45\textwidth]{terahertz_applications.pdf}
+        \caption{A polarisation sensitive cross-nanowire THz detector \tiny{[Peng et al., Science 368, 510-513 (2020)]}.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Terahertz Imaging}
+    \begin{outline}
+        \1 THz waves have the ability to \textcolor{red}{see through} apparently opaque objects.
+        \1 This is done in a non-ionising manner
+        \1 Through image processing, we can achieve high-resolution imaging through THz waves.
+    \end{outline}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.95\textwidth]{terahertz_imagin.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Material Characterisation}
+
+    \small
+    \begin{columns}
+        \begin{column}{.4\textwidth}
+            \begin{outline}
+                \1 THz time-domain spectroscopy (THz-TDS) is a well-known method for charaterising the material properties of different substances
+                \2 Attractive applications in explosives detection, counterfeit drug discovery and health monitoring of plants
+                \1 The Biggest feature is again, the non-ionising nature of THz waves
+                \1 Common substances such as \ch{H2O} and \ch{N2} have strong absorption spectra
+             \end{outline}
+        \end{column}
+        \begin{column}{.6\textwidth}
+            \scriptsize
+            \begin{figure}[T!]
+                \centering
+                \includegraphics[width=.95\textwidth]{nitrogen.pdf}
+                \label{fig:nitrogen}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\end{document}

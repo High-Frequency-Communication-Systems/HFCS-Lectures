@@ -1,0 +1,524 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={High Frequency Communication Systems},
+  pdfauthor={Hasan Tahir Abbas \& Qammer Abbasi},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\directlua{luaotfload.add_fallback(
+             "myfallback",
+             {"NotoColorEmoji:mode=harf;"}
+           )}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{High Frequency Communication Systems}
+\author{Hasan Tahir Abbas \& Qammer Abbasi}
+\date{Spring 2021}
+
+\begin{document}
+\maketitle
+
+\hypertarget{preliminary-information}{%
+\section{Preliminary Information}\label{preliminary-information}}
+
+\hypertarget{course-introduction}{%
+\subsection{Course Introduction}\label{course-introduction}}
+
+\begin{itemize}
+\tightlist
+\item
+  Introduction to Millimetre wave (mmWave) and Terahertz (THz) Frequency
+  Communication Systems
+\item
+  Theory of Electromagnetic wave propagation
+\item
+  Channel Modelling Schemes
+\item
+  Antenna Analysis and Design
+\end{itemize}
+
+\hypertarget{course-objectives}{%
+\subsection{Course Objectives}\label{course-objectives}}
+
+\begin{itemize}
+\tightlist
+\item
+  State of the art of electromagnetic simulation strategies for THz
+  devices
+\item
+  Application of solid-state structures and novel 2D materials in mmWave
+  and THz device technologies
+\item
+  Antenna design with emphasis on phased arrays used for beamforming
+\item
+  Wireless Propagation models of mmWave and THz communication channels
+\end{itemize}
+
+\hypertarget{course-intended-learning-outcomes}{%
+\subsection{Course Intended Learning
+Outcomes}\label{course-intended-learning-outcomes}}
+
+By the end of this course, you will be able to: It 😺 lorem 👅 \LaTeX.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Recognise the physical limitations of electromagnetic wave propagation
+  and the need to move to higher frequencies in next generation mobile
+  communication.
+\item
+  Analyse the wireless channel models to characterise a cellular
+  communication environment.
+\item
+  Use electromagnetic simulation techniques to study antennas and wave
+  propagation.
+\item
+  Design complex antenna systems with specific beamforming needs for
+  mobile environments.
+\end{enumerate}
+
+\hypertarget{course-assessments}{%
+\subsection{Course Assessments}\label{course-assessments}}
+
+\begin{longtable}[]{@{}lc@{}}
+\toprule
+Assessment Type & Weightage \\
+\midrule
+\endhead
+Homework & 30 \% \\
+Final Exam & 20 \% \\
+Lab Exercises & 20 \% \\
+Lab Project and Presentation & 20 \% \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{electromagnetic-theory-old_key}{%
+\section{Electromagnetic Theory
+:old\_key:}\label{electromagnetic-theory-old_key}}
+
+\hypertarget{electromagnetic-waves}{%
+\subsection{Electromagnetic Waves}\label{electromagnetic-waves}}
+
+\hypertarget{tikz-picture}{%
+\subsection{TikZ picture}\label{tikz-picture}}
+
+\begin{itemize}
+\tightlist
+\item
+  Here is a TikZ picutre
+\end{itemize}
+
+\begin{tikzpicture}
+\draw (0,0) circle (2cm);
+\end{tikzpicture}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+  point to a location in memory
+\item
+  declaration: \texttt{int\ *intPtr;}
+\item
+  getting an address: \texttt{intPtr\ =\ \&x;}
+\item
+  ``dereferencing'' a pointer gets the value pointed to:
+  \texttt{*intPtr}
+\end{itemize}
+
+\hypertarget{pointer-arithmetic}{%
+\subsection{Pointer arithmetic}\label{pointer-arithmetic}}
+
+\begin{itemize}
+\tightlist
+\item
+  In general, we cannot perform arbitrary assignments to a pointer and
+  expect to read valid memory (often results in segfaults)
+\item
+  Exception: we can add or subtract from a pointer to navigate an array
+\item
+  Incrementing a pointer increments by \texttt{sizeof(type)} being
+  pointed to, not by 1 memory address
+\end{itemize}
+
+\hypertarget{strings}{%
+\subsection{Strings}\label{strings}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{int\ strlen(char\ *string)}
+\item
+  \texttt{int\ strcpy(char\ *dst,\ char\ *src)}
+\item
+  \texttt{int\ strcmp(char\ *str1,\ char\ *str2)}
+\end{itemize}
+
+\hypertarget{strlen}{%
+\subsection{strlen}\label{strlen}}
+
+. . .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{int}\NormalTok{ strlen(}\DataTypeTok{char}\NormalTok{ *string)\{}
+    \DataTypeTok{int}\NormalTok{ n;}
+    \ControlFlowTok{for}\NormalTok{ (n = }\DecValTok{0}\NormalTok{; *s != }\CharTok{\textquotesingle{}\textbackslash{}0\textquotesingle{}}\NormalTok{, s++)\{}
+\NormalTok{        n++;}
+\NormalTok{    \}}
+    \ControlFlowTok{return}\NormalTok{ n;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{strcpy}{%
+\subsection{strcpy}\label{strcpy}}
+
+. . .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{char}\NormalTok{ *strcpy(}\DataTypeTok{char}\NormalTok{ *dst, }\DataTypeTok{char}\NormalTok{ *src)\{}
+    \DataTypeTok{int}\NormalTok{ i = }\DecValTok{0}\NormalTok{;}
+    \ControlFlowTok{while}\NormalTok{ ((dst[i] = src[i]) != }\CharTok{\textquotesingle{}\textbackslash{}0\textquotesingle{}}\NormalTok{)\{}
+\NormalTok{        i++;}
+\NormalTok{    \}}
+    \ControlFlowTok{return}\NormalTok{ dst;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+. . .
+
+\begin{itemize}
+\tightlist
+\item
+  src and dst cannot be overlapping, why?
+\end{itemize}
+
+\hypertarget{strcpy-with-pointer-arithmetic}{%
+\subsection{strcpy with pointer
+arithmetic}\label{strcpy-with-pointer-arithmetic}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{char}\NormalTok{ *strcpy(}\DataTypeTok{char}\NormalTok{ *dst, }\DataTypeTok{char}\NormalTok{ *src)\{}
+    \ControlFlowTok{while}\NormalTok{ (*dst++ = *src++);}
+    \ControlFlowTok{return}\NormalTok{ dst;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  How does this work?
+\end{itemize}
+
+\hypertarget{strcmp}{%
+\subsection{strcmp}\label{strcmp}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{int}\NormalTok{ strcmp(}\DataTypeTok{char}\NormalTok{ *s, }\DataTypeTok{char}\NormalTok{ *t)\{}
+    \ControlFlowTok{for}\NormalTok{ ( ; *s == *t; s++, t++)\{}
+        \ControlFlowTok{if}\NormalTok{ (*s == }\CharTok{\textquotesingle{}\textbackslash{}0\textquotesingle{}}\NormalTok{)\{}
+            \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{        \}}
+\NormalTok{    \}}
+    \ControlFlowTok{return}\NormalTok{ *s {-} *t;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{the-problem-with-strlen-strcpy-strcmp}{%
+\subsection{The Problem with strlen, strcpy,
+strcmp}\label{the-problem-with-strlen-strcpy-strcmp}}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  What's wrong with these functions?
+\item
+  C does not store length alongside arrays
+\item
+  Naive versions can potentially access memory improperly if given
+  non-terminated strings or insufficient space
+\end{itemize}
+\end{quote}
+
+\hypertarget{buffer-overflow}{%
+\subsection{Buffer overflow}\label{buffer-overflow}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{char}\NormalTok{           A[}\DecValTok{8}\NormalTok{] = }\StringTok{""}\NormalTok{;}
+\DataTypeTok{unsigned} \DataTypeTok{short}\NormalTok{ B    = }\DecValTok{1979}\NormalTok{;}
+\NormalTok{strcpy(A, }\StringTok{"excessive"}\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
+. . .
+
+!
+
+. . .
+
+\note{Show example here}
+
+\hypertarget{solution-passing-the-lengths-of-string-to-functions}{%
+\subsection{Solution: Passing the lengths of string to
+functions}\label{solution-passing-the-lengths-of-string-to-functions}}
+
+\begin{itemize}
+\tightlist
+\item
+  The C standard library includes string functions which take the
+  maximum length of the string as arguments (eg. \texttt{strnlen},
+  \texttt{strncpy}, etc.)
+\item
+  These versions are less prone to buffer overruns
+\item
+  more info: \url{http://www.cplusplus.com/reference/cstring/}
+\item
+  standard library functions also have man pages (eg.
+  \texttt{man\ strcpy}, \texttt{man\ malloc}, etc.)
+\end{itemize}
+
+\hypertarget{memory-allocation}{%
+\subsection{Memory Allocation}\label{memory-allocation}}
+
+\note{What's the difference between}
+
+\begin{itemize}
+\tightlist
+\item
+  stack
+\item
+  heap
+\item
+  static
+\end{itemize}
+
+\hypertarget{example}{%
+\subsection{Example}\label{example}}
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{\textbackslash{}include\{}\StringTok{"src/allocation.c"}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{the-stack}{%
+\subsection{The Stack}\label{the-stack}}
+
+Assume \texttt{DrawSquare()} calls \texttt{DrawLine()}
+
+\hypertarget{lifetime-of-a-variable}{%
+\subsection{Lifetime of a variable}\label{lifetime-of-a-variable}}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  stack: lives until the end of the function call in which it is defined
+\item
+  heap: lives until it is freed
+\item
+  static: until program ends
+\end{itemize}
+\end{quote}
+
+\hypertarget{malloc}{%
+\subsection{malloc}\label{malloc}}
+
+\begin{itemize}
+\tightlist
+\item
+  to allocate memory on the heap, use \texttt{malloc}
+\item
+  function signature:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{void}\NormalTok{* malloc (}\DataTypeTok{size\_t}\NormalTok{ size);}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  we \emph{must} free memory allocated by malloc
+\item
+  failure to do so is a memory leak
+\item
+  freeing a pointer while others still hold references to it is also a
+  potential error
+\end{itemize}
+
+\hypertarget{malloc-details-kr-8.7}{%
+\subsection{malloc details (K\&R 8.7)}\label{malloc-details-kr-8.7}}
+
+\begin{itemize}
+\tightlist
+\item
+  keeps a list of free blocks of memory
+\item
+  each block contains a size, pointer to next block, and the free space
+\item
+  when a request is made, the list is scanned until a block big enough
+  is found
+\item
+  when a block is found, it is returned and removed from the free list
+\item
+  if no sufficiently large block exists, ask the OS for more
+\end{itemize}
+
+\hypertarget{free-details-kr-8.7}{%
+\subsection{free details (K\&R 8.7)}\label{free-details-kr-8.7}}
+
+\begin{itemize}
+\tightlist
+\item
+  scans the free list looking for the freed block's address
+\item
+  adds an entry to the list if between two blocks
+\item
+  merges free blocks if adjacent
+\end{itemize}
+
+\hypertarget{more-tools}{%
+\section{More Tools}\label{more-tools}}
+
+\hypertarget{valgrind}{%
+\subsection{Valgrind}\label{valgrind}}
+
+\begin{itemize}
+\tightlist
+\item
+  Valgrind is a set of debugging and profiling tools
+\item
+  The most common use for Valgrind is checking for memory errors
+\end{itemize}
+
+\hypertarget{example-c-program}{%
+\subsection{Example C program}\label{example-c-program}}
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{\textbackslash{}include\{}\StringTok{"src/memleak.c"}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{errors-in-previous-program}{%
+\subsection{Errors in previous
+program}\label{errors-in-previous-program}}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  problem 1: heap block overrun
+\item
+  problem 2: memory leak -- x not freed
+\end{itemize}
+\end{quote}
+
+\hypertarget{lets-run-valgrind-on-this-program}{%
+\subsection{Let's run valgrind on this
+program}\label{lets-run-valgrind-on-this-program}}
+
+\end{document}

@@ -47,7 +47,7 @@ First, we will insert the \mdinlinecode{Variable} block by dragging and dropping
   \centering
   \begin{tabular}{|c|c|}
     \hline
-    \texttt{samp\_rate}  & 48000   \\
+    \texttt{sample\_rate}  & 48000   \\
     \texttt{centre}      & 2210    \\
     \texttt{fsk\_dev}    & 170     \\
     \texttt{vco\_max}    & 2500    \\
@@ -107,9 +107,9 @@ The transmitter can be implemented by the following steps:
   \1 Before we perform any mathematical operations such as filtering, we need to convert the data type of the input stream. We use a \newline \mdinlinecode{UChar to Float} block.
   \1 In order to keep the flowgraph nice, easy to comprehend, we can create a component in multiple lines. We can do this by using the \mdinlinecode{Virtual Sink} and \mdinlinecode{Virtual Source} blocks. These blocks serve as connectors. We need to make sure the \mdinlinecode{Stream ID} matches for a given pair
   \1 For the virtual connectors created above, set the \mdinlinecode{Stream ID} to \newline \mdinlinecode{''xmt\_data''}.
-  \1 Next, create a \mdinlinecode{Low Pass Filter} block which reduces the bandwidth the generated signal. The parameters to be entered are, \newline \mdinlinecode{FIR Type - Float - Float (Decimating)}, \mdinlinecode{Decimation = 1}, \newline \mdinlinecode{Gain = 1},  \mdinlinecode{Sample Rate = samp\_rate}, \mdinlinecode{Cutoff Freq = 200}, \newline \mdinlinecode{Transition Width = 1000}, \mdinlinecode{Window = Hamming} and \mdinlinecode{Beta = 6.76}.
+  \1 Next, create a \mdinlinecode{Low Pass Filter} block which reduces the bandwidth the generated signal. The parameters to be entered are, \newline \mdinlinecode{FIR Type - Float - Float (Decimating)}, \mdinlinecode{Decimation = 1}, \newline \mdinlinecode{Gain = 1},  \mdinlinecode{Sample Rate = sample\_rate}, \mdinlinecode{Cutoff Freq = 200}, \newline \mdinlinecode{Transition Width = 1000}, \mdinlinecode{Window = Hamming} and \mdinlinecode{Beta = 6.76}.
   \1 The next involves calibrating the signal to the values so that amplitude is either at the \mdinlinecode{Mark} or \mdinlinecode{Space} frequency voltage levels. For this we use the \mdinlinecode{Const Multiply} and \mdinlinecode{Const Add} blocks for which the Const values are \mdinlinecode{inp\_amp} and \mdinlinecode{vco\_offset} respectively.
-  \1 The last step is the most important in which the processed signal is passed to a \mdinlinecode{VCO} block. Here the two voltage levels are converted to the \mdinlinecode{Mark} and \mdinlinecode{Space} frequencies around the centre frequency. The parameters to be inserted are, \mdinlinecode{Sampling Rate = samp\_rate}, \mdinlinecode{Sensitivity = 15708}, and \mdinlinecode{Amplitude = 0.5}.
+  \1 The last step is the most important in which the processed signal is passed to a \mdinlinecode{VCO} block. Here the two voltage levels are converted to the \mdinlinecode{Mark} and \mdinlinecode{Space} frequencies around the centre frequency. The parameters to be inserted are, \mdinlinecode{Sampling Rate = sample\_rate}, \mdinlinecode{Sensitivity = 15708}, and \mdinlinecode{Amplitude = 0.5}.
   \1 Create a \mdinlinecode{Virtual Sink} that is akin to labelling the transmitted signal. We will use it in the receiver module. Use the \newline \mdinlinecode{Stream ID = ''fsk\_out''}.
 \end{outline}
 
@@ -122,7 +122,7 @@ A typical receiver module in a communication system consists of a filter, demodu
 
 \begin{outline}[enumerate]
   \1 Create a \mdinlinecode{Virtual Source} with to capture the transmitted signal. Make sure to use the same \mdinlinecode{Stream ID} as defined in the transmitter side.
-  \1 We now use a \mdinlinecode{Frequency Xlating FIR Filter} block that performs a frequency translation on the received signal. Through this, we can pick up a selected frequency band, translate it to the origin (in this case centre it along the centre frequency), and then remove the remaining frequency components. The parameter values used are, \mdinlinecode{Type = Float - Complex (Complex Taps)}, \mdinlinecode{Decimation = 1}, \newline \mdinlinecode{Taps = firdes.low\_pass(1.0,samp\_rate,1000,400)}, \newline \mdinlinecode{Center Freq = centre}, \mdinlinecode{Sample Rate = samp\_rate}. Here we have utilised the feature to program a block using \mdinlinecode{Python} code.
+  \1 We now use a \mdinlinecode{Frequency Xlating FIR Filter} block that performs a frequency translation on the received signal. Through this, we can pick up a selected frequency band, translate it to the origin (in this case centre it along the centre frequency), and then remove the remaining frequency components. The parameter values used are, \mdinlinecode{Type = Float - Complex (Complex Taps)}, \mdinlinecode{Decimation = 1}, \newline \mdinlinecode{Taps = firdes.low\_pass(1.0,sample\_rate,1000,400)}, \newline \mdinlinecode{Center Freq = centre}, \mdinlinecode{Sample Rate = sample\_rate}. Here we have utilised the feature to program a block using \mdinlinecode{Python} code.
   \1 Next, create a noise removal \mdinlinecode{Simple Squelch} block that sets a threshold level below which all the signal is removed. Set the \newline \mdinlinecode{Threshold (dB) = 70}, and keep \mdinlinecode{Alpha = 1}.
   \1 The \mdinlinecode{Quadrature Demod} block is used to \textit{demodulate} the received signal. It accepts a complex baseband signal which is then converted into an output, that is the signal frequency in relation to the sample rate, multiplied with the gain. We obtain a signal which is positive for the input frequencies above zero and vice versa. Set the \mdinlinecode{Gain = 128177}.
   \1 The \mdinlinecode{Binary Slicer} module binarises the signal into a byte of \mdinlinecode{1} and \mdinlinecode{0}.
@@ -167,7 +167,7 @@ In this section, we require you to paste the results of the simulation created i
   \2 Xlating FIR Filter
   \2 Digital received signal
   \1 What happens if you change the \mdinlinecode{Centre Frequency} parameter of the \mdinlinecode{Xlating FIR Filter} block to \mdinlinecode{0}?
-  \2 Plot the frequency spectrum in this case. Also briefly explain what happens.
+  \2 Plot the frequency spectrum in this case. Also, briefly explain what happens.
   \2 Can you explain WHY do we need to keep the \newline \mdinlinecode{Center Frequency = 2.21 kHz}?
 \end{outline}
 

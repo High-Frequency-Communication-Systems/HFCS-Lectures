@@ -1,0 +1,15 @@
+{
+    "cSpell.enableFiletypes": [
+        "latex"
+    ],
+    "cSpell.words": [
+        "Poynting"
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "latex",
+            "scheme": "file",
+            "pattern": "lecture3.tex"
+        }
+    ]
+}

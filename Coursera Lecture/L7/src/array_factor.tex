@@ -1,0 +1,44 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\pgfplotsset{width=7cm,compat=1.8}
+\usepgfplotslibrary{polar}
+\pgfplotsset{mypolarplot/.style={%
+  clip=false, % needed for double line (last \addplot command)
+  domain=0:2*pi, % plot full cycle
+  samples=300, % number of samples; can be locally adjusted
+  grid=both, % display major and minor grids
+  major grid style={black}, 
+  minor x tick num=3, % 3 minor x ticks between majors
+  minor y tick num=1, % 1 minor y tick between majors
+  xtick={0,90,...,359},
+  xticklabels={%
+    $\theta = \ang{90}$,
+    $\theta = \ang{0}$,
+    $\theta = \ang{270}$,
+    $\theta = \ang{180}$
+  },
+  yticklabel style={anchor=east}, % move label position
+}}
+\begin{document}
+    
+    \begin{tikzpicture}[scale=2]
+    \draw[->] (-1,0) -- (1,0);
+    \draw[->] (0,-1) -- (0,1);
+    \draw node [red] at (-1,.25) {\scriptsize{Kardioida $r=5-5\sin
+    \theta$}};
+    \draw[color=red,domain=0:6.28,samples=200,smooth] plot (canvas polar
+    cs:angle=\x r,radius=      {.5cm-.5cm*sin(\x r)});    %r = angle en
+    radian
+    \end{tikzpicture}
+    
+    \begin{tikzpicture}[scale=2]
+    \draw[->] (-1,0) -- (1,0);
+    \draw[->] (0,-1) -- (0,1);
+    \draw node [red] at (-1,.25) {\scriptsize{Kardioida $r=5-5\sin
+    \theta$}};
+    \draw[color=red,domain=0:6.28,samples=200,smooth] plot (xy polar
+    cs:angle=\x r,radius=      {.5-.5*sin(\x r)});    %r = angle en radian
+    \end{tikzpicture} 
+    \end{document}

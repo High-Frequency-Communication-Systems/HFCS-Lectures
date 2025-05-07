@@ -1,0 +1,89 @@
+{
+  "title": "Latex Programmer Keyboard - hasan",
+  "rules": [
+    {
+      "description": "",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            },
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "open_bracket",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            },
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "close_bracket",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            },
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "backslash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            },
+            "key_code": "w"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "4",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+

@@ -1,0 +1,157 @@
+\documentclass{standalone}
+\usepackage{verbatim}
+
+% \usepackage{pgfplots} 
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
+\usepackage{tikz} 
+\usepackage{physics}  
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage[active,tightpage]{preview}  % generates a tightly fitting border around the work
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% from https://tex.stackexchange.com/a/375604/121799
+%along x axis
+\makeatletter
+\define@key{x sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{x sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{x sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{x spherical}{% %%%rotation around x
+    \setkeys{x sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*cos(\mytheta)}{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*sin(\mytheta)*sin(\myphi)}}
+
+%along y axis
+\define@key{y sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{y sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{y sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{y spherical}{% %%%rotation around x
+    \setkeys{y sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*cos(\mytheta)}{\myradius*sin(\mytheta)*sin(\myphi)}}
+
+
+%along z axis
+\define@key{z sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{z sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{z sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{z spherical}{% %%%rotation around x
+    \setkeys{z sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*sin(\mytheta)*sin(\myphi)}{\myradius*cos(\mytheta)}}
+
+\makeatother
+
+% \tikzset{declare function={myx(x,y,z)=\x*sin(\y)*}}
+% {{Cos[x]*Cos[y], Cos[y]*Sin[x], 
+%   Sin[y]}, {-(Cos[z]*Sin[x]) - 
+%    Cos[x]*Sin[y]*Sin[z], 
+%   Cos[x]*Cos[z] - Sin[x]*Sin[y]*
+%     Sin[z], Cos[y]*Sin[z]}, 
+%  {-(Cos[x]*Cos[z]*Sin[y]) + 
+%    Sin[x]*Sin[z], 
+%   -(Cos[z]*Sin[x]*Sin[y]) - 
+%    Cos[x]*Sin[z], Cos[y]*Cos[z]}}
+
+
+\begin{document}
+
+%Angle Definitions
+%-----------------
+
+%set the plot display orientation
+%syntax: \tdplotsetdisplay{\theta_d}{\phi_d}
+\tdplotsetmaincoords{65}{120}
+
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+\pgfmathsetmacro{\rvec}{3}
+\pgfmathsetmacro{\thetavec}{70}
+\pgfmathsetmacro{\phivec}{60}
+
+\begin{tikzpicture}[scale=2,tdplot_main_coords,cube/.style={very thin,black},
+        grid/.style={very thin,gray!80},
+        axis/.style={->,blue,ultra thick},
+        rotated axis/.style={->,purple,ultra thick}]
+
+
+    %-----------------------
+    \coordinate (O) at (0,0,0);
+
+    \pgfmathsetmacro{\len}{2}
+    \pgfmathsetmacro{\h}{-0}
+    \pgfmathsetmacro{\l}{1}
+
+    %set up some coordinates 
+    %-----------------------
+    \coordinate (O) at (0,0,0);
+    \coordinate (S) at (0,\h,0);
+    \coordinate (P1) at (-.2,0,\l/2);
+    \coordinate (P2) at (.2,0,\l/2);
+    \coordinate (P3) at (-.2,0,-\l/2);
+    \coordinate (P4) at (.2,0,-\l/2);
+    \coordinate (P_1) at (0,0,\l/2);
+    \coordinate (P_2) at (0,0,-\l/2);
+
+    % Define P through spherical coordinates
+    \tdplotsetcoord{P}{\rvec}{\thetavec - 30}{\phivec}
+    %draw figure contents
+    %--------------------
+
+    %     %draw a grid in the x-y plane
+    % \foreach \x in {-1,-.75,...,1}
+    %     \foreach \y in {-1,-.75,...,1}
+    % {
+    %     \draw[grid] (\x,-1) -- (\x,1);
+    %     \draw[grid] (-1,\y) -- (1,\y);
+    % }
+
+
+    %draw figure contents
+    %--------------------
+    %draw the main coordinate system axes
+    \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,-5) -- (0,0,5) node[anchor=south]{$z$};
+
+
+    % \tdplotdrawarc[-latex]{(O)}{0.3}{0}{\phivec}{anchor=north}{$\phi$}
+
+
+    \tdplotsetthetaplanecoords{\phivec}
+
+
+    \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.2}{0}{\thetavec - 30}{anchor=south west}{$\theta$}
+
+    % \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{.8}{0}{\thetavec - 50}{anchor=south west}{$\theta_1$}
+
+    % \tdplotdrawarc[tdplot_rotated_coords]{(-1,0,0)}{.8}{0}{\thetavec - 56}{anchor=north west}{$\theta_2$}
+
+
+    \draw[-stealth,color=black] (O) -- node[midway, anchor= north west]{$r$} (P) ;
+
+    % \draw[-stealth,color=black] (P_1) -- node[midway, anchor= south east]{$R_1 $} (P) ;
+
+    % \draw[-stealth,color=black] (P_2) -- node[midway, anchor=west]{$R_2$} (P) ;
+    % %draw a vector from source to point (P) 
+    % \draw[-stealth,color=black] (S) -- node[anchor=south east]{$\bf{r'}$} (P);
+
+    %draw a vector from source to point (P) 
+    \draw[color=black] (P) node[anchor=south]{$P$};
+
+    %         \draw[color=black] (P1) -- (P2);
+    % \draw[color=black] (P3) -- (P4);
+
+    \draw[thick, color=black,<->] (0,-\l/3 ,1) --  node[anchor=north east]{} (0,-\l/3,0) node[midway,color = black, anchor= east]{$d$};
+
+    \draw[thick, color=black,<->] (0,-\l/3 ,1) --  node[anchor=north east]{} (0,-\l/3,0) node[midway,color = black, anchor= east]{$d$};
+
+    \draw[thick, color=black,<->] (0,0 ,1) --  node[anchor=north east]{} (0,\l/2,.6) node[midway,color = black, anchor= east]{$d \cos \theta$};
+ 
+    \foreach \x in {-4,...,4}
+       \draw[thick, color=red,-stealth] (0,\h - \l/2,+\x) --  node[anchor=north east]{} (0,\h + \l/2,+\x) node[midway,color = black, anchor= south east]{$\x$};
+
+
+
+\end{tikzpicture}
+\end{document}

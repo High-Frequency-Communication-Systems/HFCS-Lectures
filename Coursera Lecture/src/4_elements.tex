@@ -1,0 +1,124 @@
+\documentclass{standalone}
+\usepackage{verbatim}
+
+% \usepackage{pgfplots} 
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
+\usepackage{tikz} 
+\usepackage{physics}  
+\usetikzlibrary{calc}
+\usepackage{tikz-3dplot}
+\usepackage[active,tightpage]{preview}  % generates a tightly fitting border around the work
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% from https://tex.stackexchange.com/a/375604/121799
+%along x axis
+\makeatletter
+\define@key{x sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{x sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{x sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{x spherical}{% %%%rotation around x
+    \setkeys{x sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*cos(\mytheta)}{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*sin(\mytheta)*sin(\myphi)}}
+
+%along y axis
+\define@key{y sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{y sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{y sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{y spherical}{% %%%rotation around x
+    \setkeys{y sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*cos(\mytheta)}{\myradius*sin(\mytheta)*sin(\myphi)}}
+
+
+%along z axis
+\define@key{z sphericalkeys}{radius}{\def\myradius{#1}}
+\define@key{z sphericalkeys}{theta}{\def\mytheta{#1}}
+\define@key{z sphericalkeys}{phi}{\def\myphi{#1}}
+\tikzdeclarecoordinatesystem{z spherical}{% %%%rotation around x
+    \setkeys{z sphericalkeys}{#1}%
+    \pgfpointxyz{\myradius*sin(\mytheta)*cos(\myphi)}{\myradius*sin(\mytheta)*sin(\myphi)}{\myradius*cos(\mytheta)}}
+
+\makeatother
+
+% \tikzset{declare function={myx(x,y,z)=\x*sin(\y)*}}
+% {{Cos[x]*Cos[y], Cos[y]*Sin[x], 
+%   Sin[y]}, {-(Cos[z]*Sin[x]) - 
+%    Cos[x]*Sin[y]*Sin[z], 
+%   Cos[x]*Cos[z] - Sin[x]*Sin[y]*
+%     Sin[z], Cos[y]*Sin[z]}, 
+%  {-(Cos[x]*Cos[z]*Sin[y]) + 
+%    Sin[x]*Sin[z], 
+%   -(Cos[z]*Sin[x]*Sin[y]) - 
+%    Cos[x]*Sin[z], Cos[y]*Cos[z]}}
+
+
+\begin{document}
+
+%Angle Definitions
+%-----------------
+
+%set the plot display orientation
+%syntax: \tdplotsetdisplay{\theta_d}{\phi_d}
+\tdplotsetmaincoords{65}{120}
+
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+\pgfmathsetmacro{\rvec}{3}
+\pgfmathsetmacro{\thetavec}{70}
+\pgfmathsetmacro{\phivec}{60}
+
+\begin{tikzpicture}[scale=2,tdplot_main_coords,cube/.style={very thin,black},
+        grid/.style={very thin,gray!80},
+        axis/.style={->,blue,ultra thick},
+        rotated axis/.style={->,purple,ultra thick}]
+
+
+    %-----------------------
+    \coordinate (O) at (0,0,0);
+
+    \pgfmathsetmacro{\len}{2}
+    \pgfmathsetmacro{\h}{-0}
+    \pgfmathsetmacro{\l}{1}
+
+    %set up some coordinates 
+    %-----------------------
+    \coordinate (O) at (0,0,0);
+    \coordinate (S) at (0,\h,0);
+    \coordinate (P1) at (-.2,0,\l/2);
+    \coordinate (P2) at (.2,0,\l/2);
+    \coordinate (P3) at (-.2,0,-\l/2);
+    \coordinate (P4) at (.2,0,-\l/2);
+    \coordinate (P_1) at (0,0,\l/2);
+    \coordinate (P_2) at (0,0,-\l/2);
+
+    % Define P through spherical coordinates
+    \tdplotsetcoord{P}{\rvec}{\thetavec - 30}{\phivec}
+    %draw figure contents
+    %--------------------
+
+
+
+    %draw figure contents
+    %--------------------
+    %draw the main coordinate system axes
+    \draw[thick,->] (3.3,0,0) -- (4,0,0) node[anchor=south east]{$z$};
+
+
+    system axes
+    \draw[thick,<->] (2,.1,0) -- (3,.1,0) node[anchor=north]{$d$};
+
+
+    \tdplotsetthetaplanecoords{\phivec}
+
+ 
+    \foreach \x in {0,...,3}
+    \draw[black,fill=red] (\x,0,0) circle (1pt) node[color = black, anchor= east]{$e^{\x \times j  \alpha}$};
+    %    \draw[thick, color=red,-stealth] (0,\h - \l/2,+\x) --  node[anchor=north east]{} (0,\h + \l/2,+\x) node[midway,color = black, anchor= south east]{$\x$};
+
+
+
+
+\end{tikzpicture}
+\end{document}

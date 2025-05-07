@@ -1,0 +1,62 @@
+% Beamer mtheme
+%
+% Copyright 2014 Matthias Vogelgesang
+% Licensed under CC-BY-SA 4.0 International.
+%
+% The initial template comes from the HSRM beamer theme by Benjamin Weiss, which
+% you can find at https://github.com/hsrmbeamertheme/hsrmbeamertheme.
+%
+
+\ProvidesPackage{beamerfontthemeglasgow}
+
+\RequirePackage{fontspec}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setsansfont[BoldFont={Fira Sans}]{Fira Sans Light}
+\setmonofont{Fira Mono}
+\newfontfamily\ExtraLight{Fira Sans ExtraLight}
+\newfontfamily\Light{Fira Sans Light}
+\newfontfamily\Book{Fira Sans}
+\newfontfamily\Medium{Fira Sans Medium}
+
+\AtBeginEnvironment{tabular}{\setsansfont[BoldFont={Fira Sans}, Numbers={Monospaced}]{Fira Sans Light}}
+
+% % // EMOJI
+% \setsansfont[BoldFont={Noto Sans}]{Noto Sans}
+% \setmonofont{Noto Mono}
+% \newfontfamily\ExtraLight{Noto Sans ExtraLight}
+% \newfontfamily\Light{Noto Sans Light}
+% \newfontfamily\Book{Noto Sans}
+% \newfontfamily\Medium{Noto Sans Medium}
+
+% // EMOJI
+% \setsansfont[BoldFont={OpenSansEmoji}]{OpenSansEmoji}
+% \setmonofont{OpenSansEmoji}
+% \newfontfamily\ExtraLight{OpenSansEmoji}
+% \newfontfamily\Light{OpenSansEmoji}
+% \newfontfamily\Book{OpenSansEmoji}
+% \newfontfamily\Medium{OpenSansEmoji}
+%
+% \AtBeginEnvironment{tabular}{\setsansfont[BoldFont={Noto Sans}, Numbers={Monospaced}]{Noto Sans Light}}
+
+\setbeamerfont{title}{family=\Book, size=\Large}
+\setbeamerfont{author}{family=\ExtraLight, size=\small}
+\setbeamerfont{date}{family=\ExtraLight, size=\small}
+
+\setbeamerfont{section title}{family=\normalsize, size=\normalsize}
+
+\setbeamerfont{block title}{family=\Book, size=\normalsize}
+\setbeamerfont{block title alerted}{family=\Book,size=\normalsize}
+
+\setbeamerfont{subtitle}{family=\Light, size=\fontsize{12}{14}}
+\setbeamerfont{frametitle}{family=\Book, series=\scshape, size=\normalsize}
+
+\setbeamerfont{caption}{size=\small}
+\setbeamerfont{caption name}{family=\Book}
+
+\setbeamerfont{description item}{family=\Book}
+
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+
+
+\linespread{1.05}

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:ns2="http://www.iki.fi/pav/software/textext/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="105.14538mm"
+   height="105.14528mm"
+   viewBox="0 0 105.14538 105.14528"
+   version="1.1"
+   id="svg9132"
+   sodipodi:docname="textext.svg"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">
+  <defs
+     id="defs9126" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.54510352"
+     inkscape:cx="373.48093"
+     inkscape:cy="321.41601"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata9129">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-16.191654,-70.577999)">
+    <circle
+       style="fill:#fffad9;stroke:#000000;stroke-width:0.123472;stroke-dasharray:0.246944, 0.123472"
+       id="path9695"
+       cx="68.764343"
+       cy="123.15069"
+       r="52.510952" />
+    <g
+       transform="matrix(0.705556,0,0,0.705556,103.43,144.755)"
+       ns2:version="1.2.0"
+       ns2:texconverter="pdflatex"
+       ns2:pdfconverter="inkscape"
+       ns2:text="$\va{E}$
+"
+       ns2:preamble="/Users/hasanabbas/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/circuitSymbols/circuitSymbolsPreamble.tex"
+       ns2:scale="2.0"
+       ns2:alignment="middle center"
+       ns2:jacobian_sqrt="0.705556"
+       id="g9720">
+      <defs
+         id="id-2d853e70-9066-43ca-b8cc-64b39ada1845">
+        <g
+           id="id-ce4d5cfb-4453-44a3-a497-8ade5c1fc76f">
+          <symbol
+             overflow="visible"
+             id="id-079a7cc6-1d58-4757-a1fe-0540ccc7b312">
+            <path
+               style="stroke:none;stroke-width:0"
+               d=""
+               id="id-498aac95-0222-4588-9f5e-09635ab9e9e7" />
+          </symbol>
+          <symbol
+             overflow="visible"
+             id="id-ec489d94-33dc-43bc-b67e-2f57f35f465b">
+            <path
+               style="stroke:none;stroke-width:0"
+               d="m 5.359375,-5.9375 c -0.140625,0.140625 -0.46875,0.421875 -0.46875,0.59375 0,0.09375 0.09375,0.203125 0.1875,0.203125 0.09375,0 0.140625,-0.078125 0.203125,-0.140625 C 5.390625,-5.421875 5.625,-5.703125 6.0625,-5.921875 6.125,-5.96875 6.234375,-6.015625 6.234375,-6.125 6.234375,-6.234375 6.15625,-6.28125 6.09375,-6.328125 5.875,-6.484375 5.765625,-6.65625 5.6875,-6.890625 5.65625,-6.984375 5.625,-7.125 5.484375,-7.125 c -0.140625,0 -0.203125,0.140625 -0.203125,0.21875 0,0.046875 0.078125,0.359375 0.234375,0.578125 H 2.15625 c -0.15625,0 -0.34375,0 -0.34375,0.203125 0,0.1875 0.1875,0.1875 0.34375,0.1875 z m 0,0"
+               id="id-918e012e-b6be-4a11-9be0-00005a502b16" />
+          </symbol>
+          <symbol
+             overflow="visible"
+             id="id-75623435-2a35-4be8-abcc-adc509dcf465">
+            <path
+               style="stroke:none;stroke-width:0"
+               d=""
+               id="id-aea47054-c400-4e3a-b556-b1ae7559df4d" />
+          </symbol>
+          <symbol
+             overflow="visible"
+             id="id-3f06be1a-8e55-4222-a615-5ee04fcae4a3">
+            <path
+               style="stroke:none;stroke-width:0"
+               d="m 7.203125,-2.734375 h -0.46875 c -0.21875,1.375 -0.5,2.265625 -2.34375,2.265625 H 2.875 v -2.8125 h 0.546875 c 0.96875,0 1.0625,0.4375 1.0625,1.171875 h 0.46875 v -2.8125 h -0.46875 c 0,0.75 -0.09375,1.171875 -1.0625,1.171875 H 2.875 v -2.5625 h 1.515625 c 1.609375,0 1.875,0.734375 2.03125,1.9375 h 0.46875 l -0.3125,-2.40625 h -6.1875 V -6.3125 H 1.46875 v 5.84375 H 0.390625 V 0 H 6.75 Z m 0,0"
+               id="id-49d2861c-0145-4e64-8517-4171b92f21aa" />
+          </symbol>
+        </g>
+      </defs>
+      <g
+         id="id-2b118bf7-1298-43d4-92e0-954d44676b03"
+         transform="translate(-149.103,-125.094)">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="id-4bb94b5e-f463-410c-b25f-c7f73dee6b44">
+          <g
+             transform="translate(149.219,132.219)"
+             id="g9712">
+            <path
+               style="stroke:none;stroke-width:0"
+               d="m 5.359375,-5.9375 c -0.140625,0.140625 -0.46875,0.421875 -0.46875,0.59375 0,0.09375 0.09375,0.203125 0.1875,0.203125 0.09375,0 0.140625,-0.078125 0.203125,-0.140625 C 5.390625,-5.421875 5.625,-5.703125 6.0625,-5.921875 6.125,-5.96875 6.234375,-6.015625 6.234375,-6.125 6.234375,-6.234375 6.15625,-6.28125 6.09375,-6.328125 5.875,-6.484375 5.765625,-6.65625 5.6875,-6.890625 5.65625,-6.984375 5.625,-7.125 5.484375,-7.125 c -0.140625,0 -0.203125,0.140625 -0.203125,0.21875 0,0.046875 0.078125,0.359375 0.234375,0.578125 H 2.15625 c -0.15625,0 -0.34375,0 -0.34375,0.203125 0,0.1875 0.1875,0.1875 0.34375,0.1875 z m 0,0"
+               id="id-a4944de5-39a4-4e91-b125-37326104cd21" />
+          </g>
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="id-f9b426d6-fcc2-4027-8f83-8bbf47ee155a">
+          <g
+             transform="translate(148.712,134.765)"
+             id="g9716">
+            <path
+               style="stroke:none;stroke-width:0"
+               d="m 7.203125,-2.734375 h -0.46875 c -0.21875,1.375 -0.5,2.265625 -2.34375,2.265625 H 2.875 v -2.8125 h 0.546875 c 0.96875,0 1.0625,0.4375 1.0625,1.171875 h 0.46875 v -2.8125 h -0.46875 c 0,0.75 -0.09375,1.171875 -1.0625,1.171875 H 2.875 v -2.5625 h 1.515625 c 1.609375,0 1.875,0.734375 2.03125,1.9375 h 0.46875 l -0.3125,-2.40625 h -6.1875 V -6.3125 H 1.46875 v 5.84375 H 0.390625 V 0 H 6.75 Z m 0,0"
+               id="id-04980e32-336e-4458-8043-f6794def6cb2" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

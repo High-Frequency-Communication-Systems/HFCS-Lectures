@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="292.95087mm"
+   height="51.606762mm"
+   viewBox="0 0 292.95087 51.606762"
+   version="1.1"
+   id="svg9743"
+   sodipodi:docname="DISPERSION.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+  <defs
+     id="defs9737" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="533.09186"
+     inkscape:cy="545.59227"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0.8" />
+  <metadata
+     id="metadata9740">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(86.783334,-97.474546)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -86.783334,132.40837 h 42.333333 V 101.8493 H 8.1138887 v 30.55907 H 55.562497"
+       id="path10310"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.365;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 63.764586,132.26385 c 0,0 27.392878,3.0342 32.279162,0 4.609972,-2.86262 -1.59405,-31.61086 4.233332,-32.940323 5.32687,-1.21528 54.14484,-2.65238 58.38473,2.381253 4.23988,5.03363 -0.42842,27.699 4.23333,30.55907 5.20357,3.1925 43.21527,0 43.21527,0"
+       id="path10310-2"
+       sodipodi:nodetypes="csszsc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       x="-55.484135"
+       y="148.20511"
+       id="text10365"><tspan
+         sodipodi:role="line"
+         id="tspan10363"
+         x="-55.484135"
+         y="148.20511"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+         dx="7.9375 0 0 -0.52916664">BEFORE DISPERSION</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
+       x="102.47836"
+       y="148.20511"
+       id="text10365-2"><tspan
+         sodipodi:role="line"
+         id="tspan10363-4"
+         x="102.47836"
+         y="148.20511"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583">AFTER DISPERSION</tspan></text>
+  </g>
+</svg>

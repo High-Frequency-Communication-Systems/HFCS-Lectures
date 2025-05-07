@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable}
+\usepgfplotslibrary{polar}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{polaraxis}[
+    grid=both,
+    ymin=-35, ymax=0, ylabel={Gain (dBi)},
+    yticklabel style={font=\small},
+    xticklabel style={font=\small},
+    xtick={0,30,...,330},
+    ytick={-35,-30,...,0},
+    xticklabels={$0\degree$,$30\degree$,$60\degree$,$90\degree$,$120\degree$,$150\degree$,$180\degree$,$210\degree$,$240\degree$,$270\degree$,$300\degree$,$330\degree$},
+    y axis line style={-},
+    x axis line style={-},
+    major grid style={black},
+    minor grid style={black!50},
+    width=10cm, height=10cm
+  ]
+    \addplot[
+      mark=none,
+      domain=0:360,
+      samples=360,
+      black,
+      thick
+    ] {cos(x)^2};
+  \end{polaraxis}
+\end{tikzpicture}
+
+\end{document}
